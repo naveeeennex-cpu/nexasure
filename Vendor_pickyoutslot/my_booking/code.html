@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Today's Bookings - Venue Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d59f2", // Vibrant Blue
+            "primary-light": "#eff6ff", // Very light blue for backgrounds
+            "background": "#ffffff",
+            "card": "#ffffff",
+            "text-main": "#0f172a", // Dark Blue/Black (Slate 900)
+            "text-secondary": "#64748b", // Slate 500
+            "border-subtle": "#e2e8f0", // Slate 200
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            "card": "0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 1px 4px -1px rgba(0, 0, 0, 0.02)",
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }.no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }.no-scrollbar {
+        -ms-overflow-style: none;scrollbar-width: none;}
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-display text-text-main">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between bg-white p-4 shadow-sm border-b border-gray-100/50">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 text-text-main hover:bg-gray-100 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-xl font-bold text-text-main">Today's Bookings</h1>
+<p class="text-sm font-medium text-text-secondary">October 26, 2023</p>
+</div>
+<div class="w-10"></div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 pb-24 pt-4 bg-white">
+<div class="flex flex-col gap-4">
+<div class="rounded-xl bg-card border border-border-subtle shadow-card p-4 transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<p class="text-lg font-bold text-primary">09:00 AM</p>
+<p class="mt-2 text-base font-semibold text-text-main">John Doe</p>
+<p class="mt-1 text-sm text-text-secondary">987-654-3210</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary hover:bg-blue-100 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-3 border-t border-border-subtle pt-3">
+<p class="text-sm font-medium text-text-main">Badminton Court A</p>
+</div>
+</div>
+<div class="rounded-xl bg-card border border-border-subtle shadow-card p-4 transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<p class="text-lg font-bold text-primary">10:30 AM</p>
+<p class="mt-2 text-base font-semibold text-text-main">Jane Smith</p>
+<p class="mt-1 text-sm text-text-secondary">555-123-4567</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary hover:bg-blue-100 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-3 border-t border-border-subtle pt-3">
+<p class="text-sm font-medium text-text-main">Swimming Pool - Lane 2</p>
+</div>
+</div>
+<div class="rounded-xl bg-card border border-border-subtle shadow-card p-4 transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<p class="text-lg font-bold text-primary">01:00 PM</p>
+<p class="mt-2 text-base font-semibold text-text-main">Michael Johnson</p>
+<p class="mt-1 text-sm text-text-secondary">123-456-7890</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary hover:bg-blue-100 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-3 border-t border-border-subtle pt-3">
+<p class="text-sm font-medium text-text-main">Tennis Court 1</p>
+</div>
+</div>
+<div class="rounded-xl bg-card border border-border-subtle shadow-card p-4 transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<p class="text-lg font-bold text-primary">02:30 PM</p>
+<p class="mt-2 text-base font-semibold text-text-main">Emily Davis</p>
+<p class="mt-1 text-sm text-text-secondary">234-567-8901</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary hover:bg-blue-100 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-3 border-t border-border-subtle pt-3">
+<p class="text-sm font-medium text-text-main">Badminton Court B</p>
+</div>
+</div>
+<div class="rounded-xl bg-card border border-border-subtle shadow-card p-4 transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<p class="text-lg font-bold text-primary">04:00 PM</p>
+<p class="mt-2 text-base font-semibold text-text-main">Chris Lee</p>
+<p class="mt-1 text-sm text-text-secondary">345-678-9012</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary hover:bg-blue-100 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-3 border-t border-border-subtle pt-3">
+<p class="text-sm font-medium text-text-main">Gym Session</p>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-border-subtle bg-white pb-safe">
+<div class="flex h-20 items-center justify-around pb-2">
+<a class="flex w-1/4 flex-col items-center justify-center text-primary" href="#">
+<span class="material-symbols-outlined filled">home</span>
+<span class="mt-1 text-[10px] font-bold">Home</span>
+</a>
+<a class="flex w-1/4 flex-col items-center justify-center text-text-secondary hover:text-text-main" href="#">
+<span class="material-symbols-outlined">calendar_view_day</span>
+<span class="mt-1 text-[10px] font-medium">Slots</span>
+</a>
+<a class="flex w-1/4 flex-col items-center justify-center text-text-secondary hover:text-text-main" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="mt-1 text-[10px] font-medium">Passes</span>
+</a>
+<a class="flex w-1/4 flex-col items-center justify-center text-text-secondary hover:text-text-main" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="mt-1 text-[10px] font-medium">Courses</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

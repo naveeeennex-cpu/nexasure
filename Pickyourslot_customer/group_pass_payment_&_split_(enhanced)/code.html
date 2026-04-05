@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Group Pass Payment &amp; Split</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "text-main": "#0d121c",
+                        "text-secondary": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20 selection:text-primary">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-20 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<button class="text-text-main dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Checkout</h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col gap-6 p-4 pb-32">
+<!-- Order Summary Card -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-900 p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-start gap-4">
+<div class="w-24 h-24 shrink-0 bg-center bg-no-repeat bg-cover rounded-lg shadow-sm" data-alt="Vibrant concert crowd with lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8yvqulPvzIL7BsyXWjCnToSla3eMPMCyghdpHUdlOm_U3LZMlljNvMKsDPT4l2_L8WmptQzXYkH6Covj9jr6ohZz6quowz-S6UBea4Bl7SSD0KovpfrxK4zeMO81-BFnhwJW-TdoygdMSeIvoSuUr4oqQae_xVeiY77cmVi9tKgIgkkUd66roYts6YQXmiMLocIN9srbXba-b7FqO_xAWxkexuSuB7GftoB0Kc5admFkohnd7YHRAuvTZwKJ4dPb6FivMm14dR-s1");'></div>
+<div class="flex flex-col flex-1 gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Weekend Group Pass</h3>
+</div>
+<p class="text-text-secondary text-sm font-medium">Sat, Aug 12 • 4 Guests</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-text-secondary text-xs font-semibold uppercase tracking-wider">Total</span>
+<span class="text-primary text-xl font-bold">$120.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Split Toggle -->
+<div>
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full flex-1 items-center justify-center rounded-lg px-2 text-text-secondary text-sm font-medium transition-all duration-200">
+<span class="truncate">Pay in Full</span>
+<input class="invisible w-0 fixed" name="payment-type" type="radio" value="full"/>
+</label>
+<label class="flex cursor-pointer h-full flex-1 items-center justify-center rounded-lg px-2 bg-white dark:bg-gray-700 shadow-sm text-primary dark:text-white text-sm font-semibold transition-all duration-200">
+<span class="truncate">Split the Bill</span>
+<input checked="" class="invisible w-0 fixed" name="payment-type" type="radio" value="split"/>
+</label>
+</div>
+<p class="mt-2 text-center text-xs text-text-secondary">You pay your share now. We'll send links to others.</p>
+</div>
+<!-- Group Members Section -->
+<div class="flex flex-col gap-3">
+<h3 class="text-text-main dark:text-white text-base font-bold px-1">Group Members (4)</h3>
+<div class="rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900 shadow-sm">
+<!-- User (Owner) -->
+<div class="flex items-center gap-3 p-3 border-b border-gray-50 dark:border-gray-800 bg-primary/5">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 shrink-0 border-2 border-white dark:border-gray-700 shadow-sm" data-alt="Portrait of a smiling young man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDGU9rLhLHgQJXCoAJJqH9z1k6XJSKSX_kz5-PZ3WPlHF-ObK6m9EJpweTawlYKT3tVkqXfl-p8Vc9Mk4Ns88JYXSMs_0IuVWqz-H_Fj7QAzulqodYgBSwAX5QfAyYAEmr4y9kLERKCi4_Mt6eN8aqgCNjcuQ0FNzY9L71Mr5PamfEqqP_CeSeTYxzsqB4AZMND9C5sMBuE-6NWiD8g0VC8qskBtdduUxtUGqHuEedFVrcC5ACh7zySopIc_JPiAKBQ2-fz4vlIoRF");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-text-main dark:text-white text-sm font-semibold truncate">You (Owner)</p>
+<p class="text-primary text-xs font-medium">Paying Now</p>
+</div>
+<div class="shrink-0 font-bold text-text-main dark:text-white">$30.00</div>
+</div>
+<!-- Member 2 -->
+<div class="flex items-center gap-3 p-3 border-b border-gray-50 dark:border-gray-800">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 shrink-0 border border-gray-100 dark:border-gray-700" data-alt="Portrait of a woman with curly hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8ShFzjVyZv9rIwLE5skhs6-WPrBLkRqEiTpO7xbdfufmCS9mjcBrEqKZwpGK1FGYZEbl9DNRMOE7FloMQ1qpvC3iUcS6yQ20pR0xXA8k_XrCaxQAPwc0bQInrwSP08fX-STWGSYonRFZ5y8JgiSESF3QBo4lAwgxnBzg2nf0gz9Yi6v-lg8_T34sOh3KWWJQZsAQI4K_CZ64F8jIk5T3OdxhXU2kr-CRfsOSshoY4dd0U563J63Lu5nAqVRYXkMYs1U4TbOQ9aXGl");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-text-main dark:text-white text-sm font-medium truncate">Sarah Jenkins</p>
+<p class="text-text-secondary text-xs">Pending</p>
+</div>
+<div class="shrink-0 font-medium text-text-secondary">$30.00</div>
+</div>
+<!-- Member 3 -->
+<div class="flex items-center gap-3 p-3 border-b border-gray-50 dark:border-gray-800">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 shrink-0 border border-gray-100 dark:border-gray-700" data-alt="Portrait of a man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWRhEejCrc1t6ZPT0w7pn_h8D9YkF5odfuLyE2IF1PtGd5eTssj_-vUMCOKpQtnvQFJUm6dvLvpWF-jUIT2I828BSu1IzHobLxq1q0UHh_1lIKqSZnoGxt8VL3EqgPOsFh3s6GfMaXTcZuWGaRBxyl793lkUnTaMF9-43TT-KC-k8pim2J3G10wNp3PrykAR6CYRxHnDceORbld9lBWrNLDz1etTj4LIXmKu4UjNYxWMc2I16ZSIHWXpU3-j3NKKNJJqEEwQqZ2Utj");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-text-main dark:text-white text-sm font-medium truncate">Mike T.</p>
+<p class="text-text-secondary text-xs">Pending</p>
+</div>
+<div class="shrink-0 font-medium text-text-secondary">$30.00</div>
+</div>
+<!-- Member 4 -->
+<div class="flex items-center gap-3 p-3">
+<div class="flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-text-secondary rounded-full h-10 w-10 shrink-0 text-xs font-bold border border-gray-100 dark:border-gray-700">
+                            ER
+                        </div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-text-main dark:text-white text-sm font-medium truncate">Emily R.</p>
+<p class="text-text-secondary text-xs">Pending</p>
+</div>
+<div class="shrink-0 font-medium text-text-secondary">$30.00</div>
+</div>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-text-main dark:text-white text-base font-bold">Payment Method</h3>
+<button class="text-primary text-sm font-medium hover:text-blue-700">Change</button>
+</div>
+<div class="flex flex-col gap-2">
+<label class="group relative flex items-center justify-between rounded-xl border border-primary bg-blue-50/50 dark:bg-blue-900/20 p-4 cursor-pointer transition-all hover:bg-blue-50 dark:hover:bg-blue-900/30">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-14 items-center justify-center rounded bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400">credit_card</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-text-main dark:text-white">Visa ending in 4242</span>
+<span class="text-xs text-text-secondary">Expires 12/25</span>
+</div>
+</div>
+<div class="text-primary">
+<span class="material-symbols-outlined fill-current">check_circle</span>
+</div>
+<input checked="" class="invisible absolute" name="payment_method" type="radio" value="card"/>
+</label>
+<label class="group relative flex items-center justify-between rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 cursor-pointer transition-all hover:border-gray-300 dark:hover:border-gray-600">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-14 items-center justify-center rounded bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-text-main dark:text-white">Apple Pay</span>
+</div>
+</div>
+<div class="text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+</div>
+<input class="invisible absolute" name="payment_method" type="radio" value="apple"/>
+</label>
+</div>
+</div>
+<!-- Breakdown -->
+<div class="mt-2 flex flex-col gap-2 border-t border-dashed border-gray-200 dark:border-gray-800 pt-4 px-1">
+<div class="flex justify-between text-sm text-text-secondary">
+<span>Subtotal (1 share)</span>
+<span>$28.50</span>
+</div>
+<div class="flex justify-between text-sm text-text-secondary">
+<span>Service Fee &amp; Tax</span>
+<span>$1.50</span>
+</div>
+<div class="flex justify-between items-center mt-2">
+<span class="text-base font-bold text-text-main dark:text-white">Your Payment</span>
+<span class="text-xl font-bold text-text-main dark:text-white">$30.00</span>
+</div>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="fixed bottom-0 left-0 right-0 z-10 bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 p-4 pb-8 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] max-w-md mx-auto">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary py-4 text-white shadow-lg shadow-primary/30 transition-transform active:scale-[0.98] hover:bg-blue-600">
+<span class="text-base font-bold">Complete Payment</span>
+<span class="ml-2 font-medium opacity-90">($30.00)</span>
+</button>
+</div>
+</div>
+</body></html>

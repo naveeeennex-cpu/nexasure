@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Successful</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2433",
+                        "text-main": "#0d121c",
+                        "text-sub": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "nav": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-light dark:bg-background-dark text-text-main dark:text-white font-display antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-surface-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-6" id="savings-popup">
+<div class="w-full max-w-[320px] bg-white rounded-3xl p-8 shadow-2xl transform transition-all scale-100 relative overflow-hidden text-center">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
+<div class="absolute top-20 -right-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10">
+<div class="mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-4xl text-primary animate-bounce" style="font-variation-settings: 'FILL' 1;">savings</span>
+</div>
+<h2 class="text-2xl font-bold text-gray-900 mb-2">Congratulations!</h2>
+<div class="my-6">
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Amount Saved</span>
+<div class="text-5xl font-extrabold text-primary mt-1 tracking-tight">$5.00</div>
+<p class="text-text-sub font-medium mt-2 text-sm">on this booking!</p>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-blue-200 transition-transform active:scale-[0.98]" onclick="document.getElementById('savings-popup').style.display='none'">
+                    OK
+                </button>
+</div>
+</div>
+</div>
+<main class="flex-1 flex flex-col items-center px-6 pt-12 pb-6 w-full">
+<div class="relative mb-6 mt-4 group">
+<div class="absolute inset-0 bg-blue-100 dark:bg-blue-900/30 rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative flex items-center justify-center size-28 rounded-full bg-blue-50 dark:bg-surface-dark border border-blue-100 dark:border-blue-900/50 shadow-soft">
+<span class="material-symbols-outlined text-[64px] text-primary" style="font-variation-settings: 'FILL' 1, 'wght' 600;">check_circle</span>
+</div>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-text-main dark:text-white mb-2 text-center">Payment Successful!</h1>
+<p class="text-text-sub dark:text-gray-400 text-center mb-10 max-w-[260px] mx-auto leading-relaxed">Your booking has been confirmed and the vendor has been notified.</p>
+<div class="w-full bg-background-light dark:bg-surface-dark rounded-3xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+<div class="flex flex-col items-center justify-center border-b border-gray-200 dark:border-gray-700/50 pb-6 mb-5">
+<span class="text-sm font-medium text-text-sub dark:text-gray-400 mb-1">Total Amount Paid</span>
+<span class="text-4xl font-bold text-text-main dark:text-white tracking-tight">$55.00</span>
+<div class="mt-2 flex items-center gap-1.5 px-3 py-1 bg-green-100/60 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-full">
+<span class="material-symbols-outlined text-[16px] fill-current">check_circle</span>
+<span class="text-xs font-semibold">Payment Verified</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm text-text-sub dark:text-gray-400">Booking Reference</span>
+<span class="text-sm font-semibold text-text-main dark:text-white font-mono tracking-wide bg-white dark:bg-gray-800 px-2 py-0.5 rounded border border-gray-100 dark:border-gray-700">#CW-8392-XL</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-sub dark:text-gray-400 pt-0.5">Vendor</span>
+<div class="text-right">
+<span class="block text-sm font-bold text-text-main dark:text-white">Car Spa Center</span>
+<span class="block text-xs text-text-sub dark:text-gray-500">123 Main Street, Downtown</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-sub dark:text-gray-400 pt-0.5">Date &amp; Time</span>
+<div class="text-right">
+<span class="block text-sm font-bold text-text-main dark:text-white">Oct 24, 2023</span>
+<span class="block text-xs text-text-sub dark:text-gray-500">10:00 AM</span>
+</div>
+</div>
+<div class="border-t border-dashed border-gray-200 dark:border-gray-700 my-2"></div>
+<div class="space-y-2">
+<span class="text-xs uppercase tracking-wider font-semibold text-text-sub dark:text-gray-500 mb-2 block">Services</span>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-main dark:text-gray-200">Exterior Foam Wash</span>
+<span class="font-medium text-text-main dark:text-white">$15.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-main dark:text-gray-200">Ceramic Wax Coating</span>
+<span class="font-medium text-text-main dark:text-white">$40.00</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto p-6 bg-surface-light dark:bg-background-dark pb-8">
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span>View My Bookings</span>
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</button>
+<button class="w-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-primary dark:text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+<span>Get Directions</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

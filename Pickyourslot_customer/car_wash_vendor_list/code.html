@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Car Wash Vendor List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden min-h-screen flex flex-col group/design-root">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 py-3 h-[60px]">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition-colors text-[#0d121c] dark:text-white">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight text-[#0d121c] dark:text-white">Select a Car Wash</h2>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<!-- Filter Chips -->
+<div class="bg-background-light dark:bg-background-dark sticky top-[60px] z-10 pt-2 pb-4 shadow-[0_4px_12px_-8px_rgba(0,0,0,0.05)]">
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar">
+<!-- Active Chip -->
+<button class="flex shrink-0 items-center justify-center h-9 px-5 rounded-full bg-primary text-white text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-blue-700">
+                All
+            </button>
+<!-- Inactive Chips -->
+<button class="flex shrink-0 items-center justify-center h-9 px-5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-700">
+                Hatchback
+            </button>
+<button class="flex shrink-0 items-center justify-center h-9 px-5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-700">
+                Sedan
+            </button>
+<button class="flex shrink-0 items-center justify-center h-9 px-5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-700">
+                SUV
+            </button>
+<button class="flex shrink-0 items-center justify-center h-9 px-5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-700">
+                Luxury
+            </button>
+<!-- More Filters -->
+<button class="flex shrink-0 items-center gap-2 justify-center h-9 px-4 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 text-sm font-medium shadow-sm transition-all active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                Filters
+            </button>
+</div>
+</div>
+<!-- Vendor List -->
+<main class="flex-1 px-4 py-2 flex flex-col gap-4 pb-10">
+<!-- Vendor Card 1 -->
+<div class="flex flex-col sm:flex-row p-3 gap-3 bg-white dark:bg-gray-800 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100 dark:border-gray-700/50 overflow-hidden">
+<!-- Thumbnail -->
+<div class="relative w-full sm:w-32 h-40 sm:h-auto rounded-lg bg-gray-200 shrink-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Luxury car covered in thick white foam at a car wash" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeCpdZRIvb4LDvqMgm55RxXew73VRD5UkJEwHBJ-VpXc_NlMcKZeE5zDBpmcetEgYPsHOgG-cInKLscIYuzl991RBua50N4yK71sa7bIRRP9TvRbec7AZrLJXbaRBmbN2uYe52Gzjn6hxEZbe42jLM2h0PksFQPcG5cSlC6ge2A7XBqrcN8SIXwkhESaHQpX_0i7_Qvig9lm0Vc6TweSKgkCpH9vUnpqz7wSWH6kFHDpXjG8y1uMZ1WdEX7B_7X2NbZGPbpzcksKRf');">
+</div>
+<div class="absolute top-2 left-2 bg-white/90 dark:bg-black/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-slate-800 dark:text-white uppercase tracking-wider">
+                    Best Value
+                </div>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold text-[#0d121c] dark:text-white leading-tight">Sparkle Auto Spa</h3>
+<div class="flex items-center gap-1 text-[#0d121c] dark:text-white text-sm font-semibold">
+<span>4.8</span>
+<span class="material-symbols-outlined text-yellow-500 text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-slate-400 font-normal text-xs">(124)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>1.2 mi away • Downtown</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium">Exterior</span>
+<span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium">Interior</span>
+<span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium">Waxing</span>
+</div>
+</div>
+<a href="../car_wash_services_&_vehicle_type/code.html">
+<button class="w-full h-9 flex items-center justify-center bg-primary hover:bg-blue-600 text-white text-sm font-medium rounded-lg shadow-sm shadow-blue-500/20 transition-all active:scale-[0.98]">
+                    View Services
+                </button>
+</a>
+</div>
+<!-- Vendor Card 2 -->
+<div class="flex flex-col sm:flex-row p-3 gap-3 bg-white dark:bg-gray-800 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100 dark:border-gray-700/50 overflow-hidden">
+<div class="relative w-full sm:w-32 h-40 sm:h-auto rounded-lg bg-gray-200 shrink-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Blue car entering an automated car wash tunnel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDm-lmDr-AvYTtE6EST1Rak6fov2_-9cXNuBZBd9zCC2-n9323tpFmfmbJ8S7cH6GW2aXm2qDMQtS_joSDqJT2stbrzhYqy5sIS9hahabjfasl8eWkfccqmHQS1I-2YMUqOE-c-5RoMkEDllQnHcbGI17iC21tGlL0bqAcYoA8VkpLdJy3aOdPE9eoNPml6SEjy9aodJ-46av61YSe81hQSCBT0spSgIEbQeywKSFLK0_BR7s1gMjyCjMEqmTSnoMXWfMdddqYNM0-8');">
+</div>
+</div>
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold text-[#0d121c] dark:text-white leading-tight">Blue Wave Wash</h3>
+<div class="flex items-center gap-1 text-[#0d121c] dark:text-white text-sm font-semibold">
+<span>4.5</span>
+<span class="material-symbols-outlined text-yellow-500 text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-slate-400 font-normal text-xs">(89)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>3.4 mi away • Westside</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-slate-600 dark:text-slate-300 text-xs font-medium">Express</span>
+<span class="px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-slate-600 dark:text-slate-300 text-xs font-medium">Automatic</span>
+</div>
+</div>
+<a href="../car_wash_services_&_vehicle_type/code.html">
+<button class="w-full h-9 flex items-center justify-center bg-primary hover:bg-blue-600 text-white text-sm font-medium rounded-lg shadow-sm shadow-blue-500/20 transition-all active:scale-[0.98]">
+                    View Services
+                </button>
+</a>
+</div>
+</div>
+<!-- Vendor Card 3 -->
+<div class="flex flex-col sm:flex-row p-3 gap-3 bg-white dark:bg-gray-800 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100 dark:border-gray-700/50 overflow-hidden">
+<div class="relative w-full sm:w-32 h-40 sm:h-auto rounded-lg bg-gray-200 shrink-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Professional detailer polishing a red sports car hood" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoNYlcQD9kZ0zc4aMwSmxmVhLvfAO_CTmr5zh6pR3Zb2zG4aupuj7ySLCvCMcw54ofbTUs6yW7zm9Cd2_GG1R0sG2FjEJDqPi_1SMFjEwDL7RJJQEY0BgTYy9Y5b0XS5fIn4O6B2LXckZH21LpMhsV9QJbtwWTE09Si7tP171MFiWxW7Hvf88Te2tlHt4Ue1ghGKvptPwyqVdGs77B6HDTRob7dDTlqpg7lJDnXEzc7V0QxcNI_dMW8Rjw8P_DIUPfs4wFxRxZ0OHy');">
+</div>
+</div>
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold text-[#0d121c] dark:text-white leading-tight">Clean &amp; Shine Detailers</h3>
+<div class="flex items-center gap-1 text-[#0d121c] dark:text-white text-sm font-semibold">
+<span>4.9</span>
+<span class="material-symbols-outlined text-yellow-500 text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-slate-400 font-normal text-xs">(210)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>0.8 mi away • North Hills</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-xs font-medium">Full Detail</span>
+<span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-xs font-medium">Ceramic</span>
+</div>
+</div>
+<button class="w-full h-9 flex items-center justify-center bg-primary hover:bg-blue-600 text-white text-sm font-medium rounded-lg shadow-sm shadow-blue-500/20 transition-all active:scale-[0.98]">
+                    View Services
+                </button>
+</div>
+</div>
+<!-- Vendor Card 4 -->
+<div class="flex flex-col sm:flex-row p-3 gap-3 bg-white dark:bg-gray-800 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100 dark:border-gray-700/50 overflow-hidden opacity-90">
+<div class="relative w-full sm:w-32 h-40 sm:h-auto rounded-lg bg-gray-200 shrink-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center grayscale-[30%]" data-alt="Modern glass building of a car wash facility" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMCtc6DLR669RMqUlBNrpuKFrMY_wYliZjCIlIAqGgnuZ5JJfNKQZOjGcOEgBUoATfP9hKXnUbXonS43FPmXRd4B5JODrshWnh2PyWOoLdswEgCI3sWyx9ahK-46Ld7v2VnOAXSCEW-vM0fdOH3MJaqY6Sl1IKo8U7rZ6zRTW6EURzZXNQqcHnsN2uolz3k-wSCaDSAhhE-zATba8gMWiIcFtqDVFeVvXZA7OXKj9E8IrCinX8qgPfJoGrAVW7nBUfgrXnTuKnUQQ-');">
+</div>
+</div>
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold text-[#0d121c] dark:text-white leading-tight">EcoWash Station</h3>
+<div class="flex items-center gap-1 text-[#0d121c] dark:text-white text-sm font-semibold">
+<span>4.2</span>
+<span class="material-symbols-outlined text-yellow-500 text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-slate-400 font-normal text-xs">(45)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>5.1 mi away • Midtown</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium">Eco-Friendly</span>
+<span class="px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium">Waterless</span>
+</div>
+</div>
+<button class="w-full h-9 flex items-center justify-center bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 text-slate-700 dark:text-white text-sm font-medium rounded-lg transition-all active:scale-[0.98]">
+                    View Services
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Optional but makes it feel like an app) -->
+<nav class="sticky bottom-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pb-5 pt-3 px-6 flex justify-between items-center z-30">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[24px] fill-current" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+<span class="text-[10px] font-medium">Bookings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

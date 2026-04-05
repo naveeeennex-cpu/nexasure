@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Student Details &amp; Payments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d59f2",
+            "background-light": "#ffffff",
+            "text-main": "#0f172a", // Dark blue/black for main text
+            "text-sub": "#475569", // Slate 600 for sub text
+            "card-bg": "#ffffff", // White background for cards
+            "border-color": "#cbd5e1", // Slate 300 for darker borders
+            "status-blue": "#0d59f2",
+            "status-blue-bg": "#eff6ff",
+            "status-red": "#dc2626",
+            "status-red-bg": "#fef2f2"
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light text-text-main">
+<header class="flex items-center bg-background-light p-4 pb-2 justify-between sticky top-0 z-10 border-b border-transparent">
+<div class="text-text-main flex size-12 shrink-0 items-center justify-start cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</div>
+<h1 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Student Details</h1>
+<div class="flex size-12 shrink-0 items-center justify-end">
+<span class="material-symbols-outlined text-text-main cursor-pointer" style="font-size: 24px;">more_vert</span>
+</div>
+</header>
+<main class="flex flex-col flex-grow px-4 pb-6">
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 shadow-sm border border-border-color" data-alt="Profile picture of Alex Morgan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMaTW_zugqDlokFEUtPOcjPv8XunPCBUGDy_Byahj605PyP5O0ZJalw0Q7vAyqelKianLN9jS1zdXEQflaFqOSxZU3upVk-2Yvj27JVAD4TbNVO2LDqx4V07wEtz5Gv5dbMQMkfGM8EGGF9MAP2z4Mpp96zIew6db2eiRrAc5sRynwr8OlhPxo-6mShxix6xcbvd4lgguov50qU1eJCCdXuWLDRNItBiK_bx2pCosj5JthgfMTUG3MwRWKJRu2KC_nNJHFomgwkz_s");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-text-main text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Morgan</p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-text-sub" style="font-size: 18px;">mail</span>
+<p class="text-text-sub text-sm font-normal leading-normal">alex.morgan@example.com</p>
+</div>
+</div>
+<p class="text-text-sub text-sm font-normal leading-normal text-center mt-2">Enrolled on: 15 Aug, 2024</p>
+<div class="mt-4 text-center w-full max-w-[280px]">
+<div class="bg-status-blue-bg rounded-lg py-2.5 px-4 border border-blue-100">
+<p class="text-sm text-text-main flex items-center justify-center gap-1">
+<span class="font-medium text-text-sub">Classes Attended:</span>
+<span class="font-bold text-primary">5</span>
+<span class="text-text-sub">out of 8</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section>
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] px-0 pb-3 pt-2">Payment Status</h2>
+<div class="bg-card-bg border border-border-color rounded-xl p-4 shadow-sm">
+<div class="flex justify-between gap-x-6 py-3 border-b border-b-slate-100">
+<p class="text-text-sub text-sm font-normal leading-normal">Next Payment Date</p>
+<p class="text-text-main text-sm font-bold leading-normal text-right">15 Sep, 2024</p>
+</div>
+<div class="flex justify-between gap-x-6 py-3 border-b border-b-slate-100">
+<p class="text-text-sub text-sm font-normal leading-normal">Last Payment Date</p>
+<div class="text-right">
+<p class="text-text-main text-sm font-medium leading-normal">15 Aug, 2024</p>
+<p class="text-green-600 text-xs font-medium">Paid</p>
+</div>
+</div>
+<div class="flex justify-between gap-x-6 py-3">
+<p class="text-text-sub text-sm font-normal leading-normal">Outstanding Balance</p>
+<p class="text-primary text-base font-bold leading-normal text-right">$75.00</p>
+</div>
+</div>
+</section>
+<section class="mt-6">
+<div class="flex justify-between items-end pb-3">
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] px-0">Attendance History</h2>
+<a class="text-primary text-sm font-bold hover:underline mb-1" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-card-bg border border-border-color rounded-xl p-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">sports_martial_arts</span>
+</div>
+<div>
+<p class="text-text-main text-sm font-bold">Advanced Karate</p>
+<p class="text-text-sub text-xs">Today, 10:00 AM</p>
+</div>
+</div>
+<span class="bg-status-blue-bg text-status-blue px-2.5 py-1 rounded-full text-xs font-bold border border-blue-100">Present</span>
+</div>
+<div class="bg-card-bg border border-border-color rounded-xl p-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined" style="font-size: 20px;">fitness_center</span>
+</div>
+<div>
+<p class="text-text-main text-sm font-bold">Strength Training</p>
+<p class="text-text-sub text-xs">12 Aug, 04:00 PM</p>
+</div>
+</div>
+<span class="bg-status-red-bg text-status-red px-2.5 py-1 rounded-full text-xs font-bold border border-red-100">Absent</span>
+</div>
+<div class="bg-card-bg border border-border-color rounded-xl p-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">self_improvement</span>
+</div>
+<div>
+<p class="text-text-main text-sm font-bold">Yoga Flow</p>
+<p class="text-text-sub text-xs">10 Aug, 09:00 AM</p>
+</div>
+</div>
+<span class="bg-status-blue-bg text-status-blue px-2.5 py-1 rounded-full text-xs font-bold border border-blue-100">Present</span>
+</div>
+</div>
+</section>
+<div class="flex-grow"></div>
+<footer class="sticky bottom-0 bg-background-light py-3 border-t border-border-color mt-4">
+<div class="flex flex-1 gap-3 max-w-[480px] flex-col items-stretch">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-full shadow-sm hover:bg-blue-700 transition-colors">
+<span class="truncate">Record Payment</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-status-blue-bg text-primary border border-blue-100 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-blue-100 transition-colors">
+<span class="truncate">Send Reminder</span>
+</button>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

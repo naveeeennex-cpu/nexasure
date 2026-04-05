@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PickYourSlot - Venue Partner Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d59f2",
+            "primary-dark": "#0b46c2",
+            "background-light": "#ffffff",
+            "card-light": "#f8fafc",
+            "text-main": "#0f172a",
+            "text-secondary": "#64748b",
+            "border-light": "#e2e8f0",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display text-text-main">
+<div class="relative flex min-h-screen w-full flex-col pb-24">
+<header class="flex items-center bg-background-light p-4 pb-2 justify-between sticky top-0 z-10 border-b border-transparent sm:border-border-light/40">
+<div class="flex size-12 shrink-0 items-center">
+<div class="aspect-square w-10 h-10 rounded-full bg-cover bg-center bg-no-repeat shadow-sm" data-alt="User profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPKRhrLya4hceCxj99zGpQrxHaEU4xMO5sW-_xFRtLXj1kOUKGj3vojdGnGgMY61irVdtcWFatRsBkJAHiuZmGpnRSqB-FpdjO0LAM5DN21OJbW3evgFzXNGGjPE3fzkpty810h5SVxZ_PONZxamNMOXBtq8aJu2Gom2nh3SXwXhovZjcwMPOC2bIQlTJdZNNQMlR-G_R0_nD_vv0cVllbo-QsWex1DhpWRB6RwVsowHjZrO0VY9uMLY0S7bEo50ZK6HbltrCisfM-');"></div>
+</div>
+<div class="flex-1 ml-2">
+<button class="group flex items-center gap-1">
+<span class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] truncate">Main Gym Facility</span>
+<span class="material-symbols-outlined text-primary text-2xl transition-transform group-focus:rotate-180">expand_more</span>
+</button>
+</div>
+<div class="flex items-center justify-end gap-2">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-card-light text-text-main hover:bg-slate-100 transition-colors border border-border-light/50">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+</button>
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-card-light text-text-main hover:bg-slate-100 transition-colors border border-border-light/50">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<section class="flex w-full overflow-x-auto px-4 py-3">
+<div class="flex min-h-min flex-row items-start justify-start gap-4">
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="relative w-full aspect-square rounded-full border-2 border-dashed border-primary/50 flex items-center justify-center bg-card-light">
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+</div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">Your Story</p>
+</div>
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="w-full aspect-square rounded-full bg-cover bg-center p-1 bg-clip-content border-2 border-primary" data-alt="Story from FitHub" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAh76pNBgGOCMwpRgLzd_qjz3r3E22pkNY2dDqHcTbvWInRlO24Js48spa-jmkpeFRwy883qhWpzYP9PUsgXZuwLEmuA04CNKxKf1uT9wet2ggaRmhbkkqf2TUptCZK38WEFoylqGDjjau-oVxyqBuujKQoIHjL7GpAjbuUUdh6XBll3DmjEq9Mox-qEPCWie0MHwVVVtMjTlDmSjS4lOX-UIUjqynOd7MiNB5r5I4pGtDILz_S8IUWE7yj82YrSUFvorpc2WvnOUJF');"></div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">FitHub</p>
+</div>
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="w-full aspect-square rounded-full bg-cover bg-center p-1 bg-clip-content border-2 border-primary" data-alt="Story from YogaFlow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB50_U9XSWRu0Y4OO1vrDlHJG748iHWWxU-tpOTRIIGwaNwCG2PwaXCs8kdyS3ifda9T9ubnB6Is1le4HYQucGopNf2A8jNQyU5lKtKxUXH88SpR7Ty4kpqxAeEiloPXlZxrXQQegoUQ9kH7C4yVZ3NNWctwch--B4BwomL3H45llf2gjQ6mHq9U1u13d-3XR9i7xsWIZ0HCEarYbaMUfQ8ZTKzXRRD36StelViyKtbWk0qSBYOmeV8U-WPHuDwAUUEXI5eVduOA7iL');"></div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">YogaFlow</p>
+</div>
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="w-full aspect-square rounded-full bg-cover bg-center p-1 bg-clip-content border-2 border-primary" data-alt="Story from ArtSpace" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU6XAwXEVxxOpALMwYG2lemsZV9ur2z0yoL3VsB46LpsKLU4-gcEZeeGINmFE7rpcqV6Jna28mUnGQIb-Xfsjzd_sWI8hANStZTPOPX2DWFvHy_DGrUqUWYc4mCp8tmVO0ufwPd73zCl-FjCapak-oLcFrADcFlLz4ZAKTBxa3xiJxBi3crAicKxyYPhcRmHsfI5YTZD0lEG49FoSbt4P7exmlklU96rOk3wyoRa0z7ZeGhpu9othlQ3bn6YOQHp8XgS58sk5ilVsG');"></div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">ArtSpace</p>
+</div>
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="w-full aspect-square rounded-full bg-cover bg-center p-1 bg-clip-content border-2 border-primary" data-alt="Story from Cookery" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGVjXZIe5L8BCPP7qmxYTDCe1fJ1XrpsoBRmqeDmZbfk1jbSMtZMDnY3SFyJ0AbY1mv2iKEV4Oso77BQA6IXP0Bfgjj1T_X5cziCmw2DlZBRSJeGVKM8b4wIOhCLaYqzhx-sKxM0-DWXvlO_LHqFOaENcTvaNlypSYf0TdnLYVPZyWzcplpaAMNZ7M8CXmSPElrydTE8mpTlknvfRsYcTGkjifLKI0wT4BuFh3gR0hCSfoIz4Rc6TS84Lb2cdKr4tRzlL9WCoN3927');"></div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">Cookery</p>
+</div>
+<div class="flex flex-col justify-center gap-2 w-20 text-center shrink-0">
+<div class="w-full aspect-square rounded-full bg-cover bg-center p-1 bg-clip-content border-2 border-gray-300" data-alt="Story from MindMeld" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxVKjccUf2RhM_5XGecd6IW41jJge9x4wN5bqyBkKqTJd09ziXCRSEQLrqlrQSUC7Q1jEhe7OPeElfqm3JWPF1PveVNl-_CmPA5eCkaHE3LnuRmWe-kw-sfRSj8LhCRdMoCxDBdBcKyldPPFSIziVRAbpf2XqYYKc3xvxKuHy7vXKHEeUk847GHSnYmchJL9rnrsRFU5ljLHjnnpm4enXtbwFtnBDyeWFJ9L-upK9F2lUYEaPtddMCwwZdvT0mUY6twgqmeFNILQzm');"></div>
+<p class="text-text-secondary text-[13px] font-normal leading-normal">MindMeld</p>
+</div>
+</div>
+</section>
+<h2 class="text-text-main text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Today's Overview</h2>
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pt-0">
+<div class="flex flex-col gap-2 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<p class="text-text-secondary text-base font-medium leading-normal">Today's Bookings</p>
+<p class="text-primary-dark tracking-light text-3xl font-bold leading-tight">12</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<p class="text-text-secondary text-base font-medium leading-normal">Revenue</p>
+<p class="text-primary-dark tracking-light text-3xl font-bold leading-tight">$1,250</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-4 bg-card-light border border-border-light shadow-sm sm:col-span-2">
+<p class="text-text-secondary text-base font-medium leading-normal">New Sign-ups</p>
+<p class="text-primary-dark tracking-light text-3xl font-bold leading-tight">4</p>
+</div>
+</section>
+<h2 class="text-text-main text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Upcoming Bookings</h2>
+<section class="flex flex-col gap-3 px-4 pb-4">
+<div class="flex items-center gap-4 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<div class="flex flex-col items-center justify-center text-primary font-bold">
+<p class="text-sm">09:00</p>
+<p class="text-xs">AM</p>
+</div>
+<div class="h-full w-px bg-primary/20"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-main">Advanced Yoga</p>
+<p class="text-sm text-text-secondary">with Olivia Chen</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<div class="flex flex-col items-center justify-center text-primary font-bold">
+<p class="text-sm">11:30</p>
+<p class="text-xs">AM</p>
+</div>
+<div class="h-full w-px bg-primary/20"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-main">Personal Training</p>
+<p class="text-sm text-text-secondary">with Liam Johnson</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+<button class="w-full text-center text-primary font-semibold py-2 hover:text-primary-dark transition-colors">View All</button>
+</section>
+<h2 class="text-text-main text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-2">Active Passes/Courses</h2>
+<section class="flex flex-col gap-3 px-4 pb-8">
+<div class="flex items-center gap-4 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-text-main">Gym Access - Monthly</p>
+<p class="text-sm text-text-secondary">32 Active Participants</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-4 bg-card-light border border-border-light shadow-sm">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">self_improvement</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-text-main">Yoga Beginners Course</p>
+<p class="text-sm text-text-secondary">15 Active Participants</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+<button class="w-full text-center text-primary font-semibold py-2 hover:text-primary-dark transition-colors">View All</button>
+</section>
+<nav class="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-border-light">
+<div class="flex justify-around items-center h-20">
+<a class="flex flex-col items-center justify-center text-primary w-1/4" href="#">
+<span class="material-symbols-outlined filled">home</span>
+<span class="text-xs font-semibold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">calendar_view_day</span>
+<span class="text-xs font-semibold mt-1">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-xs font-semibold mt-1">Passes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs font-semibold mt-1">Courses</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

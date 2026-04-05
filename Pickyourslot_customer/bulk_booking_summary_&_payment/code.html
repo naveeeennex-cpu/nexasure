@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bulk Booking Summary</title>
+<!-- Google Fonts: Lexend -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white dark:bg-[#1a2230] px-4 py-3 shadow-sm">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Booking Summary</h1>
+<div class="size-10"></div> <!-- Spacer for alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 pt-6 flex flex-col gap-6">
+<!-- Venue Summary Card -->
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-[#1a2230] shadow-sm ring-1 ring-slate-900/5 dark:ring-white/10">
+<!-- Image Header -->
+<div class="h-40 w-full bg-cover bg-center" data-alt="Modern sports arena exterior with glass facade" style='background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDN-b9YsX2B_UqsroPtuBUmwiUGNpSPOXwkIquIqTmrC7L-YR9dgpRPltHlH80E60DrUnNn_w4YJ1sa-4VseUBIUYLlRybICk3pkTSw0cVLrvpt367ozhyxybazRpVpAu4WCosT_YDRUpxsz1kyXou5smTWb_yNV0Rfm2_Or8cO5B6279TQRv4jHp7UmC0Ofg3VSmNfcUofCU6ycFX-CyQ2kzAcnMdk7XG2Q4Okj_EMNv78C1iCBHEc28dBPDUwdXsekpACpEz1G8y-");'>
+<div class="flex h-full flex-col justify-end p-4">
+<h2 class="text-2xl font-bold text-white shadow-sm">Grand Sports Arena</h2>
+</div>
+</div>
+<!-- Details List -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Date & Participants Row -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Date</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Oct 12 - Oct 14, 2023</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Participants</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">25 Adults</p>
+</div>
+</div>
+</div>
+<!-- Facilities Chips -->
+<div>
+<p class="mb-2 text-xs font-medium text-slate-500 dark:text-slate-400">Facilities Included</p>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-slate-300 ring-1 ring-inset ring-slate-600/10">
+                                Tennis Court A
+                            </span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-slate-300 ring-1 ring-inset ring-slate-600/10">
+                                Swimming Pool
+                            </span>
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-slate-300 ring-1 ring-inset ring-slate-600/10">
+                                Locker Room
+                            </span>
+</div>
+</div>
+<div class="my-1 h-px w-full bg-slate-100 dark:bg-slate-800"></div>
+<!-- Total Cost -->
+<div class="flex items-center justify-between">
+<span class="text-base font-medium text-slate-600 dark:text-slate-400">Total Booking Cost</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">$1,200.00</span>
+</div>
+</div>
+</div>
+<!-- Payment Options -->
+<div class="flex flex-col gap-3">
+<h3 class="px-1 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Payment Options</h3>
+<div class="flex flex-col gap-3 sm:flex-row">
+<!-- Option 1: Advance -->
+<label class="group relative flex cursor-pointer rounded-xl border border-primary bg-blue-50/50 p-4 shadow-sm focus:outline-none dark:bg-blue-900/10 dark:border-primary/50">
+<input checked="" class="peer sr-only" name="payment-option" type="radio" value="advance"/>
+<span class="flex flex-1">
+<span class="flex flex-col">
+<span class="block text-sm font-medium text-slate-900 dark:text-white">Advance Payment (20%)</span>
+<span class="mt-1 flex items-center text-xs text-slate-500 dark:text-slate-400">Pay the rest at venue</span>
+<span class="mt-2 text-lg font-bold text-primary">$240.00</span>
+</span>
+</span>
+<span aria-hidden="true" class="pointer-events-none absolute -inset-px rounded-xl border-2 border-primary peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 border-transparent"></span>
+<span class="absolute right-4 top-4 h-5 w-5 rounded-full border border-slate-300 bg-white dark:bg-slate-800 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<span class="h-2 w-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></span>
+</span>
+</label>
+<!-- Option 2: Full -->
+<label class="group relative flex cursor-pointer rounded-xl border border-slate-200 bg-white p-4 shadow-sm focus:outline-none dark:bg-[#1a2230] dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600">
+<input class="peer sr-only" name="payment-option" type="radio" value="full"/>
+<span class="flex flex-1">
+<span class="flex flex-col">
+<span class="block text-sm font-medium text-slate-900 dark:text-white">Full Payment</span>
+<span class="mt-1 flex items-center text-xs text-slate-500 dark:text-slate-400">Complete transaction now</span>
+<span class="mt-2 text-lg font-bold text-slate-900 dark:text-white">$1,200.00</span>
+</span>
+</span>
+<span aria-hidden="true" class="pointer-events-none absolute -inset-px rounded-xl border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10"></span>
+<span class="absolute right-4 top-4 h-5 w-5 rounded-full border border-slate-300 bg-white dark:bg-slate-800 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<span class="h-2 w-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></span>
+</span>
+</label>
+</div>
+</div>
+<!-- Terms & Conditions -->
+<div class="flex flex-col gap-2">
+<h3 class="px-1 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Terms &amp; Conditions</h3>
+<div class="h-32 overflow-y-auto rounded-lg border border-slate-200 bg-white p-4 text-xs leading-relaxed text-slate-600 dark:border-slate-700 dark:bg-[#1a2230] dark:text-slate-300 scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-600">
+<p class="mb-2 font-bold">1. Cancellation Policy</p>
+<p class="mb-3">Cancellations made 48 hours prior to the booking date are eligible for a full refund. Any cancellation made within 48 hours will incur a 20% cancellation fee deducted from the advance payment.</p>
+<p class="mb-2 font-bold">2. Venue Rules</p>
+<p class="mb-3">Proper sports attire is mandatory. No food or drinks allowed inside the court area. The management reserves the right to deny entry if rules are not followed.</p>
+<p class="mb-2 font-bold">3. Liability</p>
+<p class="mb-3">The venue is not responsible for any lost items or injuries sustained during the activity. Participants engage in sports activities at their own risk.</p>
+<p class="mb-2 font-bold">4. Refund Process</p>
+<p class="">Refunds are processed within 5-7 business days to the original payment method.</p>
+</div>
+<div class="flex items-center gap-2 px-1">
+<div class="flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" id="terms" name="terms" type="checkbox"/>
+</div>
+<div class="text-xs leading-5 text-slate-600 dark:text-slate-400">
+                        I agree to the <span class="font-medium text-primary">Terms and Conditions</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white p-4 pb-8 dark:bg-[#1a2230] dark:border-slate-800">
+<div class="mx-auto max-w-lg">
+<button class="flex w-full items-center justify-between rounded-xl bg-primary px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/30 transition-transform active:scale-[0.98] hover:bg-blue-600">
+<span>Proceed to Pay</span>
+<span class="flex items-center gap-1">
+                        $240.00
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+        // Simple JS to toggle styling on radio buttons for visual feedback (simulating React state)
+        const radios = document.querySelectorAll('input[name="payment-option"]');
+        const labels = document.querySelectorAll('label.group');
+        const payButtonAmount = document.querySelector('button span.flex');
+
+        radios.forEach((radio) => {
+            radio.addEventListener('change', (e) => {
+                // Reset all styles
+                labels.forEach(lbl => {
+                    lbl.classList.remove('border-primary', 'bg-blue-50/50', 'dark:bg-blue-900/10', 'dark:border-primary/50');
+                    lbl.classList.add('border-slate-200', 'bg-white', 'dark:bg-[#1a2230]', 'dark:border-slate-700');
+                });
+
+                // Apply active style
+                const activeLabel = e.target.closest('label');
+                activeLabel.classList.remove('border-slate-200', 'bg-white', 'dark:bg-[#1a2230]', 'dark:border-slate-700');
+                activeLabel.classList.add('border-primary', 'bg-blue-50/50', 'dark:bg-blue-900/10', 'dark:border-primary/50');
+
+                // Update button text
+                if (e.target.value === 'advance') {
+                    payButtonAmount.innerHTML = '$240.00 <span class="material-symbols-outlined text-lg">arrow_forward</span>';
+                } else {
+                    payButtonAmount.innerHTML = '$1,200.00 <span class="material-symbols-outlined text-lg">arrow_forward</span>';
+                }
+            });
+        });
+    </script>
+</body></html>

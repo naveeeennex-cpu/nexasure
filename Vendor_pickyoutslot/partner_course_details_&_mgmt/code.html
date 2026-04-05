@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Course Details - PickYourSlot Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#007BFF", // Vibrant Blue
+              "background-light": "#FFFFFF",
+              "surface": "#F1F5F9",
+              "text-main": "#0F172A", // Dark Slate/Blue-Black
+              "text-sub": "#475569", // Slate 600 - Darker grey for light mode readability
+              "text-inactive": "#1E293B", // Slate 800 - Dark Blue for inactive
+              "accent-dark": "#1E3A8A", // Dark Blue
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display text-text-main">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light group/design-root overflow-x-hidden">
+<div class="flex items-center bg-background-light p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-100">
+<div class="flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-text-main" style="font-size: 24px;">arrow_back</span>
+</div>
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Advanced Yoga - Tue 6 PM</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-main gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-text-main" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+<div class="p-4 pt-4">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface p-4 shadow-sm">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-text-sub text-sm font-medium leading-normal">John Doe, Instructor</p>
+<p class="text-text-main text-lg font-bold leading-tight">Course Details</p>
+<p class="text-text-sub text-sm font-medium leading-normal">Tue, 6:00 PM - 7:00 PM</p>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1 shadow-sm" data-alt="A serene yoga pose" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRBpS_63AqHhKqLnYgIpORa25rccXYqXD1oXj9DYRnrrmWD_Jtx_I0rxAAU13jEOOTB5ZRgS0mSg1vLRmHs8Vb7jghnUnqNbyDW2aDZOZ7OI9KEMKGNi2DCU2x-t64A-BAR1uMm1FmIT7Jm78CGxcop-E6sXyBaqm7_Pkil6Mwzi88PAhr90T2Sz_8wOFQdSoS5j34ue-njQo5u0Eq5XI8nMJpQxnlVkOaC1bPW4cH68odhfrCKWcyjtGMlf_BZYj1WDosML-hSbf2");'></div>
+</div>
+</div>
+<div class="flex px-4 py-3">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-surface p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:shadow-md has-[:checked]:text-white text-text-inactive text-sm font-semibold leading-normal transition-all duration-200">
+<span class="truncate">Students</span>
+<input checked="" class="invisible w-0" name="tab-toggle" type="radio" value="Students"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:shadow-md has-[:checked]:text-white text-text-inactive text-sm font-semibold leading-normal transition-all duration-200">
+<span class="truncate">Attendance</span>
+<input class="invisible w-0" name="tab-toggle" type="radio" value="Attendance"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-2">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-text-sub flex border-none bg-surface items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-main focus:outline-0 focus:ring-0 border-none bg-surface focus:border-none h-full placeholder:text-text-sub px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search students..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-0 px-4 pb-24">
+<div class="flex items-center gap-4 bg-background-light min-h-[72px] py-3 justify-between border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shadow-sm" data-alt="Avatar of Eleanor Pena" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBA_uRbIZk6bpfduaD77g-99j1CG0jw2uHmzCyc5-AfPl3HY9XhV8bzX9HyFW2qdXYc0T5nYUDv1HCsmxoEpKAUyS-h7AzWVcLLaxsbd8_Tuafxq8-o3V26vc5KO9LrGgt3IjDqKTgSMSE42TJbmKADtUuySvq2WGdZDQfksxhZJSONARk58m9gkL2mxuhR2SRPl5Fb_MjMDR8bkLw0LKncI5c_oZ_CKEXRLU4Zecdls1i22cXSBOAp7Eesxr1j5QBvZbko8jGkESmj");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main text-base font-semibold leading-normal line-clamp-1">Eleanor Pena</p>
+<p class="text-text-sub text-sm font-normal leading-normal line-clamp-2">eleanor.p@example.com</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-700">Paid</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-background-light min-h-[72px] py-3 justify-between border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shadow-sm" data-alt="Avatar of Cameron Williamson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbg_PmsS567DFK7ilTSPOdm75FjSxzR1BRSRDOf_ytntrFqSUwNY5mAqw34kwVTTmaYgcaf5_ct_NNtMh1sGurBvG_-gpntvmIy9D1uaxymEj6nq0MQYZ4Lx_K5hLOROh9sIujguHSm0ktI7Gcm_jJ_5C3SyUaqZbxbbe-4CEtzjcs4pGVpPOFyrX3q6azzgwaE6atU4KGfPYacC-uJOMNgzOC9zIcCVIRk2qBfW0wt7lZ1dyX4-uq6aWu8HY_t6nEIg1BMXv109DQ");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main text-base font-semibold leading-normal line-clamp-1">Cameron Williamson</p>
+<p class="text-text-sub text-sm font-normal leading-normal line-clamp-2">cameron.w@example.com</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-orange-700">Pending</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-background-light min-h-[72px] py-3 justify-between border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shadow-sm" data-alt="Avatar of Jane Cooper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZSIfyB9quPeLHa71Z4uhv7jrhYrvU8jXkVnRt7NKSskUnzDtckLad5cgod11SBW-pIgAzyNOcqKg5vu20FgjVR3Anj8b0S8fsF34xL_vfJkTw4S7By8VUDDoiO8rWMnk8rTehkVTNCXy-Wayk2ZfUVArdC7MVECOf4LiFkM-XGv-88YX4j1LgDV7Z-qBPPidJqqMRN6Q_JV7kzkwylNHfmo2YsEH6XlMYKyzU6vYmlUm_SmE0MmdDx7hB4QMwq11QWedD-y96QFcr");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main text-base font-semibold leading-normal line-clamp-1">Jane Cooper</p>
+<p class="text-text-sub text-sm font-normal leading-normal line-clamp-2">jane.cooper@example.com</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-700">Paid</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-background-light min-h-[72px] py-3 justify-between border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shadow-sm" data-alt="Avatar of Cody Fisher" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARegxIg3yjIVbtxfQKnwx4IPgTyd7pWhY1eUqYWSzC5-pnRnBiQKsIxReeOLpOIqkg4H7GEG40YIyDaAuBL-BsSlKC4pIfQ0jkKwwVFJjGBeTmfRihe6puZFX7guW9eUQ-pPPogIE07yHV6TfcGTE2kKU_P5jpchwpxXvQW4JkAGd_dR6L3h0OKv-OZa9tCJAbIcxup13A1V_Xx3jF0IgWdoIKxnsRkedIrpDcE4WXSIwzdHB8f4qc8mZTQT1_IqiC7oYEdQp1_B2H");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main text-base font-semibold leading-normal line-clamp-1">Cody Fisher</p>
+<p class="text-text-sub text-sm font-normal leading-normal line-clamp-2">cody.fisher@example.com</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-700">Paid</span>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6">
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-blue-200 transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" style="font-size: 32px;">add</span>
+</button>
+</div>
+</div>
+</body></html>

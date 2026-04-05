@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Salon Listing Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "surface-light": "#f8f9fa",
+                        "surface-dark": "#1a2231",
+                        "text-primary": "#0a2540",
+                        "text-secondary": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-primary dark:text-white min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-primary dark:text-white">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<h1 class="text-text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Select a Salon</h1>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-primary dark:text-white">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</button>
+</div>
+</header>
+<!-- Filter Chips -->
+<div class="bg-background-light dark:bg-background-dark py-2">
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar">
+<!-- Active Chip -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-3 pr-4 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-size: 18px;">check</span>
+<span class="text-sm font-medium leading-normal">All</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-primary dark:text-white pl-4 pr-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-sm font-medium leading-normal">Men</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-primary dark:text-white pl-4 pr-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-sm font-medium leading-normal">Women</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-primary dark:text-white pl-4 pr-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-sm font-medium leading-normal">Kids</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-primary dark:text-white pl-3 pr-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="material-symbols-outlined" style="font-size: 18px;">tune</span>
+<span class="text-sm font-medium leading-normal">Filters</span>
+</button>
+</div>
+</div>
+<!-- Salon List -->
+<main class="flex-1 px-4 py-4 space-y-4">
+<!-- Card 1 -->
+<div class="group flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+<!-- Image -->
+<div class="w-full sm:w-32 h-40 sm:h-auto shrink-0 bg-center bg-no-repeat bg-cover rounded-lg relative overflow-hidden" data-alt="Modern salon interior with bright lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuaVk7vXmV4o7SMpPTj4mjq4ROsqQGnHHqcTxQgt7BO8p_EMxqQA0pQUp5GdUTDy2dfjR73h_ktF6CZjn0W8koXvdpdcVlvkXdarfrRgVl0y3cRv9htNCjoFpsvbaHrvUWy0Pt2qBVrZcloywfMbDlNrP52RvPtjP5FFBtMb_y2X2omDg_nWzyKBGrXy9qzRA02I9e1MJW9nFGV7-uUVMn9FCVR6mINlpJGU86W6NIJAn695cHmgcHIOoVm1nfpmq6M54MKairT-nN");'>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/60 backdrop-blur rounded-md px-1.5 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 fill-1" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold text-text-primary dark:text-white">4.8</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-1 flex-col justify-between gap-3">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-text-primary dark:text-white text-base font-bold leading-tight">Luxe Hair Studio</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">Open</span>
+</div>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal leading-normal truncate">1.2 km • Downtown Ave</p>
+</div>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Haircut</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Styling</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Color</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-xs text-text-secondary dark:text-gray-500 font-normal">312 Reviews</p>
+<a href="../salon_profile_&_service_selection/code.html">
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold shadow-md shadow-blue-500/20 active:scale-95 transition-all hover:bg-blue-600">
+                        View Services
+                    </button>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+<!-- Image -->
+<div class="w-full sm:w-32 h-40 sm:h-auto shrink-0 bg-center bg-no-repeat bg-cover rounded-lg relative overflow-hidden" data-alt="Classic barbershop with leather chairs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNlvAaDn2cOUuics6RowBu6EEb3AE-Tcr6RMDZjhbQCdjBMVzruSEAD8AUFG6alPI6s1ZBU4c4H22UjjJT0KMBPvW-bPrOAR0nsi-_P-2gmaO8Pe4TqJes62zLTPiy98yNc8kj5kILGPeaVG_OGJgwH2dg4CzFXclXh36XLa8aMsnDWnWvhF_TLa6lySwJDZexhwu5FuIg_TRyD_EIxJsl-lRwMtnAzGrlZ4voCnl06iSENKvFfmy3TOEhF-NM-tUjPMqU0s0QHAy_");'>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/60 backdrop-blur rounded-md px-1.5 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 fill-1" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold text-text-primary dark:text-white">4.9</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-1 flex-col justify-between gap-3">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-text-primary dark:text-white text-base font-bold leading-tight">The Grooming Lounge</h3>
+<!-- No status tag for variety -->
+</div>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal leading-normal truncate">0.8 km • Westside Plaza</p>
+</div>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Shave</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Facial</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Massage</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-xs text-text-secondary dark:text-gray-500 font-normal">150 Reviews</p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold shadow-md shadow-blue-500/20 active:scale-95 transition-all hover:bg-blue-600">
+                        View Services
+                    </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+<!-- Image -->
+<div class="w-full sm:w-32 h-40 sm:h-auto shrink-0 bg-center bg-no-repeat bg-cover rounded-lg relative overflow-hidden" data-alt="Luxury spa interior with towels and candles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqOlWvBis56YXdAjveMhypbbPXp-nyqRA0gqatlyj2gIAI51lIomX_3DYinQML-vI8Ujy9rf1ORWKV7ehSnURTGR4lK0HwV6Y0P7t-v1F426pj9ZSBNSJjlHmfGv8FoGpKS7zkr8KeM2m6S04-T0ssyg4s54-_mTG0i5SohBLg3FwsMOrat1m0F6qWA1aWSUiGyzXK_f4ZGcj-LT0Bd0K5gyqfO1jrNQ7b4j_-gEFdyKzZDH_-lgKr8GYjyr2NpLgAN1Zow-wxvTba");'>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/60 backdrop-blur rounded-md px-1.5 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 fill-1" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold text-text-primary dark:text-white">4.7</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-1 flex-col justify-between gap-3">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-text-primary dark:text-white text-base font-bold leading-tight">Serenity Spa &amp; Salon</h3>
+<span class="text-xs font-medium text-text-secondary dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">Closed</span>
+</div>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal leading-normal truncate">2.5 km • North Hills</p>
+</div>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Spa</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Manicure</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Hair</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-xs text-text-secondary dark:text-gray-500 font-normal">500+ Reviews</p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold shadow-md shadow-blue-500/20 active:scale-95 transition-all hover:bg-blue-600">
+                        View Services
+                    </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+<!-- Image -->
+<div class="w-full sm:w-32 h-40 sm:h-auto shrink-0 bg-center bg-no-repeat bg-cover rounded-lg relative overflow-hidden" data-alt="Modern hair salon washing station area" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX49JGO4ekYz8T9EKeC--MCMfFchsq2axD36yc3YKHxe89YHvcSPZFmZIWfD67HW8ONtt-4wkf2hBMuQ8GBdGPSmCfK6BQbtA3Xbh6_Wopa2fC4mhsAc086c4tdze571gc9cxdhv2ZZYWUr8c7b_axr8PWkg2SoONBehfHb5zkcD7fX0DkGDM1VJEnFsRngIrcl0VNAla374VXMVg51Vmb556ZjvF5dFHRhps6K7ssf7uvLWBlc7r0E_p16_x3XGoRhh-n1uVqK4Z7");'>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/60 backdrop-blur rounded-md px-1.5 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 fill-1" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold text-text-primary dark:text-white">5.0</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-1 flex-col justify-between gap-3">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-text-primary dark:text-white text-base font-bold leading-tight">Urban Chic Cuts</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">Open</span>
+</div>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal leading-normal truncate">3.1 km • Arts District</p>
+</div>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Styling</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[10px] font-medium text-text-secondary dark:text-gray-300">Extensions</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-xs text-text-secondary dark:text-gray-500 font-normal">89 Reviews</p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold shadow-md shadow-blue-500/20 active:scale-95 transition-all hover:bg-blue-600">
+                        View Services
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<div class="h-4 bg-transparent"></div>
+</body></html>

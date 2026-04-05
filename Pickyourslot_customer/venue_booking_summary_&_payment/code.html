@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Booking Summary</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-dark": "#0b4bc9",
+                        "secondary-text": "#49659c",
+                        "dark-text": "#0B2C5B",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for Terms section */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .terms-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terms-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .terms-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .terms-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-dark-text font-display antialiased selection:bg-primary/20 selection:text-primary">
+<div class="relative flex min-h-screen w-full flex-col mx-auto max-w-md bg-background-light shadow-2xl overflow-hidden pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 px-4 py-3 flex items-center justify-between">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-100 transition-colors text-dark-text">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-dark-text text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Booking Summary</h1>
+</header>
+<main class="flex-1 overflow-y-auto">
+<!-- Venue Summary Section -->
+<section class="p-4 pt-6">
+<h2 class="text-dark-text tracking-tight text-xl font-bold leading-tight mb-4">Order Summary</h2>
+<!-- Venue Card -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4">
+<div class="flex gap-4 items-start">
+<div class="w-20 h-20 shrink-0 rounded-xl bg-gray-200 bg-cover bg-center shadow-inner" data-alt="Badminton court with vibrant green flooring and net" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYypRJoY-xkKwq2pbbjw6VH4v7jw4rljIEA72PWNR5joJ8czwFjGAQuJKxWZHpJZc4olGXQxXDcoJdd9NiowOvCWpfBVjwonNFaGBCF_gq1nWeXMd5it5dIdT_3XO4Q-VA5MlwKhbwzoWkDAA7WxDn2YoG0dh7o1WXYm4BvTNJ66cqQXqxwUAJbEOfO3L_k0_QMTPzdxYLCECq9Va9ZWTGBFc_edA19Sjqtj_fYNmIED1fyUm_SYXfkhrRqs9JkQ76FvwH1yMbja9o');">
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<h3 class="text-dark-text text-base font-bold leading-tight">Smash Arena - Downtown</h3>
+<div class="flex items-center gap-1 text-secondary-text">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<p class="text-xs font-normal leading-normal line-clamp-1">123 Sport Avenue, Cityville</p>
+</div>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 w-fit">
+<span class="material-symbols-outlined text-primary text-[14px]">sports_tennis</span>
+<span class="text-primary text-xs font-semibold">Badminton</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Details List -->
+<div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 divide-y divide-gray-50">
+<div class="flex justify-between items-center py-3 first:pt-0">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-blue-50 text-primary">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</div>
+<p class="text-secondary-text text-sm font-medium">Court</p>
+</div>
+<p class="text-dark-text text-sm font-semibold">Court 05</p>
+</div>
+<div class="flex justify-between items-center py-3">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-blue-50 text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<p class="text-secondary-text text-sm font-medium">Date</p>
+</div>
+<p class="text-dark-text text-sm font-semibold">Sat, 14 Oct 2023</p>
+</div>
+<div class="flex justify-between items-center py-3">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-blue-50 text-primary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<p class="text-secondary-text text-sm font-medium">Time</p>
+</div>
+<p class="text-dark-text text-sm font-semibold">06:00 PM - 08:00 PM</p>
+</div>
+<div class="flex justify-between items-center py-3 last:pb-0">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-blue-50 text-primary">
+<span class="material-symbols-outlined text-[20px]">attach_money</span>
+</div>
+<p class="text-secondary-text text-sm font-medium">Hourly Rate</p>
+</div>
+<p class="text-dark-text text-sm font-semibold">$20.00 / hr</p>
+</div>
+</div>
+</section>
+<!-- Payment Options -->
+<section class="px-4 pb-6">
+<h2 class="text-dark-text tracking-tight text-xl font-bold leading-tight mb-4 pt-2">Payment Options</h2>
+<div class="flex flex-col gap-3">
+<!-- Option 1: Full Payment (Selected) -->
+<label class="relative flex items-center justify-between p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer transition-all shadow-sm group">
+<input checked="" class="peer sr-only" name="payment_type" type="radio" value="full"/>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-5 h-5 rounded-full border border-primary bg-primary text-white">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="text-dark-text font-bold text-sm">Full Payment</span>
+<span class="text-secondary-text text-xs">Pay the total amount now</span>
+</div>
+</div>
+<span class="text-primary font-bold text-lg">$40.00</span>
+</label>
+<!-- Option 2: Advance Payment -->
+<label class="relative flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white hover:border-primary/50 cursor-pointer transition-all shadow-sm">
+<input class="peer sr-only" name="payment_type" type="radio" value="advance"/>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border border-gray-300"></div>
+<div class="flex flex-col">
+<span class="text-dark-text font-bold text-sm">Advance Payment</span>
+<span class="text-secondary-text text-xs">Pay 20% now to reserve</span>
+</div>
+</div>
+<span class="text-dark-text font-bold text-lg opacity-60">$8.00</span>
+</label>
+</div>
+<!-- Price Breakdown -->
+<div class="mt-6 px-2 space-y-2">
+<div class="flex justify-between text-sm text-secondary-text">
+<span>Subtotal</span>
+<span>$38.00</span>
+</div>
+<div class="flex justify-between text-sm text-secondary-text">
+<span>Service Fee &amp; Tax</span>
+<span>$2.00</span>
+</div>
+<div class="my-2 border-t border-dashed border-gray-300"></div>
+<div class="flex justify-between items-center">
+<span class="text-dark-text font-bold text-base">Total Payable</span>
+<span class="text-primary font-bold text-xl">$40.00</span>
+</div>
+</div>
+</section>
+<!-- Terms and Conditions -->
+<section class="px-4 pb-6">
+<div class="bg-white rounded-xl border border-gray-200 p-4">
+<h3 class="text-dark-text font-bold text-sm mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-text text-[18px]">gavel</span>
+                        Terms &amp; Conditions
+                    </h3>
+<div class="h-24 overflow-y-auto terms-scroll pr-2 text-xs text-secondary-text leading-relaxed">
+<p class="mb-2">1. Cancellation Policy: Bookings can be cancelled up to 24 hours before the scheduled time for a full refund. Cancellations within 24 hours are non-refundable.</p>
+<p class="mb-2">2. Court Rules: Only non-marking shoes are allowed on the court. Please bring your own rackets and shuttlecocks unless renting.</p>
+<p class="mb-2">3. Conduct: Maintain sportsmanship. Aggressive behavior will result in a ban from the venue.</p>
+<p>4. Safety: The venue is not responsible for any injuries sustained during play. Play at your own risk.</p>
+</div>
+<div class="mt-3 pt-3 border-t border-gray-100">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 rounded border-gray-300 text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="text-xs font-medium text-dark-text group-hover:text-primary transition-colors">I agree to the terms and conditions</span>
+</label>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100 p-4 px-6 pb-8 mx-auto max-w-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between mb-3 md:hidden">
+<div class="flex flex-col">
+<span class="text-xs text-secondary-text font-medium">Total Amount</span>
+<span class="text-dark-text font-bold text-lg">$40.00</span>
+</div>
+<div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-md font-medium">
+                    Secure Checkout
+                 </div>
+</div>
+<a href="../venue_booking_confirmation/code.html">
+<button class="w-full bg-primary hover:bg-primary-dark active:scale-[0.98] transition-all text-white font-bold text-lg py-3.5 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+<span>Pay Now</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</a>
+</div>
+</div>
+</body></html>

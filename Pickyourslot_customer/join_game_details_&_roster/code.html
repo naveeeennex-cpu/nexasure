@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join Game Details &amp; Roster</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2433",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-surface-light dark:bg-surface-dark shadow-xl">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Match Details</h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col pb-28"> <!-- Added padding bottom for sticky footer -->
+<!-- Hero Section -->
+<div class="px-4 pt-4">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary mb-2">
+                    Open for 2 more
+                </span>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left mb-1">Friendly 5v5 Cricket Match</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Hosted by Rahul K.</p>
+</div>
+<!-- Date & Location Cards -->
+<div class="space-y-1 px-4 mb-6">
+<!-- Date -->
+<div class="flex items-center gap-4 py-3 border-b border-gray-100 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Saturday, Oct 14</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">10:00 AM - 1:00 PM</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex items-center gap-4 py-3">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal line-clamp-1">City Sports Complex</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1">123 Stadium Road, Metro City</p>
+</div>
+<button class="text-primary text-sm font-semibold">Map</button>
+</div>
+</div>
+<!-- Map Preview -->
+<div class="px-4 mb-8">
+<div class="w-full bg-center bg-no-repeat aspect-[21/9] bg-cover rounded-xl object-cover relative overflow-hidden shadow-sm" data-alt="Map showing location of City Sports Complex" data-location="Metro City" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAFp8UsiXkAy2IBsgFTamDAjPWKg1bolyhNc2dxBHLFcdGxChtuKKimqzzQB88IT0mOt-kC54AssN_kEUcUl99YbrkfJvYok5Xlvg4likFNtT2jqWpGzsuRRDtM7pyFgY10qiQQIDL61iGyNJ5TZiAzBgu-prnEuK7lixpZUtFhSnNAlXVk4tb_Slz_D3fZGIQiIr8ce9QHt3vhnfG0XbPS4jw1HHKgjJIEmlu8_2_rgsJKltrRYYqh7b0UtRpRwHW614-iVY4Y5bx");'>
+<div class="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors cursor-pointer"></div>
+<div class="absolute bottom-2 right-2 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-medium backdrop-blur-sm">Metro City</div>
+</div>
+</div>
+<div class="h-2 bg-background-light dark:bg-gray-900 w-full mb-6"></div>
+<!-- Roster Section -->
+<div class="px-4 mb-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Current Roster</h3>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">8/10 Players</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 mb-6">
+<div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+</div>
+<!-- Players Grid/List -->
+<div class="space-y-4">
+<!-- Host -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="Rahul K avatar" class="size-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArWU9HOA8g7XCkdPdgvxnb_jZDY9zHlKuifmgehMyXqZ2Oi9NWUlBWJHQLEjNfI2bzhE328GbQgczrR-bsn8_qg-3gCHAgRvUK5GdqYzflQM_lQZOQ6NJAqEk3-F9MHumkcjF97ew1vLzKFBlCapGMSdwDdAcxiFYDDYgrPCiGRWXgXZBNhmyIq-oCtLcf_DzSjzeClF_wN_QbdjuurxBLm0zsYc75GO_U-lw43ZRlRdBj0__Y-xKZihq9WO43YZ0rxR8BVK75980k"/>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Rahul K. <span class="text-[10px] bg-primary text-white px-1.5 py-0.5 rounded ml-1 uppercase tracking-wide">Host</span></p>
+<p class="text-xs text-slate-500">All-Rounder</p>
+</div>
+</div>
+</div>
+<!-- Other Players -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Player avatar" class="size-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpXy7PcloZqQkNmIzs0W_RLHCqgOTyJUT9kFSqaNNbpyPmcu5fCjV__QpRze8BvAqPJe1Q9gzky9HfBm1xf8lkaa_cfyWz5L06rYIg0rjgTFbK66ZJU9iSLi1nhcW_2V5Jj4fs4HyCfLXUt4O9wq9ahwkahfUx7p_tAKvb3I1YBEMNnZ4JCF3AHI1RSjtVGCvKd24h-8fe9hVUmC68O-Zr9syfUlafDjxUJqlwfFkJymTVV4KdfjPNavAUmkJT0d3aKYLz_lNmLJpE"/>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Amit S.</p>
+<p class="text-xs text-slate-500">Batsman</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Player avatar" class="size-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmPUy0g4KPCoyrVtT84v8jgkhvioqdALb35E57Fkg7To8Juu8xzju83Q18ZWkDKVw4K6dPaV4SQbfD2YUJCHiHGjcgPdQK18gvbkhltmG0lV8C2fwv4vvJy0Nx5ncIH4usVP7zqtsQ_xFSUUBakLCvg9eHfUwgGz4LO8Jq6MVL2Bvir9uQ-LhPfhfPMMagPdPwfvu_cF0LYThKSKFpE1CyI_8FJorgXhYguESTeZhpy4w3TaMnOZIOsngktCsd9e4v22-d3M5_5eEe"/>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Sarah J.</p>
+<p class="text-xs text-slate-500">Bowler</p>
+</div>
+</div>
+</div>
+<!-- Collapsed view indicator -->
+<div class="flex items-center gap-3 pl-1 pt-2 cursor-pointer group">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark bg-gray-300"></div>
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark bg-gray-400"></div>
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark bg-gray-500"></div>
+</div>
+<span class="text-sm text-primary font-medium group-hover:underline">+ 5 others joined</span>
+</div>
+</div>
+</div>
+<div class="h-2 bg-background-light dark:bg-gray-900 w-full mb-6"></div>
+<!-- User Preferences -->
+<div class="px-4 mb-8">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-4">Choose your role</h3>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="role" type="radio"/>
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 p-3 text-center transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined mb-1 block">sports_cricket</span>
+<span class="text-sm font-medium">Batsman</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="role" type="radio"/>
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 p-3 text-center transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined mb-1 block">sports_baseball</span>
+<span class="text-sm font-medium">Bowler</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="role" type="radio"/>
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 p-3 text-center transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined mb-1 block">accessibility_new</span>
+<span class="text-sm font-medium">Wicket Keeper</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="role" type="radio"/>
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 p-3 text-center transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined mb-1 block">stars</span>
+<span class="text-sm font-medium">All-Rounder</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Payment & Terms -->
+<div class="px-4 mb-4">
+<div class="rounded-xl bg-background-light dark:bg-gray-800/50 p-4 border border-gray-100 dark:border-gray-800">
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-3 uppercase tracking-wider">Payment Details</h4>
+<div class="flex justify-between items-center mb-2 text-sm text-slate-600 dark:text-slate-300">
+<span>Entry Fee (Split)</span>
+<span>$14.00</span>
+</div>
+<div class="flex justify-between items-center mb-3 text-sm text-slate-600 dark:text-slate-300">
+<span>Platform Fee</span>
+<span>$1.00</span>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+<div class="flex justify-between items-center text-base font-bold text-slate-900 dark:text-white">
+<span>Total Pay</span>
+<span>$15.00</span>
+</div>
+</div>
+<!-- Terms Checkbox -->
+<div class="flex gap-3 mt-4 items-start">
+<div class="flex h-5 items-center">
+<input class="h-5 w-5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="terms" type="checkbox"/>
+</div>
+<div class="text-sm">
+<label class="font-normal text-slate-500 dark:text-slate-400" for="terms">
+                            I agree to the <a class="text-primary hover:underline" href="#">Game Rules</a> and <a class="text-primary hover:underline" href="#">Cancellation Policy</a>.
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Total to pay</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">$15.00</span>
+</div>
+<a href="../join_game_player_prefs_&_terms/code.html">
+<button class="flex-1 rounded-xl bg-primary px-4 py-3.5 text-base font-bold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors flex justify-center items-center gap-2">
+<span>Join Game</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</a>
+</div>
+</div>
+</div>
+</body></html>

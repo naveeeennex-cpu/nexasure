@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Bookings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "vibrant-blue": "#007AFF",
+            "dark-blue-text": "#0F172A",
+            "secondary-text": "#334155",
+            "border-light": "#E2E8F0",
+            "card-border": "#DBEAFE", 
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          boxShadow: {
+            "card": "0 4px 24px -2px rgba(10, 20, 50, 0.08)",
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white font-display text-dark-blue-text selection:bg-vibrant-blue/20">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-white">
+<header class="sticky top-0 z-10 flex items-center bg-white/95 px-4 py-3 backdrop-blur-md">
+<button class="flex size-10 items-center justify-center rounded-full text-dark-blue-text hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-dark-blue-text">My Bookings</h1>
+<div class="size-10"></div>
+</header>
+<nav class="sticky top-[52px] z-10 bg-white px-4 pt-2">
+<div class="flex border-b border-border-light">
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-vibrant-blue pb-3 pt-2" href="#">
+<p class="text-sm font-bold text-vibrant-blue">Upcoming</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-transparent pb-3 pt-2" href="#">
+<p class="text-sm font-bold text-secondary-text">Past</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-transparent pb-3 pt-2" href="#">
+<p class="text-sm font-bold text-secondary-text">Host game</p>
+</a>
+</div>
+</nav>
+<main class="flex-1 space-y-4 p-4 pb-28">
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-card border border-blue-50/50 transition-transform active:scale-[0.99]">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-lg bg-vibrant-blue/10 text-vibrant-blue">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold uppercase tracking-wider text-dark-blue-text/80 mb-0.5">Gym</p>
+<p class="font-bold text-dark-blue-text text-[15px] leading-tight mb-1">Full Body Workout Session</p>
+<p class="text-sm font-medium text-secondary-text">Mon, 23 Oct • 09:00 AM</p>
+</div>
+<a href="../my_bookings_details/code.html">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-dark-blue-text">chevron_right</span>
+</div>
+</a>
+</div>
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-card border border-blue-50/50 transition-transform active:scale-[0.99]">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-lg bg-vibrant-blue/10 text-vibrant-blue">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold uppercase tracking-wider text-dark-blue-text/80 mb-0.5">Salon</p>
+<p class="font-bold text-dark-blue-text text-[15px] leading-tight mb-1">Men's Haircut</p>
+<p class="text-sm font-medium text-secondary-text">Wed, 25 Oct • 11:30 AM</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-dark-blue-text">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-card border border-blue-50/50 transition-transform active:scale-[0.99]">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-lg bg-vibrant-blue/10 text-vibrant-blue">
+<span class="material-symbols-outlined">theaters</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold uppercase tracking-wider text-dark-blue-text/80 mb-0.5">Event</p>
+<p class="font-bold text-dark-blue-text text-[15px] leading-tight mb-1">Weekend Movie: 'The Creator'</p>
+<p class="text-sm font-medium text-secondary-text">Sat, 28 Oct • 07:00 PM</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-dark-blue-text">chevron_right</span>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 z-20 w-full max-w-md border-t border-border-light bg-white/95 backdrop-blur-lg">
+<div class="flex h-20 items-center justify-around pb-2">
+<a class="flex flex-col items-center justify-center gap-1.5 text-secondary-text transition-colors hover:text-dark-blue-text" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1.5 text-secondary-text transition-colors hover:text-dark-blue-text" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-[10px] font-bold tracking-wide">My Pass</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1.5 text-vibrant-blue" href="#">
+<span class="material-symbols-outlined filled">calendar_month</span>
+<span class="text-[10px] font-bold tracking-wide">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1.5 text-secondary-text transition-colors hover:text-dark-blue-text" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

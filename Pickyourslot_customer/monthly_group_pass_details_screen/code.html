@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monthly Group Pass Details</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+                'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scroll if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Pass Details</h2>
+</div>
+<!-- HeaderImage -->
+<div class="w-full px-4 py-2">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[240px] shadow-soft relative group" data-alt="Abstract badminton court with shuttlecock and racket or sports arena lighting" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzQpQRP9exsJT-Ffv721MvQ3CogIYt9rpD4RZHWX-8OeRvdZfnfhVs-Fgs6S1o3zn4ayNztkRcE6uCG4tI8huSUaxyjSlEFtYhJ_usJn8JctHzwItXx4Q83HA4PIFMzLImp90Zv_IpIVh21nMgMMVtQ_mdn9B3sJKYv41YVPXZKyZ4wMcI1STHC3t2HsMqiIiDqEzvuL9LGTAWjJXUzbZz7zyFzgDVIZznzO7b6iMM2lAAAtoGsGFCoGzWS1Lpbkzl9j_dpy_eK4Lh");'>
+<div class="flex flex-col p-5 z-10">
+<div class="mb-2 w-fit rounded bg-primary/90 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">Monthly Pass</div>
+<p class="text-white tracking-tight text-[28px] font-bold leading-tight drop-shadow-md">Badminton Club</p>
+</div>
+</div>
+</div>
+<!-- HeadlineText (Price) -->
+<div class="flex flex-col items-center pt-6 pb-2 px-4">
+<h2 class="text-primary tracking-tight text-[32px] font-bold leading-tight text-center">$200 <span class="text-lg text-slate-500 dark:text-slate-400 font-medium">/ Month</span></h2>
+</div>
+<!-- BodyText (Description) -->
+<div class="px-6 pb-6">
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed text-center">Secure your court every day during prime time. Play more matches, improve your skills, and pay less per game.</p>
+</div>
+<!-- Stats Grid -->
+<div class="px-4 pb-6">
+<div class="grid grid-cols-2 gap-3">
+<!-- Time Card -->
+<div class="flex flex-col gap-3 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Daily Time</p>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight mt-1">6 - 8 PM</p>
+</div>
+</div>
+<!-- Capacity Card -->
+<div class="flex flex-col gap-3 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Capacity</p>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight mt-1">4 Players</p>
+</div>
+</div>
+<!-- Commitment Card (Full Width) -->
+<div class="col-span-2 flex flex-row items-center gap-4 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">event_repeat</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Commitment</p>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight mt-1">Monthly Auto-Renewal</p>
+<p class="text-xs text-slate-400 mt-1">Cancel anytime before the next cycle.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue Info -->
+<div class="px-4 pb-6">
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 ml-1">Location</h3>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="size-16 shrink-0 rounded-lg bg-gray-200 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Small map thumbnail showing location pin" data-location="Downtown Sports Complex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhbJQZLNQwGaaKis35cwbo7NcLJJtWDBuISVv7QbmZKultKILvYZMElrY7uQa5cIgKEc6hHb9geglTsJd9SQEm4vfFUv3VdCFXp9CHU4JkJqUOwLsTJfuBGNXsZ79sAdNdPCCwCpEJzr86MsddeRPw4y2mRLClYjtD82mNC4OTBva_8wLazpbQYrL0InvSUoYobLHmGUici_wXcze4HKbnuBYdVxQP1Tw1ZybYWwnhXbpnv5IQ69-0jThSBpOjC6ZQbTr9QK5XnUM8"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white font-bold truncate">Downtown Sports Complex</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">123 Athletics Way, City Center</p>
+</div>
+<div class="text-primary">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 p-4 pb-8 z-50">
+<div class="max-w-md mx-auto w-full flex flex-col gap-2">
+<button class="w-full bg-primary hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base py-4 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span>Subscribe &amp; Form Group</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="text-center text-[11px] text-slate-400 font-medium">Billed monthly. Terms &amp; Conditions apply.</p>
+</div>
+</div>
+</div>
+</body></html>

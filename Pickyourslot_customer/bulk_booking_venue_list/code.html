@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bulk Booking Venue List</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#FFFFFF", /* Pure white as per plan */
+                        "background-off": "#f8f9fa", /* Off-white for contrast */
+                        "background-dark": "#101622",
+                        "text-main": "#0d121c", /* Dark text */
+                        "text-sub": "#49659c", /* Blue-grey subtext */
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<!-- iOS Status Bar Placeholder (Visual only) -->
+<div class="h-11 w-full"></div>
+<div class="flex items-center justify-between px-4 pb-4 pt-2">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h1 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Bulk Booking Venues</h1>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-white" style="font-size: 24px;">search</span>
+</button>
+</div>
+</header>
+<!-- Filters -->
+<div class="sticky top-[88px] z-10 bg-background-light dark:bg-background-dark pb-2 pt-2 border-b border-transparent">
+<div class="flex gap-3 px-4 overflow-x-auto hide-scrollbar pb-2">
+<!-- Active Chip -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary px-4 shadow-sm shadow-primary/30 transition-all hover:brightness-110 active:scale-95">
+<span class="text-white text-sm font-medium leading-normal">All</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-off dark:bg-gray-800 px-4 border border-gray-100 dark:border-gray-700 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal">Football</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-off dark:bg-gray-800 px-4 border border-gray-100 dark:border-gray-700 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal">Cricket</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-off dark:bg-gray-800 px-4 border border-gray-100 dark:border-gray-700 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal">Gym</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-off dark:bg-gray-800 px-4 border border-gray-100 dark:border-gray-700 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal">Tennis</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-off dark:bg-gray-800 px-4 border border-gray-100 dark:border-gray-700 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95">
+<span class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal">Events</span>
+</button>
+</div>
+</div>
+<!-- Venue List -->
+<div class="flex-1 overflow-y-auto px-4 py-4 space-y-4 pb-24">
+<!-- Card 1 -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md active:scale-[0.99]">
+<div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Large football stadium with green pitch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbkEXPXHmc9JLlTDNhYlU83BZ_wyeUifkowBviKzjcPU_FSY6TmcuVd-7sP7EuaQueVYQV4I--WtHjCkeSUrflCW96NvZLczaR8k8ZGKSRY1nA99ETLezqLvLhgSQetgJHquOL_XOY6eBuD70hJkO11iiZecOlIYl0UtWBpc5GZqtg3ZeUK3FhrUtmd5peIx0KGmJ1urTmuomzpLnTa-Etc9QZi_i_d_NaOrXdCY9Llcu1TIT7kjNOYat9v0dpVO8_7ckdyJuDm08j");'></div>
+<div class="absolute top-3 right-3 rounded-md bg-white/90 dark:bg-black/80 px-2 py-1 backdrop-blur-sm">
+<p class="text-xs font-bold text-primary">From $200/hr</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Downtown Sports Complex</h3>
+<div class="flex items-center gap-1 mt-1 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal">12 Main St, City Center</p>
+</div>
+</div>
+<a href="../bulk_booking_venue_details_(time_range_selection)/code.html">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+</div>
+</a>
+</div>
+<div class="h-px bg-gray-100 dark:bg-gray-800 my-1"></div>
+<div class="flex items-center gap-2 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">sports_soccer</span>
+<p class="text-xs font-medium">3 Football Pitches • 2 Cricket Grounds</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md active:scale-[0.99]">
+<div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern gym interior with equipment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaf9w8BvN3HruRwUkydGmFtfCfevLKPp2UG8VJdQATE3qdSogwv3jnQZcDQzFayVMuSmgPNGjwfVrmwiZGxamwV9GejueH9BR4jwsGAFIKFrstBppesoz3qR9c6puPlHinnLXCxHNQobk2Zu_3rnTrc2884BFkmVgnw5dD1NSIuJVb860ugVZyVc9U3C37LCdvA3-n4Io_6YHJMSPNCi0ZCdZAmWMNCe7kKdzoB4xYoTbbeAgGKqDq40hSWgL68_LdSQJWCaul6qfX");'></div>
+<div class="absolute top-3 right-3 rounded-md bg-white/90 dark:bg-black/80 px-2 py-1 backdrop-blur-sm">
+<p class="text-xs font-bold text-primary">From $150/hr</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Westside Arena</h3>
+<div class="flex items-center gap-1 mt-1 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal">45 West Ave</p>
+</div>
+</div>
+<a href="../venue_details_&_sports_selection/code.html">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+</div>
+</a>
+</div>
+<div class="h-px bg-gray-100 dark:bg-gray-800 my-1"></div>
+<div class="flex items-center gap-2 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">pool</span>
+<p class="text-xs font-medium">Olympic Pool • Indoor Gym</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md active:scale-[0.99]">
+<div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Cricket ground on a sunny day" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdR4kTawOZx1BxEIahfcGfGgBycNtPo2MuBVBRFt5VT5Q5GGBk0YrzaigDrWgRrYx1ropNlK9es0aC3bIw0pcJ3tWOK8Vapk9m4rpP5eY2YcPF-vdu9kIkOIvgeBkOQag81qOjZFWI7VwTtjA4VTiXhbl7mGBBaSi76SxDn0WaJViHXHXYlNW0LnhQwJ3RUkQMQkaY0CSLNxlZb0Fr-FDt39LQsdKzhX_ZL8QzddlOoUwv5CbvH3Mh_DvvL6FXa3oTayi3SAAx65F1");'></div>
+<div class="absolute top-3 right-3 rounded-md bg-white/90 dark:bg-black/80 px-2 py-1 backdrop-blur-sm">
+<p class="text-xs font-bold text-primary">From $180/hr</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">North City Grounds</h3>
+<div class="flex items-center gap-1 mt-1 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal">88 North Rd</p>
+</div>
+</div>
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+<div class="h-px bg-gray-100 dark:bg-gray-800 my-1"></div>
+<div class="flex items-center gap-2 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">sports_cricket</span>
+<p class="text-xs font-medium">Full Cricket Pitch • Practice Nets</p>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md active:scale-[0.99]">
+<div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Red clay tennis courts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACCIy3ghja3OOfo__GoI9E0iv_TPH6PYhKzu8H2V41QXLzVSEGvpUE7s2YS0fXNjnmEPrIGUSwCCk0y6V3YoSIQoQTMKIY8lNcOcegIC9fMjaS3xnP6F3XjxHwJbpD8wCZVg4ihHFj0Fyb2whyFZbV47qHVWqfePQ3hKVfRGE8by5uETaFH3EBQaDsoPAjAez4ME9wE5zQLcm9oT8qYQ0HLfroft9GmpVQS5reqEKw25WzanfrEpG4bkdNP8sY6ReOcXL5o9P1Ni7X");'></div>
+<div class="absolute top-3 right-3 rounded-md bg-white/90 dark:bg-black/80 px-2 py-1 backdrop-blur-sm">
+<p class="text-xs font-bold text-primary">From $90/hr</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Elite Tennis Club</h3>
+<div class="flex items-center gap-1 mt-1 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-xs font-normal">21 Court Lane</p>
+</div>
+</div>
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+<div class="h-px bg-gray-100 dark:bg-gray-800 my-1"></div>
+<div class="flex items-center gap-2 text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">sports_tennis</span>
+<p class="text-xs font-medium">4 Clay Courts • 2 Hard Courts</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Tab Bar -->
+<nav class="absolute bottom-0 z-20 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 pb-5 pt-3">
+<div class="flex justify-around items-center">
+<button class="flex flex-col items-center justify-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 1;">stadium</span>
+<span class="text-[10px] font-medium">Venues</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">calendar_month</span>
+<span class="text-[10px] font-medium">My Bookings</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

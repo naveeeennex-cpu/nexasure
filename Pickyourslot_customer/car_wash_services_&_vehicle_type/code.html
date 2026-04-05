@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Car Wash Services</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2433",
+                        "text-main": "#0d121c",
+                        "text-sub": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "nav": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between px-4 py-3">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-base font-semibold tracking-tight text-center flex-1 pr-10 text-text-main dark:text-white">
+                    Select Services
+                </h1>
+</div>
+</header>
+<main class="flex-1 flex flex-col pb-24">
+<!-- Vendor Info Section -->
+<section class="bg-surface-light dark:bg-surface-dark px-4 pt-6 pb-2 mb-2">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-text-main dark:text-white mb-1">Car Spa Center</h2>
+<div class="flex items-center gap-1 text-sm text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px] text-yellow-500 fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-medium text-text-main dark:text-gray-200">4.8</span>
+<span>(120 reviews)</span>
+</div>
+</div>
+<div class="flex flex-col items-end text-right">
+<span class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs px-2 py-1 rounded-full font-medium mb-1">Open Now</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-sm text-text-sub dark:text-gray-400 mb-6">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+<p>123 Main Street, Downtown</p>
+</div>
+<!-- Photos Carousel -->
+<div class="flex overflow-x-auto gap-3 pb-4 no-scrollbar -mx-4 px-4 snap-x">
+<div class="flex-shrink-0 w-64 h-36 rounded-xl overflow-hidden shadow-sm snap-center border border-gray-100 dark:border-gray-800 group relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern car wash facility exterior with glass windows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKQuwIhT_3zZ8UsV7R1RQD3OLB79SHWT3d8Uc3waTIMaPj1axt9KJsDOBug_kyeysIzOeN_eYG6Cs5s0yQ8qJqN5fAwAsHtB-UrmArhNQH25eY8I5bEilscyQxSOizm7rKCSXKsJ30DHUMG-ws8-fRe9R1l19VegSVzOafBY7VUh2xZaApldcRD-p5EBG5NWGnyEJAnJ3Me3Q_wy7o3_RDfFuorP-xx8qzJb8O3jW9qrrfaFNFZWGh1ySibZ2lBjO422LDgVDz9ceG");'></div>
+</div>
+<div class="flex-shrink-0 w-64 h-36 rounded-xl overflow-hidden shadow-sm snap-center border border-gray-100 dark:border-gray-800 group relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of foam being applied to a blue car" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBop4ir9Xz-VC_F17hbjduezdqcUMeiOemif8gS8eN36Eq15GPHvXWQ-OWidRx4HMiOd_phJ3nbY2REYhlM6EyY0v_6M2m2kfVqQZNwMC6cJcR_RSV8j4oNFMxlvqWfDx1PJSXa_BXm64HsWhFi2UX5mgbLcSLm4h-7J_B9pCBzn7R_Wrd0qPJn_EYKVI7jUyfT48bjCl9y5Gv5XcJMq6pIGGS1q0Fpw3TAQW0otO6fbrl1whbfAdwObqD4L5bwYaE_p6ThqFdn0RCD");'></div>
+</div>
+<div class="flex-shrink-0 w-64 h-36 rounded-xl overflow-hidden shadow-sm snap-center border border-gray-100 dark:border-gray-800 group relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Detailer polishing the interior dashboard of a luxury car" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkr3lVMT0pLXRrGILCpZAm8MwjrKrLeZi0t8yk107g_63ASWIm5I0ofpmlAbB59xhufK2yovVrJe9l4exP6dCeKRN81V8GmKVdofQAi82G2GfdtZumHo72kfLZsNwvXK-xBfNscFAMbvxNMTPU5RAnc5A7r9YJUcCSsgvrG7l93lDXAzlZdzm2LVWgXCLjIfM5UQbBTIx7mbcwlwh6ji1CJOgYWK07VsoNrNGIOlI3k9NZVJ4kgEdPifwFZKRDDoIsEwUg8LMarREI");'></div>
+</div>
+</div>
+</section>
+<!-- Vehicle Type Selector (Sticky) -->
+<section class="sticky top-[60px] z-40 bg-background-light dark:bg-background-dark py-4 shadow-sm border-b border-gray-200/50 dark:border-gray-800">
+<div class="px-4 mb-2">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-sub dark:text-gray-400">Vehicle Type</h3>
+</div>
+<div class="flex overflow-x-auto gap-3 px-4 no-scrollbar">
+<!-- Hatchback -->
+<button class="group flex flex-col items-center justify-center min-w-[90px] p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-400 group-hover:text-primary mb-1">directions_car</span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Hatchback</span>
+</button>
+<!-- Sedan (Selected) -->
+<button class="relative flex flex-col items-center justify-center min-w-[90px] p-3 rounded-xl bg-primary text-white shadow-lg shadow-primary/25 ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-all">
+<span class="material-symbols-outlined text-3xl mb-1">time_to_leave</span>
+<span class="text-xs font-semibold">Sedan</span>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full"></div>
+</button>
+<!-- SUV -->
+<button class="group flex flex-col items-center justify-center min-w-[90px] p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-400 group-hover:text-primary mb-1">airport_shuttle</span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">SUV</span>
+</button>
+<!-- Luxury -->
+<button class="group flex flex-col items-center justify-center min-w-[90px] p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-400 group-hover:text-primary mb-1">diamond</span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Luxury</span>
+</button>
+</div>
+</section>
+<!-- Service List -->
+<section class="px-4 py-4 space-y-4">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Services for Sedan</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">3 Available</span>
+</div>
+<!-- Service Card 1 (Selected) -->
+<label class="relative flex items-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border-2 border-primary shadow-soft cursor-pointer transition-transform active:scale-[0.99]">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="text-base font-bold text-text-main dark:text-white">Exterior Foam Wash</h4>
+</div>
+<p class="text-sm text-text-sub dark:text-gray-400 line-clamp-2">Premium pH-neutral foam wash, wheel cleaning, and microfiber dry.</p>
+<div class="mt-2 flex items-center gap-3">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 30 mins
+                            </span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 min-w-[80px]">
+<span class="text-lg font-bold text-text-main dark:text-white">$15.00</span>
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<input checked="" class="hidden" type="checkbox"/>
+</div>
+</label>
+<!-- Service Card 2 (Unselected) -->
+<label class="relative flex items-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-transparent hover:border-gray-200 dark:hover:border-gray-700 shadow-sm cursor-pointer transition-all active:scale-[0.99]">
+<div class="flex-1 pr-4">
+<h4 class="text-base font-bold text-text-main dark:text-white mb-1">Interior Deep Clean</h4>
+<p class="text-sm text-text-sub dark:text-gray-400 line-clamp-2">Vacuuming, dashboard polish, seat shampooing, and odor removal.</p>
+<div class="mt-2 flex items-center gap-3">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 45 mins
+                            </span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 min-w-[80px]">
+<span class="text-lg font-bold text-text-main dark:text-white">$25.00</span>
+<div class="size-6 rounded-md border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center">
+<!-- Unchecked state icon placeholder -->
+</div>
+<input class="hidden" type="checkbox"/>
+</div>
+</label>
+<!-- Service Card 3 (Selected) -->
+<label class="relative flex items-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border-2 border-primary shadow-soft cursor-pointer transition-transform active:scale-[0.99]">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="text-base font-bold text-text-main dark:text-white">Ceramic Wax Coating</h4>
+<span class="bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-200 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">Popular</span>
+</div>
+<p class="text-sm text-text-sub dark:text-gray-400 line-clamp-2">Long-lasting protection and deep shine for your vehicle's paint.</p>
+<div class="mt-2 flex items-center gap-3">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 60 mins
+                            </span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 min-w-[80px]">
+<span class="text-lg font-bold text-text-main dark:text-white">$40.00</span>
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<input checked="" class="hidden" type="checkbox"/>
+</div>
+</label>
+</section>
+</main>
+<!-- Sticky Footer -->
+<footer class="fixed bottom-0 w-full max-w-md mx-auto z-50 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 p-4 pb-8 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.1)]">
+<div class="flex items-center justify-between mb-3 px-1">
+<span class="text-sm text-text-sub dark:text-gray-400">2 services selected</span>
+<span class="text-xl font-bold text-text-main dark:text-white">$55.00</span>
+</div>
+<a href="../car_wash_summary/code.html">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span>Book Appointment</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</a>
+</footer>
+</div>
+</body></html>

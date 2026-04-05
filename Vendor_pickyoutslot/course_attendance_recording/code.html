@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Record Attendance</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#007BFF",       // Vibrant Blue
+              "absent": "#FF6B6B",        // Subtle Red for Absent
+              "text-main": "#0F172A",     // Dark Blue/Black for main text
+              "text-sub": "#64748B",      // Slate 500 for secondary text
+              "surface": "#FFFFFF",       // White for cards
+              "page-bg": "#FFFFFF",       // White for page background
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg">
+<div class="relative flex flex-col min-h-screen w-full font-display text-text-main group/design-root overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center bg-white p-4 pb-2 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-text-main text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-text-main">Record Attendance</h1>
+<div class="w-10"></div>
+</div>
+<div class="flex-grow flex flex-col p-4 pb-24">
+<div class="flex min-w-72 max-w-[336px] flex-1 flex-col gap-0.5 mx-auto w-full">
+<div class="flex items-center p-1 justify-between">
+<button class="flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-text-sub text-lg">chevron_left</span>
+</button>
+<p class="text-base font-bold leading-tight flex-1 text-center text-text-main">December 2023</p>
+<button class="flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-text-sub text-lg">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-text-sub text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-text-sub text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-text-sub text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-text-sub text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-text-sub text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-text-sub text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal col-start-6"><div class="flex size-full items-center justify-center rounded-full">1</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">4</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">5</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">8</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">9</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">10</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">11</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary shadow-md">12</div>
+</button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">16</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-text-main text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">31</div></button>
+</div>
+</div>
+<h3 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] pt-6 pb-2">Enrolled Students</h3>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4 bg-surface border border-slate-100 px-4 min-h-[72px] justify-between rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm" data-alt="Ananya Sharma's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlmg3tP1QDIsP3vwcXlGJvV_rHbGQu6nfST7CLggYNI7HS5NDTUOd8NgTgDPBI5EPjdFu5pE5aZC-WrcQnmGK1rr9LgAPo_P5PuWWABSlLdSHHKBF-_p7hZVGj7_3A0FFi2Rc9dHjKVYwVLmePB0C8VbEnXBN8MEE84xYbJGWHo8LMYV9sLTd39YD3F6cv81Q10yHxfVnVCSyPCgBswZp00nc5XKC5zs9lMGDHstXf-1aC9Fxt1M590LbcyfDJGfR4wVM4d1YDiYrj");'></div>
+<p class="text-text-main text-base font-medium leading-normal flex-1 truncate">Ananya Sharma</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-absent p-0.5 has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform duration-200 ease-in-out shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface border border-slate-100 px-4 min-h-[72px] justify-between rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm" data-alt="Rohan Mehta's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJC_dquvMq23K3G07cU9_ybnYXKcXXU8HhLmmcNzC9Q8wmKg1YfISB29a7azylEkvEBz3bPaJA_nRZh8U6YyCMTDc67zGe54eMqtC0ufvgdxq276KBKZUpWqX8hvMQoBavPuwen90sZxGhH_Nns9vI5hYcspu2XRyXJ1Qar5V6i0fcHwaulMwquoY2MNZ4XvVFrrQogc83UHZQn7iZ6lf0uShND83D6WBqcKopWiDG0C1R05vy0Uo3s0GC-SDLQQJ11oLfoIXrROI9");'></div>
+<p class="text-text-main text-base font-medium leading-normal flex-1 truncate">Rohan Mehta</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-absent p-0.5 has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform duration-200 ease-in-out shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface border border-slate-100 px-4 min-h-[72px] justify-between rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm" data-alt="Priya Singh's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9Os01FRfqe1xQqkm7PnEdDZWe-YLiRvIQVd5ORElsusErc-VShaaXSU6Fuqls6PlklSqzkXlnGZJ09eRj_OUISDmPzxkLIMhFeyoKGqEN4V1IUTjWzybk2-jY579GzYHOdfHY0Agu15wXn2o2DJk2HJduufrcmfgFN8rooHJUeyEFTN_W5X-lERxjppy8EFP704NPyUAqqaTFSgBDFOdERO-4P6Mhw41Zj72tBw_zWsvUORkwixAd88v9zSgI7rO3duZsNav9JVxn");'></div>
+<p class="text-text-main text-base font-medium leading-normal flex-1 truncate">Priya Singh</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-absent p-0.5 has-[:checked]:bg-primary transition-colors duration-200">
+<input class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform duration-200 ease-in-out shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface border border-slate-100 px-4 min-h-[72px] justify-between rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm" data-alt="Arjun Kapoor's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRF3ecWyEEvDi9DDXRXG5tyjcN8Cgmkpq6GwUVEKw625ioHEeN9TdRbAYWorj82vbAtZAm5RV5HriJH_ug7pjbI2lHq7ngX99u0WE1x8ePLXkJZIjWOYiwgO4C8cu8qcx-sdJCBfpKVdoVAsetri4LniK3zwieqOgdppVXyFysaAjkaS0fxaZCwPLwDDagu9UAgUirOI6Pkyr1w_nfH8sQ172roYIoGGRhHCXddj4tg53S5NwSRUFc-0b7VxWrljGjobq_bBei8K4k");'></div>
+<p class="text-text-main text-base font-medium leading-normal flex-1 truncate">Arjun Kapoor</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-absent p-0.5 has-[:checked]:bg-primary transition-colors duration-200">
+<input checked="" class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform duration-200 ease-in-out shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-sm border-t border-slate-100">
+<button class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-blue-500/30">
+            Save Attendance
+        </button>
+</div>
+</div>
+</body></html>

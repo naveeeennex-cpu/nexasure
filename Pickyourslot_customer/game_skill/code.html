@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Game Skills</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.form-select {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBSf79U0pPg_z60AE9dNu1zBI76PqdY97gUUvtNdp9wjDG9cNblZNGFTBf3O0MLxidRdI_gtfhrR7-e6geSavU01dIge8FfS6hmUEMvD8DSRdP4Q9ox5mGjrbUq-xXFFYyd5By_bl15VMr2odvL1q73FzFtUagQzdJIGQiiF8ZSct-5bkEWmL0GCk-kyAtg3dnLiv9SQY2PagmOelECkDEdBzZZ7ZXbIOrXqSMzkenHv7dDxA09SMqbCw4s4Wizssk-ZRtAEtyiXH1l);
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact
+    }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2563EB", // Vibrant Blue
+            "background-page": "#FFFFFF",
+            "text-main": "#0F172A", // Dark/Black for main text
+            "text-accent": "#1E3A8A", // Dark Blue for labels/inputs
+            "tab-inactive": "#1E3A8A", // Dark Blue for inactive tabs (text/border)
+            "input-border": "#1E3A8A", // Dark Blue border for inputs
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    input[type=range]::-webkit-slider-thumb {
+        background: #2563EB;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-page font-display text-text-main">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex items-center bg-white/90 p-4 backdrop-blur-sm border-b border-gray-200">
+<div class="flex size-12 shrink-0 items-center justify-center text-text-main">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-text-main">My Game Skills</h1>
+<div class="w-12"></div>
+</header>
+<main class="flex-grow pb-28">
+<div class="px-4 py-3">
+<div class="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4">
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-sm">
+<p class="text-white text-sm font-medium leading-normal">Cricket</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-white px-5 border border-tab-inactive">
+<p class="text-tab-inactive text-sm font-medium leading-normal">Badminton</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-white px-5 border border-tab-inactive">
+<p class="text-tab-inactive text-sm font-medium leading-normal">Football</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-white px-5 border border-tab-inactive">
+<p class="text-tab-inactive text-sm font-medium leading-normal">Tennis</p>
+</div>
+</div>
+</div>
+<div class="px-4">
+<section id="cricket-skills">
+<h3 class="text-text-main tracking-tight text-2xl font-bold leading-tight text-left pb-4 pt-4">Cricket</h3>
+<div class="space-y-6">
+<div class="flex flex-col min-w-40 flex-1">
+<p class="text-text-accent text-base font-medium leading-normal pb-2">Cricket Role</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none appearance-none overflow-hidden rounded-lg text-text-accent focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-white focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal shadow-sm">
+<option selected="">All-Rounder</option>
+<option>Batsman</option>
+<option>Bowler</option>
+<option>Wicket-Keeper</option>
+</select>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-accent text-base font-medium leading-normal pb-2">Batting Hand</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none appearance-none overflow-hidden rounded-lg text-text-accent focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-white focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal shadow-sm">
+<option>Right-Handed</option>
+<option>Left-Handed</option>
+</select>
+</label>
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-accent text-base font-medium leading-normal pb-2">Bowling Type</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none appearance-none overflow-hidden rounded-lg text-text-accent focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-white focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal shadow-sm">
+<option>Pace</option>
+<option>Spin</option>
+</select>
+</label>
+</div>
+<div class="w-full pt-4">
+<label class="text-text-accent text-base font-medium leading-normal pb-4 block" for="skill-slider">Skill Level</label>
+<div class="px-1">
+<input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary" id="skill-slider" max="3" min="0" type="range" value="2"/>
+</div>
+<div class="flex justify-between text-xs text-text-main font-medium mt-3 px-1">
+<span>Beginner</span>
+<span>Intermediate</span>
+<span>Advanced</span>
+<span>Expert</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white to-transparent">
+<button class="w-full h-14 rounded-xl bg-primary text-white font-bold text-lg flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors">
+        Save Skills
+      </button>
+</div>
+</div>
+</body></html>

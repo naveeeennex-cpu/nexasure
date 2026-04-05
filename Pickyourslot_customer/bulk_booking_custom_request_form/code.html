@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bulk Booking Custom Request</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#ffffff", /* Using pure white as per request description */
+                        "background-dark": "#101622",
+                        "text-dark": "#0d121c",
+                        "text-secondary": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom select arrow adjustment */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display antialiased transition-colors duration-200">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center px-4 py-3 justify-between">
+<button class="text-text-dark dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<h2 class="text-text-dark dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">
+                Send Custom Request
+            </h2>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col w-full max-w-md mx-auto pb-6">
+<!-- Segmented Control -->
+<div class="px-4 py-4">
+<div class="flex h-11 w-full items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 p-1">
+<label class="group flex-1 cursor-pointer h-full flex items-center justify-center rounded-md transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+<input checked="" class="hidden" name="request_mode" type="radio" value="custom"/>
+<span class="text-sm font-semibold group-has-[:checked]:text-primary dark:group-has-[:checked]:text-blue-400 text-text-secondary dark:text-gray-400 transition-colors">Custom Request</span>
+</label>
+<label class="group flex-1 cursor-pointer h-full flex items-center justify-center rounded-md transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+<input class="hidden" name="request_mode" type="radio" value="browse"/>
+<span class="text-sm font-semibold group-has-[:checked]:text-primary dark:group-has-[:checked]:text-blue-400 text-text-secondary dark:text-gray-400 transition-colors">Browse Venues</span>
+</label>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-5 px-4">
+<!-- Activity Selector -->
+<label class="flex flex-col w-full">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">Preferred Game / Activity</p>
+<div class="relative">
+<select class="form-select w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-4 pr-10 text-base font-normal leading-normal transition-shadow">
+<option disabled="" selected="" value="">Select Activity (e.g., Football)</option>
+<option value="football">Football</option>
+<option value="tennis">Tennis</option>
+<option value="basketball">Basketball</option>
+<option value="padel">Padel</option>
+<option value="cricket">Cricket</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</label>
+<!-- Date Inputs Row -->
+<div class="flex gap-4">
+<label class="flex flex-col flex-1 min-w-0">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">Start Date</p>
+<div class="relative">
+<input class="form-input w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-10 pr-3 text-base font-normal leading-normal placeholder:text-text-secondary dark:placeholder:text-gray-500" placeholder="Select Date" type="date"/>
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-text-secondary dark:text-gray-500">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+</div>
+</label>
+<label class="flex flex-col flex-1 min-w-0">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">End Date</p>
+<div class="relative">
+<input class="form-input w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-10 pr-3 text-base font-normal leading-normal placeholder:text-text-secondary dark:placeholder:text-gray-500" placeholder="Select Date" type="date"/>
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-text-secondary dark:text-gray-500">
+<span class="material-symbols-outlined text-[20px]">event</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Timing Input -->
+<label class="flex flex-col w-full">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">Preferred Daily Timing</p>
+<div class="relative">
+<input class="form-input w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-10 pr-4 text-base font-normal leading-normal placeholder:text-text-secondary dark:placeholder:text-gray-500" placeholder="e.g. 6:00 PM - 8:00 PM" type="text"/>
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-text-secondary dark:text-gray-500">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+</div>
+</label>
+<!-- Budget Input -->
+<label class="flex flex-col w-full">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">Expected Budget / Rate</p>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+<span class="text-text-secondary dark:text-gray-400 font-semibold">$</span>
+</div>
+<input class="form-input w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-8 pr-4 text-base font-normal leading-normal placeholder:text-text-secondary dark:placeholder:text-gray-500" placeholder="0.00" type="number"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
+<span class="text-text-secondary dark:text-gray-500 text-sm">/ hr</span>
+</div>
+</div>
+</label>
+<!-- Additional Requirements Text Area -->
+<label class="flex flex-col w-full">
+<p class="text-text-dark dark:text-gray-200 text-sm font-medium leading-normal pb-2">Additional Requirements</p>
+<textarea class="form-textarea w-full rounded-xl text-text-dark dark:text-white border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary min-h-[120px] p-4 text-base font-normal leading-normal placeholder:text-text-secondary dark:placeholder:text-gray-500 resize-none" placeholder="Describe any specific needs, amenities, or special requests..."></textarea>
+</label>
+</div>
+<!-- Spacer to push content up if needed -->
+<div class="flex-1 min-h-[20px]"></div>
+<!-- Sticky Bottom Button -->
+<div class="sticky bottom-0 mt-4 px-4 pb-6 pt-2 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark">
+
+<a href="../bulk_booking_request_sent_confirmation/code.html">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary px-4 h-14 text-white shadow-lg shadow-blue-500/20 hover:bg-blue-600 hover:shadow-blue-500/40 active:scale-[0.98] transition-all duration-200">
+<span class="text-base font-bold tracking-wide">Send Request</span>
+<span class="material-symbols-outlined ml-2 text-[20px]">send</span>
+</button>
+</a>
+</div>
+</main>
+</body></html>

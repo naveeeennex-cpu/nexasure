@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join Game - Player Prefs</title>
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-dark": "#0b46c2",
+                        "background-light": "#ffffff", 
+                        "background-dark": "#101622",
+                        "text-main": "#0f172a", // Dark blue text
+                        "text-secondary": "#475569", // Slate for secondary text
+                        "surface-light": "#f1f5f9", // Very light blue/gray for inputs/backgrounds
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for Terms Section */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main antialiased overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800 p-4 pb-3">
+<div class="flex items-center justify-between">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold text-text-main dark:text-white tracking-tight">Join Game</h2>
+<div class="size-10"></div> <!-- Spacer for alignment -->
+</div>
+</header>
+<!-- Main Content (Scrollable) -->
+<main class="flex-1 flex flex-col p-5 gap-6 pb-28">
+<!-- Game Summary Card -->
+<section>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="flex p-3 gap-4">
+<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Cricket stadium view from stands with green grass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEsCEwe5VDWqpF_kdcz4fAXkMr5fEDVs6l91mw0Fs5U61DagcqJEafncCPKEXmoBi6peMVzFFEP2K4FIMQBs_7cm6NABMHmRab4tvq46ewv0QI4vfQysuZGrKuYkIN7jwolxCxNyWSoooE7q69wtjOsdJNn-I7J36svdPsuMlvvIA8opg8DL0waDtrwphPuvS6OJ21UwYW5C29nrS7lzOJiL3CizNlCEmB2lPIzXOLcYQc1a4GFUjVwZcjtYBg2_PCuxF3FjPiJ31b");'></div>
+<div class="flex flex-col justify-center gap-1">
+<h3 class="text-base font-bold text-text-main dark:text-white leading-tight">Casual Cricket Match</h3>
+<p class="text-sm text-text-secondary dark:text-slate-400">Hosted by Alex P.</p>
+<div class="flex items-center gap-1 text-xs font-medium text-primary mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>City Arena</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-text-secondary dark:text-slate-400 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Oct 24 • 6:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Player Preferences Section -->
+<section class="flex flex-col gap-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">manage_accounts</span>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Player Preferences</h3>
+</div>
+<!-- Cricket Role -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-text-main dark:text-slate-200">Primary Role</label>
+<div class="relative">
+<select class="w-full h-12 pl-4 pr-10 bg-surface-light dark:bg-slate-800 border-none rounded-lg text-text-main dark:text-white font-medium focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Select your role</option>
+<option value="batsman">Batsman</option>
+<option value="bowler">Bowler</option>
+<option value="all_rounder">All-Rounder</option>
+<option value="wicket_keeper">Wicket Keeper</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-primary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Batting Hand -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-text-main dark:text-slate-200">Batting Hand</label>
+<div class="flex bg-surface-light dark:bg-slate-800 p-1 rounded-lg">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="batting_hand" type="radio" value="right"/>
+<div class="flex items-center justify-center py-2.5 rounded-md text-sm font-medium text-text-secondary dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all">
+                                Right Hand
+                            </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="batting_hand" type="radio" value="left"/>
+<div class="flex items-center justify-center py-2.5 rounded-md text-sm font-medium text-text-secondary dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all">
+                                Left Hand
+                            </div>
+</label>
+</div>
+</div>
+<!-- Bowling Style -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-text-main dark:text-slate-200">Bowling Style</label>
+<div class="flex bg-surface-light dark:bg-slate-800 p-1 rounded-lg">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="bowling_style" type="radio" value="pace"/>
+<div class="flex items-center justify-center py-2.5 rounded-md text-sm font-medium text-text-secondary dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all">
+                                Pace
+                            </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="bowling_style" type="radio" value="spin"/>
+<div class="flex items-center justify-center py-2.5 rounded-md text-sm font-medium text-text-secondary dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all">
+                                Spin
+                            </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="bowling_style" type="radio" value="none"/>
+<div class="flex items-center justify-center py-2.5 rounded-md text-sm font-medium text-text-secondary dark:text-slate-400 peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all">
+                                None
+                            </div>
+</label>
+</div>
+</div>
+<!-- Skill Level Slider -->
+<div class="space-y-3 pt-2">
+<div class="flex justify-between items-end">
+<label class="block text-sm font-semibold text-text-main dark:text-slate-200">Skill Level</label>
+<span class="text-xs font-bold text-primary">Intermediate</span>
+</div>
+<input class="w-full h-2 bg-surface-light rounded-lg appearance-none cursor-pointer accent-primary" max="3" min="1" type="range" value="2"/>
+<div class="flex justify-between text-xs text-text-secondary font-medium px-1">
+<span>Beginner</span>
+<span>Intermediate</span>
+<span>Expert</span>
+</div>
+</div>
+</section>
+<hr class="border-slate-100 dark:border-slate-800 my-2"/>
+<!-- Payment Info -->
+<section class="bg-blue-50/50 dark:bg-slate-800 rounded-xl p-4 border border-blue-100 dark:border-slate-700">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">payments</span>
+<h3 class="text-sm font-bold text-text-main dark:text-white">Payment Summary</h3>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-sm text-text-secondary dark:text-slate-400">
+<span>Total Game Cost</span>
+<span>$240.00</span>
+</div>
+<div class="flex justify-between items-center text-sm text-text-secondary dark:text-slate-400">
+<span>Split Rate (22 Players)</span>
+<span>~ $10.90 / player</span>
+</div>
+<div class="w-full h-px bg-blue-100 dark:bg-slate-700 my-1"></div>
+<div class="flex justify-between items-center">
+<span class="text-base font-bold text-text-main dark:text-white">Your Share</span>
+<span class="text-xl font-bold text-primary">$10.90</span>
+</div>
+</div>
+</section>
+<!-- Terms and Conditions -->
+<section class="flex flex-col gap-3">
+<h3 class="text-sm font-bold text-text-main dark:text-white">Terms &amp; Conditions</h3>
+<div class="custom-scrollbar h-32 overflow-y-auto bg-surface-light dark:bg-slate-800 rounded-lg p-3 text-xs leading-relaxed text-text-secondary dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<p class="mb-2"><strong>1. Venue Rules:</strong> All players must wear appropriate sportswear. Non-marking shoes are mandatory for indoor courts. Please arrive 15 minutes before the scheduled start time.</p>
+<p class="mb-2"><strong>2. Cancellation Policy:</strong> Cancellations made less than 24 hours before the game will not be refunded. If the host cancels, a full refund will be processed.</p>
+<p class="mb-2"><strong>3. Code of Conduct:</strong> Respectful behavior towards other players and staff is required at all times. Aggressive behavior will result in a ban from future games.</p>
+<p class="mb-2"><strong>4. Liability:</strong> The organizers are not responsible for any personal injuries or lost belongings during the event.</p>
+<p><strong>5. Equipment:</strong> Basic equipment is provided, but players are encouraged to bring their own personal gear if preferred.</p>
+</div>
+<label class="flex items-start gap-3 cursor-pointer group mt-1">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 bg-white checked:border-primary checked:bg-primary focus:ring-2 focus:ring-primary focus:ring-offset-1 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[16px] text-white opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-text-secondary dark:text-slate-300 group-hover:text-text-main dark:group-hover:text-white transition-colors">
+                        I have read and agree to the Terms &amp; Conditions and Venue Rules.
+                    </span>
+</label>
+</section>
+</main>
+<!-- Fixed Footer Action -->
+<div class="fixed bottom-0 w-full max-w-md bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 p-4 pb-8 z-20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="w-full bg-primary hover:bg-primary-dark active:scale-[0.98] transition-all text-white font-bold text-lg h-14 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-between px-6">
+<span>Confirm &amp; Proceed</span>
+<span class="bg-white/20 text-sm font-semibold py-1 px-3 rounded text-white">$10.90</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "vibrant-blue": "#007AFF",
+            "dark-blue": "#0A192F",
+            "page-bg": "#FFFFFF",
+            "card-bg": "#FFFFFF",
+            "text-primary": "#0A192F",
+            "text-secondary": "#475569",
+            "border-subtle": "#E2E8F0",
+            "border-accent": "#D1E3F7",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg font-display text-text-primary">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 flex items-center bg-white/90 px-4 py-3 backdrop-blur-sm shadow-sm">
+<button class="flex size-10 items-center justify-center text-dark-blue hover:bg-gray-100 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-dark-blue">Booking Details</h1>
+<div class="size-10"></div>
+</header>
+<main class="flex-1 space-y-6 p-4 pb-40">
+<div class="space-y-4 rounded-xl bg-card-bg p-4 border border-border-accent shadow-sm">
+<div>
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Booked Service/Item</p>
+<p class="font-bold text-text-primary text-lg">Full Body Workout Session</p>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div>
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Venue Name</p>
+<p class="font-bold text-text-primary">Prime Fitness Center</p>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div>
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Date &amp; Time</p>
+<p class="font-bold text-text-primary">Mon, 23 Oct 2023 • 09:00 AM</p>
+</div>
+<div class="h-px w-full bg-border-subtle"></div>
+<div>
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Location</p>
+<p class="font-bold text-text-primary">123 Wellness Avenue, Fitness City</p>
+</div>
+</div>
+<div class="space-y-4 rounded-xl bg-card-bg p-4 border border-border-accent shadow-sm">
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary">Venue Partner Contact</p>
+<div class="flex items-center justify-between">
+<p class="font-bold text-text-primary text-lg">+1 (555) 123-4567</p>
+<a class="flex size-10 items-center justify-center rounded-full bg-vibrant-blue text-white shadow-md hover:bg-blue-600 transition-colors" href="tel:+15551234567">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</div>
+<div class="space-y-3">
+<p class="px-1 text-xs font-semibold uppercase tracking-wider text-text-secondary">Map View</p>
+<div class="aspect-video w-full rounded-xl bg-gray-100 overflow-hidden border border-border-accent shadow-sm relative group">
+<div class="absolute inset-0 flex items-center justify-center bg-vibrant-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+<span class="text-vibrant-blue font-bold text-sm">Open in Maps</span>
+</div>
+<img alt="Map showing venue location" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxLoHULWqhFm6Gea-cqa4339rVSJIf1hiDQoMuIeAmMCHPQ6G5f-n7Vlo1Gk5gct-roHpgE6j4AkkrZw4RbaSg0DVgaxxXpJmh6EO2nCjkfSSNftyk6anrNx5SummUJFBae65pQocT0oOFRF_WZD-2BnxiTX2fL9fOk3VxI6WoKT1YFEJreHo8WA1wfspb822F35BFySJNCCdlEXNb4L2c3q_VXv72D2DfxBfU9l7q2BbbTNF2gGQOLtphoGcuc2zN3MWFS-WvWisw"/>
+</div>
+</div>
+<div class="rounded-xl border border-vibrant-blue/20 bg-blue-50/50 p-4 text-center">
+<p class="text-xs font-semibold uppercase tracking-wider text-text-secondary">Booking Reference</p>
+<p class="mt-1 font-mono text-xl font-bold tracking-widest text-vibrant-blue">BK-20231023-A7B3</p>
+</div>
+</main>
+<footer class="fixed bottom-0 z-20 w-full max-w-md border-t border-border-subtle bg-white/95 p-4 backdrop-blur-sm shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-4">
+<button class="flex-1 rounded-full border border-border-accent bg-white py-3.5 text-center font-bold text-dark-blue hover:bg-gray-50 transition-colors">Reschedule</button>
+<button class="flex-1 rounded-full bg-vibrant-blue py-3.5 text-center font-bold text-white shadow-lg shadow-blue-200 hover:bg-blue-600 transition-colors">Cancel Booking</button>
+</div>
+</footer>
+</div>
+
+</body></html>

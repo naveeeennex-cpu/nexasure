@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Group Usage History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d59f2", // Vibrant blue
+            "background": "#ffffff", // White background
+            "text-main": "#0f172a", // Dark blue/black (Slate 900)
+            "text-secondary": "#64748b", // Slate 500 for secondary text
+            "input-bg": "#f1f5f9", // Light slate for inputs
+            "border-color": "#e2e8f0", // Light border
+            "card-bg": "#ffffff", // White cards
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-display text-text-main">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center bg-background p-4 pb-2 justify-between border-b border-border-color">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-main cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Usage History</h2>
+<div class="flex size-12 shrink-0"></div>
+</div>
+<div class="px-4 pt-4 pb-4">
+<h3 class="text-xl font-bold text-text-main">Morning Yoga Enthusiasts</h3>
+<p class="text-text-secondary text-sm font-medium mt-1">Quarterly Yoga Pass</p>
+</div>
+<div class="flex flex-col gap-3 px-4 py-2 bg-background">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-border-color bg-input-bg transition-colors focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20">
+<div class="text-primary flex border-none bg-transparent items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-main focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-text-secondary px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search by service or court" value=""/>
+</div>
+</label>
+<div class="flex items-center gap-3">
+<button class="flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-border-color bg-white px-4 text-sm font-medium text-primary shadow-sm hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+        Date Range
+      </button>
+<button class="flex h-10 flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-medium text-white shadow-sm shadow-blue-200 hover:bg-blue-700 transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+        Filter
+      </button>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-4">
+<div class="flex flex-col gap-3">
+<p class="text-text-secondary text-sm font-bold uppercase tracking-wide pl-1">Tuesday, 20 Aug 2024</p>
+<div class="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-color">
+<div class="flex items-center justify-between">
+<p class="text-text-main font-bold">Yoga Studio</p>
+<p class="text-text-secondary text-sm font-medium">09:00 AM</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl text-primary">group</span>
+<p class="text-text-main text-sm font-medium">5 Members Present</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-color">
+<div class="flex items-center justify-between">
+<p class="text-text-main font-bold">Yoga Studio</p>
+<p class="text-text-secondary text-sm font-medium">07:00 AM</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl text-primary">group</span>
+<p class="text-text-main text-sm font-medium">8 Members Present</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-text-secondary text-sm font-bold uppercase tracking-wide pl-1">Monday, 19 Aug 2024</p>
+<div class="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-color">
+<div class="flex items-center justify-between">
+<p class="text-text-main font-bold">Meditation Room</p>
+<p class="text-text-secondary text-sm font-medium">06:30 PM</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl text-primary">group</span>
+<p class="text-text-main text-sm font-medium">3 Members Present</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-text-secondary text-sm font-bold uppercase tracking-wide pl-1">Saturday, 17 Aug 2024</p>
+<div class="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-color">
+<div class="flex items-center justify-between">
+<p class="text-text-main font-bold">Yoga Studio</p>
+<p class="text-text-secondary text-sm font-medium">08:00 AM</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl text-primary">group</span>
+<p class="text-text-main text-sm font-medium">12 Members Present</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

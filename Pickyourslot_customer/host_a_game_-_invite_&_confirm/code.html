@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Host a Game - Invite &amp; Confirm</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "text-main": "#0d121c",
+                        "text-secondary": "#49659c",
+                        "border-color": "#ced7e8",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-20 flex items-center bg-background-light/95 backdrop-blur-sm p-4 border-b border-border-color/30 justify-between">
+<button class="text-text-main flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Review &amp; Invite</h2>
+</div>
+<!-- Game Summary Section -->
+<div class="px-4 pt-6 pb-2">
+<h3 class="text-text-main text-lg font-bold leading-tight mb-3">Game Summary</h3>
+<div class="rounded-xl border border-border-color bg-white shadow-sm overflow-hidden">
+<!-- Map Image placeholder for Venue visual -->
+<div class="h-24 w-full bg-gray-100 relative">
+<img class="w-full h-full object-cover opacity-90" data-alt="Modern geometric pattern representing a game court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4XhDqgQ8MPXFXW5B2XddpSIMBBwe-AXz_GzDylYrc78gm6LKhLkbtSAW8lwiT_jpTPHlH8MrmbTG3cLhfRkNvzICCbVSf3ywphjdV62OJh3GziwWThlgcc6X3yEGNkeceX9DpkPkYTN52OULhaonDt-Um7F1gzsFdPDD0nktG_lGGLXg_Qb-XVEMfgjECgTT86BsXaPBpP3dguUFfxDFukY1yMQD4Sjm93zOA6zEmU7nQq5qqEyoV0F1w3qpWf2g0JLwntH3DENi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+<span class="text-white text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Downtown Courts, Main St.
+                         </span>
+</div>
+</div>
+<div class="grid grid-cols-2 divide-x divide-border-color">
+<div class="flex flex-col gap-1 p-4">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wide">Game Type</p>
+<p class="text-text-main text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">sports_basketball</span>
+                            5v5 Basketball
+                        </p>
+</div>
+<div class="flex flex-col gap-1 p-4">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wide">Date &amp; Time</p>
+<p class="text-text-main text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+                            Fri, Oct 24 • 6 PM
+                        </p>
+</div>
+</div>
+<div class="border-t border-border-color p-4 bg-gray-50 flex justify-between items-center">
+<div class="flex flex-col">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wide">Cost per person</p>
+<p class="text-text-main text-sm font-bold">$10.00</p>
+</div>
+<div class="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+                        Split Payment Enabled
+                    </div>
+</div>
+</div>
+</div>
+<!-- Invite Actions -->
+<div class="px-4 py-4 space-y-3">
+<h3 class="text-text-main text-lg font-bold leading-tight">Add Players</h3>
+<div class="grid grid-cols-1 gap-3 @container">
+<!-- Search Button -->
+<button class="flex items-center justify-between w-full p-4 rounded-xl border border-border-color bg-white shadow-sm hover:border-primary/50 transition-all group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">person_search</span>
+</div>
+<div class="text-left">
+<p class="text-text-main font-semibold text-sm">Search Players</p>
+<p class="text-text-secondary text-xs">Find by name or username</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-border-color group-hover:text-primary">chevron_right</span>
+</button>
+<!-- Share Button -->
+<button class="flex items-center justify-between w-full p-4 rounded-xl border border-border-color bg-white shadow-sm hover:border-primary/50 transition-all group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="text-left">
+<p class="text-text-main font-semibold text-sm">Invite via Link</p>
+<p class="text-text-secondary text-xs">Share unique link with friends</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-border-color group-hover:text-primary">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Players List -->
+<div class="flex flex-col">
+<h2 class="text-text-main text-lg font-bold leading-tight px-4 pb-2 pt-2">Players (3/10)</h2>
+<div class="flex flex-col divide-y divide-border-color border-t border-b border-border-color bg-white mt-2">
+<!-- Player 1: Accepted -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="size-10 rounded-full object-cover border border-gray-100" data-alt="Portrait of Sarah J" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYrov44LWbxKsFpQhRFS7ETIRwN3SvO49iUj1PDsKqt0vMJpc4nz1sFhc2xziAcBZ5RrkSJDCtGYm6v9qC2PWsbjtap9MHm0FhKY5OXXvihkKV55YEBoVxSfhdaUWigaI7_X2TxamD1-daWxIY9Wp2l0c2iCVQkLXeCKLyKw6Eg5gX6U84001O1yjT2n1ryNTR6NxHi8M8970RJWTR-A9_ox9rgdF5l-OzbeCgzX41Pjh7QS69Bk-lYIFXLo9BHKnP3qXUGuAu3ILu"/>
+<div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px]">
+<span class="material-symbols-outlined text-[14px] text-green-600 bg-green-100 rounded-full p-[2px]">check</span>
+</div>
+</div>
+<div>
+<p class="text-text-main font-semibold text-sm">Sarah Jenkins</p>
+<p class="text-text-secondary text-xs">@sarah.j • Point Guard</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">Accepted</span>
+<button class="size-8 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Player 2: Pending -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="size-10 rounded-full object-cover border border-gray-100" data-alt="Portrait of Mike T" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnFt7CRCw5nmF2gn9Qkt-oXgQUXra2KjNvJ_5AtvvtX1qd6cQdsUGMyvcNWBqJ5OnQkSauKK8UmWtwl6MXMlKboFmHRK6ryvMizamX4CEkht5hr55HbZVjR1sd2NaObvd0MikuEwVQ9aqVJP4fLSdaA7rmtweRF4qH4MtJtaTWKKvH_N3CCVIX-OwzGqYqThZspIdGubw2bTxfxgc3xRN_WGuIjcyjY-CcWdENZ98wppXv3H1rMCfkRtV9aAvwPTKQJ26p0X0qjcDI"/>
+</div>
+<div>
+<p class="text-text-main font-semibold text-sm">Mike Thompson</p>
+<p class="text-text-secondary text-xs">@miket_99</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-500">Pending</span>
+<button class="size-8 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Player 3: Pending -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="size-10 rounded-full object-cover border border-gray-100" data-alt="Portrait of Alex R" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrufIEzv7uMtjoEGPP0Zf_3-3tlScvKX0MBwnQ6xnXJxUzAK0tuCsEbkpwf1TydGIdenZVveo28waa2pPRSyQW5aKKRSw85uRwpoOcoYg9pGW4XIjzpXJZq08SPkHk9fcMJ3N4RYJiQZb3q7Uwr-IWR6reQQu4uyLN8DurZCPNORDO0BS-pFqadoO0-cdduEew-ZnCYtICpc4QYREqVa4xvx494JDIb0_9VmzLKjHGBme60wOtu1W3eTrw_x1QayLKOIOr9G5FpJ_p"/>
+</div>
+<div>
+<p class="text-text-main font-semibold text-sm">Alex Rodriguez</p>
+<p class="text-text-secondary text-xs">@arod_ball</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-500">Pending</span>
+<button class="size-8 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add more hint -->
+<p class="text-center text-text-secondary text-xs mt-4">Waiting for 7 more players to join...</p>
+</div>
+<!-- Sticky Footer -->
+<div class="fixed bottom-0 w-full bg-white border-t border-border-color p-4 pb-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-30">
+<div class="flex flex-col gap-3 max-w-[480px] mx-auto">
+<div class="flex items-start gap-2 bg-blue-50 p-3 rounded-lg border border-blue-100">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+<p class="text-xs text-text-secondary leading-relaxed">
+                        Players will be charged <span class="font-bold text-text-main">$10.00</span> upon acceptance. You will be notified when payment is complete.
+                    </p>
+</div>
+<a href="../my_hosted_games_screen/code.html">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-blue-500/30">
+                    Confirm Game Creation
+                </button>
+</a>
+</div>
+</div>
+</div>
+</body></html>

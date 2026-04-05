@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Course Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#007AFF", // Vibrant Blue
+            "page-bg": "#FFFFFF",
+            "text-primary": "#0F172A", // Dark Blue/Black (Slate 900)
+            "text-secondary": "#334155", // Dark Grey/Blue (Slate 700)
+            "text-placeholder": "#64748B", // Slate 500
+            "input-border": "#CBD5E1", // Slate 300
+            "divider": "#E2E8F0", // Slate 200
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>body {
+    font-family: "Lexend", sans-serif;
+    background-color: #FFF;
+    color: #0F172A
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.form-input {
+    background-color: #FFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    color: #0F172A;font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s
+    }
+.form-input::placeholder {
+    color: #64748B
+    }
+.form-input:focus {
+    border-color: #007AFF;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15)
+    }.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD2da8hkOC8qW7SbMcx7a8rZXeuFPxtOAmNyMdapAqiaEz5LYOadLVkssZ-sF8bbpchTA8LceWaRJ32qCk2clm9-BUPcx8BYUyDc1hT364uJejus9VZ65ceRc33iYbIPsnQkjAqGwQQsWiZX7jmtqEKZDVAIJSzXTtT-RjvwlnY4yaY0-bnar7aw---FkQTbReJsa2ydUisdfVn1mzzDe7N-Mwu97NUHWvCFa_n4GzNq_vbmiA3Mfk5WxYo1R9xv5mHmcKznjtWCSGX);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg font-display text-text-primary">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-divider">
+<div class="flex items-center p-4">
+<button class="flex size-10 shrink-0 items-center justify-center transition-opacity hover:opacity-70">
+<span class="material-symbols-outlined text-text-primary" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-text-primary">Edit Course Details</h1>
+<div class="w-10 shrink-0"></div>
+</div>
+</header>
+<main class="flex-1 space-y-6 p-4 pb-40">
+<div class="space-y-4">
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="course-name">Course Name</label>
+<input class="form-input font-medium" id="course-name" type="text" value="Advanced Tennis Training"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="description">Description</label>
+<textarea class="form-input min-h-[120px]" id="description" rows="4">Master your serve and backhand with our advanced tennis program. Ideal for competitive players.</textarea>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="max-students">Max Student Count</label>
+<input class="form-input" id="max-students" type="number" value="10"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="course-duration">Course Duration</label>
+<input class="form-input" id="course-duration" type="text" value="90 mins"/>
+</div>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="course-timing">Course Timing</label>
+<input class="form-input" id="course-timing" type="text" value="Tue, Thu | 18:00 - 19:30"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="course-fees">Course Fees</label>
+<input class="form-input" id="course-fees" type="text" value="$350"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="gender">Gender</label>
+<select class="form-input form-select" id="gender">
+<option selected="">Mixed</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="age-range">Age Range</label>
+<input class="form-input" id="age-range" type="text" value="18-35 years"/>
+</div>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="category">Category</label>
+<select class="form-input form-select" id="category">
+<option selected="">Tennis</option>
+<option>Swimming</option>
+<option>Soccer</option>
+<option>Basketball</option>
+</select>
+</div>
+<div>
+<label class="mb-2 block text-sm font-semibold text-text-secondary" for="associated-coach">Select Coach</label>
+<select class="form-input form-select" id="associated-coach">
+<option selected="">Alex Ray</option>
+<option>John Doe</option>
+<option>Jane Smith</option>
+</select>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 z-20 w-full border-t border-divider bg-white/90 p-4 backdrop-blur-md">
+<div class="flex flex-col gap-4">
+<button class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary text-base font-bold text-white shadow-lg shadow-primary/20 transition-transform active:scale-[0.98]">
+                    Save Changes
+                </button>
+<button class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-transparent text-base font-bold text-primary transition-opacity hover:opacity-80">
+                    Delete Course
+                </button>
+</div>
+</footer>
+</div>
+
+</body></html>

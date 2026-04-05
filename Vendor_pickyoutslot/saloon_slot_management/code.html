@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Salon Service Config</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "vibrant-blue": "#2563eb","dark-blue": "#0f172a","input-border": "#cbd5e1","bg-surface": "#ffffff",
+              "bg-subtle": "#f8fafc",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              "card": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }.switch {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        height: 32px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cbd5e1;transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 24px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      input:checked + .slider {
+        background-color: #2563eb;}
+      input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-surface font-display text-dark-blue">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-20 border-b border-gray-100">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-dark-blue text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-dark-blue text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Add New Salon Service</h2>
+<div class="size-12 shrink-0"></div> 
+</div>
+<div class="flex flex-col gap-6 p-4">
+<label class="flex flex-col w-full group">
+<p class="text-dark-blue text-base font-bold leading-normal pb-2">Service Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue placeholder:text-gray-400 focus:outline-0 focus:ring-2 focus:ring-vibrant-blue focus:border-vibrant-blue bg-white border border-input-border h-14 p-4 text-base font-medium leading-normal shadow-sm transition-all" placeholder="e.g. Premium Haircut &amp; Style" value=""/>
+</label>
+<label class="flex flex-col w-full group">
+<p class="text-dark-blue text-base font-bold leading-normal pb-2">Associated Stylist(s)</p>
+<div class="relative">
+<select class="form-multiselect appearance-none block w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-vibrant-blue focus:border-vibrant-blue bg-white border border-input-border h-14 placeholder:text-gray-400 p-4 text-base font-medium leading-normal shadow-sm transition-all" multiple="">
+<option>Select stylists</option>
+<option>Jessica Miller</option>
+<option>Sarah Chen</option>
+<option>David Lee</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-vibrant-blue">
+<span class="material-symbols-outlined font-bold">unfold_more</span>
+</div>
+</div>
+</label>
+<div class="flex w-full gap-4">
+<label class="flex flex-col flex-1 group">
+<p class="text-dark-blue text-base font-bold leading-normal pb-2">Base Service Rate</p>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+<span class="text-dark-blue font-medium">$</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue placeholder:text-gray-400 focus:outline-0 focus:ring-2 focus:ring-vibrant-blue focus:border-vibrant-blue bg-white border border-input-border h-14 pl-8 p-4 text-base font-medium leading-normal shadow-sm transition-all" placeholder="50.00" type="number" value=""/>
+</div>
+</label>
+<label class="flex flex-col flex-1 group">
+<p class="text-dark-blue text-base font-bold leading-normal pb-2">Estimated Duration</p>
+<div class="relative">
+<select class="form-select appearance-none block w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-vibrant-blue focus:border-vibrant-blue bg-white border border-input-border h-14 placeholder:text-gray-400 p-4 text-base font-medium leading-normal shadow-sm transition-all">
+<option>30 min</option>
+<option>45 min</option>
+<option selected="">1 hr</option>
+<option>1 hr 30 min</option>
+<option>2 hr</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-vibrant-blue">
+<span class="material-symbols-outlined font-bold">expand_more</span>
+</div>
+</div>
+</label>
+</div>
+<div class="h-2"></div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-extrabold text-dark-blue">Dynamic Rate Settings</h3>
+<div class="rounded-xl bg-white border border-input-border p-4 flex flex-col gap-4 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-dark-blue font-bold">Add time-based rate</p>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-vibrant-blue text-white shadow-md hover:bg-blue-700 transition-colors">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+<div class="border-b border-gray-100"></div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-dark-blue font-bold">Weekend/Holiday Rate</p>
+<p class="text-sm text-gray-500 mt-0.5">Apply a different rate for peak times.</p>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider round"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-extrabold text-dark-blue">Recurring Blocking</h3>
+<div class="rounded-xl bg-white border border-input-border p-4 flex flex-col gap-4 shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-dark-blue font-bold">Block Slots</p>
+<p class="text-sm text-gray-500 mt-0.5">e.g., Unavailable every Tuesday AM</p>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-vibrant-blue text-white shadow-md hover:bg-blue-700 transition-colors">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="sticky bottom-0 mt-auto flex flex-col gap-3 bg-white p-4 pt-4 border-t border-gray-100 z-10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="flex w-full items-center justify-center rounded-xl bg-vibrant-blue px-6 py-4 text-base font-bold text-white transition-colors hover:bg-blue-700 shadow-md">Save Service</button>
+<button class="flex w-full items-center justify-center rounded-xl border-2 border-dark-blue bg-transparent px-6 py-4 text-base font-bold text-dark-blue transition-colors hover:bg-gray-50">Delete Service</button>
+</div>
+</div>
+
+</body></html>

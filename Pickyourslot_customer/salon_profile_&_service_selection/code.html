@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Salon Profile &amp; Service Selection</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-primary/30">
+<div class="relative min-h-screen flex flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 flex items-center justify-between px-4 py-3 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h2 class="text-base font-bold text-slate-900 dark:text-white opacity-0 animate-[fadeIn_0.3s_ease-in_forwards]">The Glamour Room</h2>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Image Grid Section -->
+<div class="p-4 grid grid-cols-3 grid-rows-2 gap-2 h-64">
+<div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-gray-200 animate-pulse"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern sleek salon interior with mirrors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkWrxYIGac2nsDNjd3GK2mDen1Bf4qRZMfY9uktRGQ_-6OWIx_Vxqy0oTRFQ6qX8RLH_a6AGZMV0akC8mPmv-5626iyYGXzvcBYWbJhenrMLg_eoqjpmKqTpNbp4gyjf2_pZuMLWYQAn3ti9SwKQ6urYsoRXmwpq_xJk5XuQYzMtJoFApBfiV8qh_34jWnV4ZLue97IdpSThmyk047BKpiYCJerm2D2TSPU8RtFQwpj_mcza9TJheFOBvy_fyHQ9H1C94IIyXGICHm');"></div>
+</div>
+<div class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-gray-200 animate-pulse"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of hair styling tools scissors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYKq0VQu8bmHfqBdMyKokDLYVVotakHr8uSAyJtboUtoF3smsjZMAKaloK5l-8Vuj2a-nOidnzOom3z-LZ6pj84lck2rnv4fEgE9FGGQTEKII1r-4ztNTKV8sJV_Zo25xgGJwYV9jqVO3DcoDXhJbi-8EzNUKkcYlvh7Bv_FmOOsBmQNQLPCNjxpO7Xav_hUvGjPUU6Sr9HswrImRIR65ZjLH5GQootJiQ8NcHDNOIlULk5FJjgzylLU6BCQdiSM_lPqYRUWC8otMP');"></div>
+</div>
+<div class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-gray-200 animate-pulse"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Stylish pink salon chairs waiting area" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxdUjA3tGbHAFCSV1iuXPTsigU60SGM5P01aStJ3EWUUfpkFcBpigy8VvcPVz_xr53IJEhMzp9aNsZChC_371sN-eAPYXc3I1g7CzyT8sXNdPHn-bJ1_v7vKYmOLfBJIuIl4QvJ9Bw_2cGa66FiiQwNFotBxEN5-2co__k4lhDCwg00QlmgAaIBql0Dryq1KAGPzKz2mzajJ7M7Sw1uGaslO_4sNxHX0cWCjcNgZXNi5g1VVmBZJi2Z3QLiqmP0ZBkgd9SIxM-6qPH');"></div>
+<!-- View All Overlay -->
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<span class="text-white text-xs font-bold font-display">+8 Photos</span>
+</div>
+</div>
+</div>
+<!-- Header Info Section -->
+<div class="px-4 pt-2 pb-4">
+<h1 class="text-2xl font-extrabold text-slate-900 dark:text-white leading-tight mb-2">The Glamour Room</h1>
+<div class="flex flex-wrap items-center gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-1 mr-4">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-slate-900 dark:text-white">4.9</span>
+<span class="text-slate-400">(120 Reviews)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">location_on</span>
+<span>1.2 mi • Downtown</span>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="sticky top-[65px] z-40 bg-white dark:bg-background-dark py-2 border-b border-gray-50 dark:border-gray-800 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-900 dark:bg-white px-5 transition-transform active:scale-95">
+<span class="text-white dark:text-slate-900 text-sm font-bold">All</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-gray-800 px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Hair</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-gray-800 px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Color</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-gray-800 px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Nails</span>
+</button>
+<button class="flex size-9 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300 text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Service Listing -->
+<div class="flex flex-col p-4 gap-6">
+<!-- Category 1 -->
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">content_cut</span>
+                        Haircuts
+                    </h3>
+<div class="flex flex-col gap-4">
+<!-- Service Item 1 -->
+<div class="group flex items-start justify-between p-4 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:border-primary/30 dark:hover:border-primary/50 transition-all shadow-sm">
+<div class="flex-1 pr-4">
+<h4 class="font-bold text-slate-900 dark:text-white text-base mb-1">Women's Dry Cut</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-2">A quick trim or reshaping on dry hair. Includes consultation.</p>
+<div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 30 min</span>
+<span>•</span>
+<span>Standard Stylist</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="font-bold text-slate-900 dark:text-white text-lg">$45</span>
+<button class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Service Item 2 -->
+<div class="group flex items-start justify-between p-4 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:border-primary/30 dark:hover:border-primary/50 transition-all shadow-sm">
+<div class="flex-1 pr-4">
+<h4 class="font-bold text-slate-900 dark:text-white text-base mb-1">Blowout &amp; Style</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-2">Wash, blowout, and professional styling for any occasion.</p>
+<div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 45 min</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="font-bold text-slate-900 dark:text-white text-lg">$60</span>
+<button class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">palette</span>
+                        Coloring
+                    </h3>
+<div class="flex flex-col gap-4">
+<!-- Service Item 3 -->
+<div class="group flex items-start justify-between p-4 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:border-primary/30 dark:hover:border-primary/50 transition-all shadow-sm">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-bold text-slate-900 dark:text-white text-base">Full Balayage</h4>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 uppercase tracking-wide">Popular</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-2">Hand-painted highlights for a natural, sun-kissed look.</p>
+<div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 120 min</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="font-bold text-slate-900 dark:text-white text-lg">$180</span>
+<button class="size-8 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Summary Bar -->
+<div class="absolute bottom-0 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 p-4 pb-6 shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)]">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Total (1 service)</span>
+<span class="text-xl font-extrabold text-slate-900 dark:text-white">$180</span>
+</div>
+<a href="../salon_stylist_&_slot_selection/code.html">
+<button class="flex-1 bg-primary hover:bg-blue-600 text-white font-bold h-12 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/25 transition-all active:scale-95">
+<span>Book Appointment</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</a>
+</div>
+</div>
+</div>
+</body></html>

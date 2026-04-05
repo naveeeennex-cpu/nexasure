@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Car Wash Service Config</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }.switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;-webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        input:checked + .slider {
+            background-color: #256af4;}
+        input:checked + .slider:before {
+            -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
+            transform: translateX(20px);
+        }
+    </style>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#256af4",
+              "dark-blue": "#0f172a","dark-accent": "#1e293b","border-blue": "#cbd5e1","surface-gray": "#f8fafc",},
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            boxShadow: {
+                'sm-blue': '0 1px 2px 0 rgba(37, 106, 244, 0.05)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white font-display text-dark-blue">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white overflow-x-hidden">
+<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-20 border-b border-gray-100">
+<div class="text-dark-blue flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined" style="font-size: 28px;">arrow_back_ios_new</span>
+</div>
+<h2 class="text-dark-blue text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center -ml-12">Add New Car Wash Service</h2>
+</div>
+<div class="flex flex-col gap-6 px-4 pb-32 pt-2">
+<div class="flex flex-col gap-4">
+<h3 class="text-dark-blue text-lg font-bold leading-tight tracking-[-0.015em] pt-2">General Information</h3>
+<label class="flex flex-col w-full group">
+<p class="text-dark-accent text-sm font-semibold leading-normal pb-2">Service Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary border border-border-blue bg-white h-14 placeholder:text-gray-400 p-4 text-base font-medium leading-normal shadow-sm transition-all" placeholder="e.g., Premium Interior Wash" value=""/>
+</label>
+<div>
+<p class="text-dark-accent text-sm font-semibold leading-normal pb-2">Vehicle Type</p>
+<div class="flex gap-3 flex-wrap">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-border-blue bg-white px-5 cursor-pointer hover:bg-gray-50 transition-colors">
+<p class="text-dark-blue text-sm font-semibold leading-normal">Hatchback</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-primary bg-primary px-5 cursor-pointer shadow-sm shadow-blue-200">
+<p class="text-white text-sm font-semibold leading-normal">Sedan</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-border-blue bg-white px-5 cursor-pointer hover:bg-gray-50 transition-colors">
+<p class="text-dark-blue text-sm font-semibold leading-normal">SUV</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-border-blue bg-white px-5 cursor-pointer hover:bg-gray-50 transition-colors">
+<p class="text-dark-blue text-sm font-semibold leading-normal">Truck</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<label class="flex flex-col flex-1">
+<p class="text-dark-accent text-sm font-semibold leading-normal pb-2">Base Service Rate</p>
+<div class="relative">
+<span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-dark-blue font-bold">$</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary border border-border-blue bg-white h-14 placeholder:text-gray-400 pl-8 pr-4 text-base font-medium leading-normal shadow-sm transition-all" placeholder="50.00" type="number" value=""/>
+</div>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-dark-accent text-sm font-semibold leading-normal pb-2">Estimated Duration</p>
+<div class="relative">
+<select class="form-select appearance-none w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary border border-border-blue bg-white h-14 pl-4 pr-10 text-base font-medium leading-normal shadow-sm transition-all">
+<option>30 min</option>
+<option selected="">45 min</option>
+<option>1 hour</option>
+<option>1 hour 30 min</option>
+</select>
+<span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-primary">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</div>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<div>
+<h3 class="text-dark-blue text-lg font-bold leading-tight tracking-[-0.015em]">Dynamic Rate Settings</h3>
+<p class="text-slate-500 text-sm font-normal leading-normal pt-1">Set different rates for specific times. These will be added to the base rate.</p>
+</div>
+<div class="flex items-center justify-between bg-surface-gray border border-slate-200 p-4 rounded-lg">
+<p class="text-dark-blue text-base font-semibold">08:00 AM - 11:00 AM</p>
+<div class="flex items-center gap-4">
+<p class="text-primary text-base font-bold">+$5.00</p>
+<span class="material-symbols-outlined text-dark-blue cursor-pointer hover:bg-slate-200 rounded-full p-1 transition-colors" style="font-size: 20px;">close</span>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 w-full h-14 rounded-lg border-2 border-dashed border-primary text-primary font-bold hover:bg-blue-50 transition-colors bg-white">
+<span class="material-symbols-outlined">add</span>
+                    Add New Time-based Rate
+                </button>
+<div class="flex items-center justify-between bg-surface-gray border border-slate-200 p-4 rounded-lg mt-2">
+<div class="flex flex-col">
+<p class="text-dark-blue text-base font-semibold">Weekend/Holiday Rate</p>
+<p class="text-slate-500 text-sm">Apply an extra charge on weekends &amp; holidays.</p>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<label class="flex flex-col w-full">
+<p class="text-dark-accent text-sm font-semibold leading-normal pb-2">Weekend/Holiday Surcharge</p>
+<div class="relative">
+<span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-dark-blue font-bold">$</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-dark-blue focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary border border-border-blue bg-white h-14 placeholder:text-gray-400 pl-8 pr-4 text-base font-medium leading-normal shadow-sm transition-all" placeholder="10.00" type="number" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<div>
+<h3 class="text-dark-blue text-lg font-bold leading-tight tracking-[-0.015em]">Recurring Bay/Staff Blocking</h3>
+<p class="text-slate-500 text-sm font-normal leading-normal pt-1">Block specific bays or staff members during recurring times, making them unavailable for this service.</p>
+</div>
+<button class="flex items-center justify-center gap-2 w-full h-14 rounded-lg border border-primary text-primary font-bold bg-white hover:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined">event_busy</span>
+                    Add Blocking Schedule
+                </button>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-sm p-4 border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-30">
+<div class="flex flex-col gap-3 max-w-md mx-auto">
+<button class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg h-14 text-base shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40 transition-shadow">Save Service</button>
+</div>
+</div>
+</div>
+
+</body></html>

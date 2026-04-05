@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Hosted Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "secondary": "#49659c",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "text-main": "#0d121c",
+                        "card-bg": "#f8f9fc",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', 'Noto Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* iOS-like safe area padding for top status bar */
+        .safe-top {
+            padding-top: env(safe-area-inset-top, 20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white min-h-screen flex justify-center">
+<!-- Mobile Container -->
+<div class="w-full max-w-md bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden relative flex flex-col min-h-screen">
+<!-- Header -->
+<div class="safe-top bg-white dark:bg-background-dark sticky top-0 z-10 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 pb-3 justify-between">
+<div class="text-text-main dark:text-white flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</div>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">My Hosted Games</h2>
+</div>
+<!-- Tabs -->
+<div class="">
+<div class="flex px-4 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-3 pt-2 flex-1 cursor-pointer transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Upcoming</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-secondary dark:text-gray-400 hover:text-text-main dark:hover:text-white pb-3 pt-2 flex-1 cursor-pointer transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Past</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-4 flex flex-col gap-5 pb-24 bg-white dark:bg-background-dark">
+<!-- Card 1: Attention Needed -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-card-bg dark:bg-gray-800/50 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<!-- Image Header Section -->
+<div class="h-32 w-full bg-cover bg-center relative" data-alt="indoor soccer field with bright lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDllrCIkf1GgAbJXyhXwnSAtN-hX4FEHP_9Rmag1GQ8KygmHgWpXtDUZTaQh1khBf2f1ZJu3D28zO4Hw76OcZ8_fB9o32XtQT8RrCQIvRLFxKOfd1cjXis_IspKxB6IhjRGobU2ROMiGDf9WArr8YT8_HC87xmMu2dykKW2rw1LGY0dGXjYSbMiYPmds2mVaV1Gzu8ju7UE_MoycjfHnoUVim6wwONJImnL9Jzd5DxGGZv0UsFYe_YdplnBJQOaj3MInCB-7Ckq7InB");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2.5 py-0.5 text-xs font-bold text-primary shadow-sm">
+<span class="mr-1.5 h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                            Accepting Players
+                        </span>
+</div>
+</div>
+<!-- Content Section -->
+<div class="p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">5-a-side Football</h3>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Fri, Oct 24 • 19:00</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Downtown Sports Plex, Court 3</span>
+</div>
+</div>
+<button class="flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 p-2 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+<!-- Progress Section -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<p class="text-text-main dark:text-white text-sm font-semibold">8/10 Players Accepted</p>
+<p class="text-xs font-medium text-orange-600 bg-orange-100 dark:bg-orange-900/30 dark:text-orange-400 px-2 py-0.5 rounded-md">Action Needed</p>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 80%;"></div>
+</div>
+<div class="flex justify-between mt-1">
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Player 1" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYD2uILhzU9pSR5ExJjmK9iSvFNZqqmAU5B2gPIHqr8A8gjwb8ljcvx1q-dnkl529Lum8bZO94WnJZ6chIIWFYBTRIsY_vIjGHH8GEo_0rBn1sfLSIu7DxkYdKKzb6ttEAMGBc4BU6m5TSxQ5mW8eRDKDlptKsRb05OHHARq67oiFvVTDUfZy48gaYCTusacu47GkigtcgL6nHXAqwTX8eyQ_UG0X-g2c8VJ-LUmx6BXQduH4OyNGSbNiXRzXsSTmxpByKCiwa2Nfb"/>
+<img alt="Player 2" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH-t5JipObKD689mjviEyS9y0jOW0fJkVek-aJLvTQlJZ_jC7Rpwe-yxUP45rX3DI29oVkDvOdyS1VOzDp7vn99XzwqoHq1XcsoD-eOoJR-CBRIEJNcZ-99Ab1HqK6Y2YFvQdttGhIlOHvrwcJwgYYNOVEwmDw44BX7Axa1D09hCncMbn0L0oqrWpsLVhSJS8xIVIdolyECsGViaMHOKiY8uXw59LpNu9JdV-mI_MH-iwUVqP2D_JdUFRtYtuz0biRg46dr2L2P3VV"/>
+<img alt="Player 3" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6CfQatiwn65zvn2r1_bvv7pVogPcLf4zHO6REQvOuxLZzQkcftNjZkqPkunSnv0M1j_r48jGev-2jE5-5mhZzoIuvXo_0gxMbODMo_bDBWdcjxLymZUtk3V1npTucWO2uYrI_rDrbbJ1D5BBQMQT4-qa1OFd9hBhhqizttmyTSb2gUIu8DyEPN98Nbh0lapp5xYBHlq9jpsec_ZCmGJMClDJQqC8NRVkk74El8SbD1j12SC5mXOqCsmq6VoJMPaetkRWLIxqleeQx"/>
+<div class="flex items-center justify-center h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800 bg-gray-100 text-[10px] font-medium text-gray-600">+5</div>
+</div>
+<span class="text-xs text-secondary dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">payments</span> Split Payment Active
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Full -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-card-bg dark:bg-gray-800/50 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<!-- Image Header Section -->
+<div class="h-32 w-full bg-cover bg-center relative" data-alt="Tennis court view from above with red clay surface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHDXZGJQR7t0gN4VG80aUw3KuXlQVbjg0SXkDJjqu2CmC4n-veYOvqFVQhV2LBLUoK9Yk9HKQKXzq5F4NDfpzXVs4a_tfsWsMoMIzD4XIFVopWfuO3urtzzpFdWxGjHYVKtbZwd70aDdk4T17vo3mhCcN3l3PTmQyTwDB511IGKwZx76zU1DaFD9eB64SYVhtS6-89QWA-n6KrRXYVVnecRbf1B5s-RpO9ZSHrqkFPdHvtXZr3WWV75L-p4rOAgdvTTcYJYv80fC7A");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2.5 py-0.5 text-xs font-bold text-secondary shadow-sm">
+<span class="mr-1.5 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
+                            Full
+                        </span>
+</div>
+</div>
+<!-- Content Section -->
+<div class="p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Tennis Singles Match</h3>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Sat, Oct 25 • 10:00</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>City Park Courts</span>
+</div>
+</div>
+<button class="flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 p-2 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+<!-- Progress Section -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<p class="text-text-main dark:text-white text-sm font-semibold">2/2 Players Accepted</p>
+<p class="text-xs font-medium text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded-md">Ready</p>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="h-full bg-green-500 rounded-full" style="width: 100%;"></div>
+</div>
+<div class="flex justify-between mt-1">
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Player 1" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a man with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDdbSXcUH5HsK4Jqs2KsLbJHWrSXBAKJ8uiEhIVyhOhpLNMvmNEKI0HCDLbSpnHNNDUbaXZhzQDsNNr8AiVp8MhOXjBvXtQUHT91TJe2NWCe65sdEPREswcy2snQ6-AHIZb6HoLODoR5Nw7k59zVT9Nhu93OkfEFASBFcibPB9AaD5n6e8lzNsMFIeBAjCLLu872OSsRLFsTFSx0YdhlOJQFZbiublM-GL7k77JQJCzw-KO4q0QUG7lh5_06DhOjTwrKxF6fQZ6-iz"/>
+<img alt="Player 2" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP5zuwk4VwV5-c8JhVDYWgKG45w0xGsXaaQDcPHdGaKVerkesMzJu7JLq6XS4xvhPfjGRhLzq4VgizOg0LSi5OhZBAryX4qITqWNzhVe72lbL-8iHA_VXXSbqp_HG8V9xvfKYVgwfLr7V25qrmOAWXzO8JHS7RsNOk094VlFO1BP0e5Kb8eUDwrTjIzdh71RJPKXyjJy_YLIDTE4SoXvIYKvas_qvmoU5e1B3Ue3-iJol-nXA1Okdx2LY2Dxf0nUXwGIZUkjmA1Ddo"/>
+</div>
+<span class="text-xs text-secondary dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-green-600">check_circle</span> Payment Complete
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Pending -->
+<div class="group relative flex flex-col gap-0 rounded-xl bg-card-bg dark:bg-gray-800/50 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<!-- Image Header Section -->
+<div class="h-32 w-full bg-cover bg-center relative" data-alt="Basketball hoop outdoors with blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjk3pP6VayNVYHQ1mjzH1k4onQGSPZH-qjIaXUweeFGyzHefMMHKig17DOCRmq5YtRynSzm4y0sV4HEY3lbB1T-DDYcbRPGtcd7he-g3YeS2n2OlkIF504qKaRz-Tj5ARkv6vFuxVVqd51CYZN-Fe1fAhXsPhFC4uGuNA1buni9DHwNdbVPOoUg0DBFr6ZtPTf3wFZ051WGwNg5Q_1asri3AXiT6UUVNp-X9LHLp4MYvpiVw-hi5e5XgRlTUuZ9UP8Oo0Xj9v8saE1");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2.5 py-0.5 text-xs font-bold text-primary shadow-sm">
+<span class="mr-1.5 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                            Open
+                        </span>
+</div>
+</div>
+<!-- Content Section -->
+<div class="p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">3v3 Basketball</h3>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Sun, Oct 26 • 16:30</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary dark:text-gray-400 text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Community Center Gym</span>
+</div>
+</div>
+<button class="flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 p-2 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+<!-- Progress Section -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<p class="text-text-main dark:text-white text-sm font-semibold">1/6 Players Accepted</p>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 16%;"></div>
+</div>
+<div class="flex justify-between mt-1">
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Player 1" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-gray-800" data-alt="Portrait of a man looking sideways" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYjUnhOM2BhR1zwQ4r8l2ijNsWAupfRdomwUvrE7LQZM17bqzSxn9uKyzsPCVlfGvGcAZM16spcxYVBM80oG8jiCRRnJhknRV3aKKNwVK9tQgmTZfJMM5Hd9Q7pc3pKvlUjzkvmIMDSxUBRTjMycOpgsGTy1OUv3E6vU5Z57dWjb6AHOF-80zYLagg066Jl3UCf4r3pkTxBH47LmUo3eNGUVSzAZGWROz60CwLtdbpGE5Fsttl_MoHhmGqQeKTfgMmM3JFJ2aYP_rT"/>
+</div>
+<span class="text-xs text-secondary dark:text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending</span> Payment Pending
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<div class="absolute bottom-6 right-6 z-20">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all active:scale-95">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+</div>
+</body></html>

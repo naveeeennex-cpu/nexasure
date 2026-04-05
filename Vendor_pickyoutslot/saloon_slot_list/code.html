@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Salon Slot Management (Light Mode)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#256af4", // Vibrant Blue
+            "secondary": "#0f172a", // Dark Blue/Black for text
+            "accent-bg": "#eff6ff", // Very light blue for backgrounds
+            "background-light": "#ffffff",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display text-slate-900">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100">
+<div class="text-secondary flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-secondary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Salon Slot Management</h2>
+<div class="flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-secondary">tune</span>
+</div>
+</div>
+<div class="flex flex-col px-4 pb-8">
+<div class="py-4">
+<div class="flex items-center justify-between bg-slate-100 p-3 rounded-xl">
+<button class="text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="text-center">
+<p class="text-slate-900 font-bold text-lg">August 2024</p>
+<p class="text-primary font-semibold text-sm">Today, 21</p>
+</div>
+<button class="text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="flex justify-between text-center text-slate-400 mt-4">
+<div class="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer">
+<span class="text-xs font-medium">MON</span>
+<span class="font-bold text-slate-700">19</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer">
+<span class="text-xs font-medium">TUE</span>
+<span class="font-bold text-slate-700">20</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-2 rounded-lg bg-primary text-white shadow-lg shadow-primary/30 cursor-pointer">
+<span class="text-xs font-medium">WED</span>
+<span class="font-bold">21</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer">
+<span class="text-xs font-medium">THU</span>
+<span class="font-bold text-slate-700">22</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer">
+<span class="text-xs font-medium">FRI</span>
+<span class="font-bold text-slate-700">23</span>
+</div>
+</div>
+</div>
+<div class="py-4">
+<h3 class="text-lg font-bold text-secondary mb-3">Select Stylist</h3>
+<div class="flex items-center gap-3 overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pb-2">
+<button class="px-4 py-2 rounded-full text-sm font-semibold bg-primary text-white whitespace-nowrap shadow-md shadow-primary/20">Stylist Maria</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors">Stylist Jessica</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors">Stylist David</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors">All Stylists</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-secondary mb-1">Time Slots</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 bg-red-50 p-4 rounded-xl text-center border border-red-100">
+<p class="text-lg font-bold text-slate-900">09:00 AM</p>
+<p class="text-sm font-bold text-red-600 uppercase tracking-wide">Booked</p>
+<p class="text-xs text-slate-600 truncate font-medium">Haircut - Alex Johnson</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">View Details</button>
+</div>
+<div class="flex flex-col gap-2 bg-white p-4 rounded-xl text-center border border-blue-200 shadow-sm">
+<p class="text-lg font-bold text-slate-900">10:00 AM</p>
+<p class="text-sm font-bold text-primary uppercase tracking-wide">Available</p>
+<p class="text-xs text-slate-300 invisible">Placeholder</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">Block Slot</button>
+</div>
+<div class="flex flex-col items-center justify-center bg-slate-50 p-4 rounded-xl text-center border border-dashed border-slate-300">
+<p class="text-lg font-bold text-slate-400">11:00 AM</p>
+<p class="text-sm font-medium text-slate-400 uppercase tracking-wide">Blocked</p>
+</div>
+<div class="flex flex-col gap-2 bg-red-50 p-4 rounded-xl text-center border border-red-100">
+<p class="text-lg font-bold text-slate-900">12:00 PM</p>
+<p class="text-sm font-bold text-red-600 uppercase tracking-wide">Booked</p>
+<p class="text-xs text-slate-600 truncate font-medium">Manicure - Sara Lee</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">View Details</button>
+</div>
+<div class="flex flex-col gap-2 bg-white p-4 rounded-xl text-center border border-blue-200 shadow-sm">
+<p class="text-lg font-bold text-slate-900">01:00 PM</p>
+<p class="text-sm font-bold text-primary uppercase tracking-wide">Available</p>
+<p class="text-xs text-slate-300 invisible">Placeholder</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">Block Slot</button>
+</div>
+<div class="flex flex-col gap-2 bg-white p-4 rounded-xl text-center border border-blue-200 shadow-sm">
+<p class="text-lg font-bold text-slate-900">02:00 PM</p>
+<p class="text-sm font-bold text-primary uppercase tracking-wide">Available</p>
+<p class="text-xs text-slate-300 invisible">Placeholder</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">Block Slot</button>
+</div>
+<div class="flex flex-col gap-2 bg-red-50 p-4 rounded-xl text-center border border-red-100">
+<p class="text-lg font-bold text-slate-900">03:00 PM</p>
+<p class="text-sm font-bold text-red-600 uppercase tracking-wide">Booked</p>
+<p class="text-xs text-slate-600 truncate font-medium">Hair Color - Chloe</p>
+<button class="mt-2 text-xs font-bold text-primary hover:text-blue-700 transition">View Details</button>
+</div>
+<div class="flex flex-col items-center justify-center bg-slate-50 p-4 rounded-xl text-center border border-dashed border-slate-300">
+<p class="text-lg font-bold text-slate-400">04:00 PM</p>
+<p class="text-sm font-medium text-slate-400 uppercase tracking-wide">Blocked</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

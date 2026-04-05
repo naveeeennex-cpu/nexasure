@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join a Game</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2563EB", // Vibrant Blue
+            "dark-text": "#0F172A", // Dark Blue/Black (Slate 900)
+            "secondary-text": "#475569", // Slate 600
+            "light-bg": "#FFFFFF",
+            "border-subtle": "#E2E8F0", // Slate 200
+            "border-blue": "#DBEAFE", // Blue 100
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-white text-dark-text">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-white">
+<header class="sticky top-0 z-20 flex items-center justify-between border-b border-border-subtle bg-white p-4">
+<button class="flex h-10 w-10 items-center justify-center text-dark-text hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold text-dark-text">Join a Game</h1>
+<div class="h-10 w-10"></div>
+</header>
+<div class="sticky top-[73px] z-10 bg-white px-4 pb-4 pt-3">
+<div class="flex items-center gap-2 overflow-x-auto scrollbar-hide py-1">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-300 bg-white px-4 shadow-sm active:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-dark-text" style="font-size: 20px;">tune</span>
+<p class="text-sm font-medium text-dark-text">Filters</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 shadow-sm transition-colors">
+<p class="text-sm font-medium text-white">Football</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-300 bg-white px-4 shadow-sm hover:border-primary/50 active:bg-slate-50 transition-colors">
+<p class="text-sm font-medium text-secondary-text">Cricket</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-300 bg-white px-4 shadow-sm hover:border-primary/50 active:bg-slate-50 transition-colors">
+<p class="text-sm font-medium text-secondary-text">Basketball</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-300 bg-white px-4 shadow-sm hover:border-primary/50 active:bg-slate-50 transition-colors">
+<p class="text-sm font-medium text-secondary-text">Near me</p>
+</button>
+</div>
+</div>
+<main class="flex flex-1 flex-col gap-4 p-4">
+<div class="flex flex-col gap-4 rounded-xl border border-border-blue bg-white p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<h2 class="text-lg font-bold text-dark-text">5-a-side Football</h2>
+<p class="text-sm font-medium text-secondary-text">City Sports Arena</p>
+<p class="text-sm text-secondary-text">Wed, 24 July - 07:00 PM</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-lg bg-primary px-3 py-1.5 text-center min-w-[70px]">
+<p class="text-sm font-bold text-white">2</p>
+<p class="text-[10px] font-medium text-blue-100 uppercase tracking-wide">spots left</p>
+</div>
+</div>
+<a href="../join_game_details_&_roster/code.html">
+<button class="w-full rounded-lg bg-primary py-3 text-base font-bold text-white shadow-sm hover:bg-blue-700 active:scale-[0.98] transition-all">Join Game</button>
+</a>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-blue bg-white p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<h2 class="text-lg font-bold text-dark-text">Box Cricket</h2>
+<p class="text-sm font-medium text-secondary-text">Power Play Sports</p>
+<p class="text-sm text-secondary-text">Wed, 24 July - 08:30 PM</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-lg bg-primary px-3 py-1.5 text-center min-w-[70px]">
+<p class="text-sm font-bold text-white">4</p>
+<p class="text-[10px] font-medium text-blue-100 uppercase tracking-wide">spots left</p>
+</div>
+</div>
+<a href="../group_creation_&_player_invite_(enhanced)/code.html">
+<button class="w-full rounded-lg bg-primary py-3 text-base font-bold text-white shadow-sm hover:bg-blue-700 active:scale-[0.98] transition-all">Join Game</button>
+</a>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-blue bg-white p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<h2 class="text-lg font-bold text-dark-text">3v3 Basketball</h2>
+<p class="text-sm font-medium text-secondary-text">The Hoop Factory</p>
+<p class="text-sm text-secondary-text">Thu, 25 July - 06:00 PM</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-lg bg-primary px-3 py-1.5 text-center min-w-[70px]">
+<p class="text-sm font-bold text-white">1</p>
+<p class="text-[10px] font-medium text-blue-100 uppercase tracking-wide">spot left</p>
+</div>
+</div>
+<button class="w-full rounded-lg bg-primary py-3 text-base font-bold text-white shadow-sm hover:bg-blue-700 active:scale-[0.98] transition-all">Join Game</button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm opacity-80">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<h2 class="text-lg font-bold text-gray-700">7-a-side Football</h2>
+<p class="text-sm font-medium text-gray-500">Goals &amp; Glory Park</p>
+<p class="text-sm text-gray-500">Fri, 26 July - 09:00 PM</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-lg bg-gray-100 border border-gray-200 px-3 py-1.5 text-center min-w-[70px]">
+<p class="text-sm font-bold text-gray-600">Full</p>
+<p class="text-[10px] font-medium text-gray-400 uppercase tracking-wide">0 spots</p>
+</div>
+</div>
+<button class="w-full rounded-lg bg-gray-200 py-3 text-base font-bold text-gray-500 cursor-not-allowed" disabled="">Game Full</button>
+</div>
+</main>
+</div>
+
+</body></html>

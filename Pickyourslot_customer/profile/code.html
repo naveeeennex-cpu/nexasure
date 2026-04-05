@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PickYourSlot - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#4F46E5",
+                    "navy": "#0A192F",
+                    "background-light": "#ffffff",
+                },
+                fontFamily: {
+                    "display": ["Lexend", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white font-display text-navy antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<header class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-navy flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h1 class="text-navy text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Profile</h1>
+<div class="flex size-12 shrink-0 items-center justify-end"></div>
+</header>
+<section class="flex p-4 @container">
+<div class="flex w-full flex-col gap-6 items-center bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-slate-50" data-alt="User's profile picture, Alex Morgan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7o4pMH7J76fGCkjfCuwsT08W_O_MTVRqDPQ12qRcHl2S98ssp7xxH7KCH5GDWUjCN5F_EHH_GPybNimSLDuO4YK3p_IwhkMwuhzZyopkcF6t3W1WZhHmzQjvXa3egv4G74F8qGKJi3VMp4BqLfByORLKweolWqBXUtfQZswaDEmkx9a_saRtQkMtccdTsCCakjULmKCy7meKNZn5Qz-VsH9pBki1ViviARRW9HTf4NPcIZXVtRzaVzflMA6Y__mhiAKmGjv9_2l8G");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-navy text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Morgan</p>
+<p class="text-slate-500 text-base font-normal leading-normal text-center">alex.morgan@email.com</p>
+</div>
+</div>
+<a href="../profile_edit/code.html">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-indigo-500 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px]">
+<span class="truncate">Edit Profile</span>
+</button>
+</a>
+</div>
+</section>
+<section class="px-4">
+<h2 class="text-navy text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Bookings &amp; History</h2>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-sm bg-white border border-slate-100 overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover @xl:rounded-l-xl @xl:rounded-tr-none" data-alt="A brightly lit tennis court" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDu9TWndJqF9l161RxaCEzt0kyVBEbLN3T2iMVYaCRgszj9xXOrZXHsB8WzgbS2Xj0SkaVvVApMahsCGegBSwATB5ph5adhVU2K1_-NzayeXXHbzDuRJI-JqQgCF70l3aVsNzn2YkDOp8od02oDbFvDOYkXI_NDIw2pqRz9hRchojTeroRlDzjnLKlDV9kz-MET3hb-j9jlkDx1aRrycVk0iXKOQi-95XlesIxkl26MXIH6BdjubrwlduFvuUi2BQDff3oXRDV205Xr");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-slate-500 text-sm font-normal leading-normal">Upcoming Booking</p>
+<p class="text-navy text-lg font-bold leading-tight tracking-[-0.015em]">Tennis Court 3</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-slate-600 text-base font-normal leading-normal">Tomorrow at 4:00 PM</p>
+<p class="text-slate-600 text-base font-normal leading-normal">Green Valley Sports Club</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary hover:bg-indigo-500 transition-colors text-white text-sm font-medium leading-normal">
+<span class="truncate">View All</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-sm bg-white border border-slate-100 overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover @xl:rounded-l-xl @xl:rounded-tr-none" data-alt="People playing a competitive tennis match" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARIeusfpzDifKZiCXsSrCdAbhTszVHbjESilT_YO0wbOrdEvTLw2563lMKPZJU9vBC9tNUdcvBncPKYWUrlUSuoc8NgjxiNdwAadQ7rhODKg8VeCCMcwHiVC__Vu2oWeIkbqepzKR0XHsr4JvksV61b4icdZZwe5_EWCtgSBmfTRUQHyNyGeZFqf4ZFp1yDzal0co3VzZ5K964cEI7djKhuB3VeGGlN2hSs1nxmMnf5o84Y56YMkurXk_JgY137WPssWrqGPjl5g1j");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-slate-500 text-sm font-normal leading-normal">Tournament History</p>
+<p class="text-navy text-lg font-bold leading-tight tracking-[-0.015em]">Summer League 2024</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-slate-600 text-base font-normal leading-normal">Finished 2nd Place</p>
+<p class="text-slate-600 text-base font-normal leading-normal">Completed on July 15, 2024</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary hover:bg-indigo-500 transition-colors text-white text-sm font-medium leading-normal">
+<span class="truncate">View All</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 mt-6">
+<h2 class="text-navy text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Account Management</h2>
+<div class="flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+<a class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-navy">credit_card</span>
+<span class="text-navy text-base font-medium">My game skill</span>
+</div>
+<a href="../game_skill/code.html">
+<span class="material-symbols-outlined text-navy">chevron_right</span>
+</a>
+</a>
+<div class="h-px bg-slate-100 mx-4"></div>
+<a class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-navy">notifications</span>
+<span class="text-navy text-base font-medium">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-navy">chevron_right</span>
+</a>
+<div class="h-px bg-slate-100 mx-4"></div>
+<a class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-navy">settings</span>
+<span class="text-navy text-base font-medium">Settings</span>
+</div>
+<span class="material-symbols-outlined text-navy">chevron_right</span>
+</a>
+</div>
+</section>
+<footer class="p-4 mt-auto">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-white border border-slate-200 hover:bg-slate-50 transition-colors text-navy text-base font-bold leading-normal tracking-[0.015em] shadow-sm">
+<span class="material-symbols-outlined">logout</span>
+<span class="truncate">Log Out</span>
+</button>
+</footer>
+</div>
+</body></html>

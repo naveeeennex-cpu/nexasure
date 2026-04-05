@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Course &amp; Coach Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0F3460", // Dark Blue
+                        "primary-dark": "#0a2545",
+                        "background-light": "#ffffff",
+                        "text-main": "#0F3460", // Dark Blue Text
+                        "text-sub": "#64748b", // Slate 500
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-text-main">
+<div class="relative flex min-h-screen w-full flex-col font-display">
+<div class="sticky top-0 z-10 flex flex-col bg-white/95 backdrop-blur-md border-b border-gray-100">
+<div class="flex items-center p-4">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-text-main" style="font-size: 24px;">arrow_back</span>
+</div>
+<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-text-main">Course &amp; Coach Management</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-transparent text-base font-bold leading-normal tracking-[0.015em] text-text-main">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</button>
+</div>
+</div>
+<div class="px-4">
+<div class="flex border-b border-gray-200">
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4 text-primary" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">My Courses</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4 text-gray-400 hover:text-text-main transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Manage Coaches</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4 text-gray-400 hover:text-text-main transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Enrollments</p>
+</a>
+</div>
+</div>
+</div>
+<main class="flex-1 space-y-5 p-4 pb-24">
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(15,52,96,0.08)] border border-gray-100">
+<div class="aspect-video w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-sm" data-alt="Tennis court with rackets and balls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw3sgr_K8M8K5YY1zQJD6n3oaJk4OV0dWbTJOsiApM6G_3OahTfQFazXv3y0sXOHEpXE9evf_Haur0G-rsunL6Stnof09aeGNmuEYykDd4uwFG42-TOeRmcAGFeJ89AKps1bR12OsPoIZxokbVe4BJwWEcOSH3pD3Mh6eof4dV1qx0ynQa1U3qtUmQxLe-J5RvWKg8uabOcWm-fMceJIedYwOjKvt9yAAiG0ETKidN_CxA1yxsawki3lvhCge2wDkW9O9u4Gmo0nA0');"></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-text-main">Advanced Tennis Fundamentals</p>
+<div class="flex items-end justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<p class="text-sm font-medium leading-normal text-text-sub">Mon, Wed, Fri | 16:00 - 17:00</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<p class="text-sm font-medium leading-normal text-text-sub">12/20 Students</p>
+</div>
+</div>
+<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold leading-normal text-white shadow-sm hover:bg-primary-dark transition-colors">
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(15,52,96,0.08)] border border-gray-100">
+<div class="aspect-video w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-sm" data-alt="Swimming pool with lane lines" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAWyfAJDG09zbOgLgxtSWpNam7440JpnVemi8quo1NPek2tlQrVwjt58KITutg6Osjd3vUUnzS0C5F9bcvP_B2kASu5JlNoSgjNUIYJw0tnWOxQydJy1I3eYz0y5SYDZamRffP0OsmLVU1lr8oxIXtIumP1co-W7-XEpllT_mPJZlBZHOAxCO8Nea6LvPGNaRGGuPK6uyvwm3nsBSvUCS0EJ1tOvhGUOZqU1mm0MlG4DFpxfAySGqvACws3RiJ76g0FyM_SeGvTMC5');"></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-text-main">Beginner Swimming Lessons</p>
+<div class="flex items-end justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<p class="text-sm font-medium leading-normal text-text-sub">Tue, Thu | 10:00 - 11:00</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<p class="text-sm font-medium leading-normal text-text-sub">8/15 Students</p>
+</div>
+</div>
+<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold leading-normal text-white shadow-sm hover:bg-primary-dark transition-colors">
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(15,52,96,0.08)] border border-gray-100">
+<div class="aspect-video w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-sm" data-alt="Soccer field with a ball in the foreground" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6I_zJ6n4X5ZbcHE5vjqawqUWxLfZwLWmgKdqLiTclTCCwMl6MkQfv_FJ_agmD343r0jqP-7dfyAqfDY_LHFizqjlA66s0OdA8bUtALXcj8_TG5iQz1xk1-8L-ZnkbhQ8KjwN0StQg4zR0w02EWucajSv8_ifsnBgngs2uMrKtjABfkOU9piQ3Iz1EOFDnQqSvqgFyy9O-qYs2k8-AgQmpdFlWGm68_QMkgheg-G_sACvapYMGRkY8mU2g1-uN0KEHhCkSZT3YaR9U');"></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-text-main">Youth Soccer Drills</p>
+<div class="flex items-end justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<p class="text-sm font-medium leading-normal text-text-sub">Sat, Sun | 09:00 - 10:30</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<p class="text-sm font-medium leading-normal text-text-sub">18/18 Students</p>
+</div>
+</div>
+<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold leading-normal text-white shadow-sm hover:bg-primary-dark transition-colors">
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 right-6 z-20">
+<button class="flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-[0_4px_16px_rgba(15,52,96,0.4)] hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-size: 28px;">add</span>
+</button>
+</div>
+</div>
+
+</body></html>

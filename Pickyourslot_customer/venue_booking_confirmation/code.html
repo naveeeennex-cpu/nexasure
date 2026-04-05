@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Booking Confirmation</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "surface-light": "#f5f8ff", // Light blue tint for cards
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-sm">
+<!-- TopAppBar -->
+<div class="flex items-center justify-end p-4 pt-6 pb-2">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="text-primary font-bold text-base leading-normal tracking-[0.015em]">Done</span>
+</button>
+</div>
+<!-- Success Indicator -->
+<div class="flex flex-col items-center justify-center pt-8 pb-4 animate-fade-in-up">
+<div class="rounded-full bg-primary p-6 flex items-center justify-center shadow-xl shadow-primary/30 mb-6 scale-100 hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-white !text-6xl font-bold">check</span>
+</div>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-[#0d121c] dark:text-white tracking-tight text-[32px] font-extrabold leading-tight px-6 text-center pb-2">
+            Booking Confirmed!
+        </h1>
+<!-- BodyText -->
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal pb-6 px-8 text-center">
+            You are all set for your game at <span class="text-slate-900 dark:text-white font-semibold">City Sports Center</span>.
+        </p>
+<!-- Image Card (Venue Preview) -->
+<div class="w-full px-6 pb-6">
+<div class="w-full h-48 rounded-xl overflow-hidden shadow-sm relative group">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Modern indoor sports court with bright lighting and wooden flooring" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2T6Oo-Kt-0G-pCcHqhZayq8kAQrpKDm_9oZFXIltlfrUIHN5GW0a9E9EWlXa0JEcTATJ2X9alFGCdlnLbBz1uW7CpaysgOlr-VU18lPQZG-ugUJ0PWgtvtTSqJcFbIyKeV5uuGWAIr-CigoLUbJrFzP92Kj8YCM3f9pxGJy_KS-HzEVX7jOE5Q5BHAsSfE4KJCbqAYdRJiIds6AucY-FJsPP_B0VZA4YemM2d6FkV73xhqpuAQrASTLac3mpTbwK5mRNsibG5chiU");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-xs font-semibold uppercase tracking-wider opacity-80 mb-1">Upcoming Game</p>
+<p class="text-lg font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                        Sat, Oct 24 • 10:00 AM
+                    </p>
+</div>
+</div>
+</div>
+<!-- Stats / Reference Card -->
+<div class="px-6 pb-6">
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-blue-50 dark:border-slate-700/50">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">Booking Reference</p>
+<div class="flex items-center gap-2">
+<p class="text-primary dark:text-blue-400 tracking-tight text-3xl font-bold font-mono">#REF-1234</p>
+<button class="text-slate-400 hover:text-primary transition-colors" title="Copy">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+<p class="text-xs text-slate-400 mt-1">Please show this at the reception</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-auto w-full px-6 pb-8 flex flex-col gap-3">
+<button class="group flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 px-4 text-white font-bold text-lg shadow-lg shadow-primary/25 hover:bg-blue-700 active:scale-[0.98] transition-all">
+                View My Bookings
+            </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-transparent border-2 border-slate-100 dark:border-slate-700 py-4 px-4 text-primary dark:text-blue-400 font-bold text-lg hover:bg-surface-light dark:hover:bg-slate-800 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">calendar_today</span>
+                Add to Calendar
+            </button>
+</div>
+<div class="h-4"></div>
+</div>
+</body></html>
