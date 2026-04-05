@@ -129,11 +129,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-purple flex items-center justify-center">
-              <span className="text-white font-bold text-sm font-[var(--font-space)]">N</span>
-            </div>
-            <span className="text-lg font-bold text-white font-[var(--font-space)]">Nexasure</span>
+          <div className="flex items-center">
+            <span className="text-xl font-bold text-white font-[var(--font-space)]">Robilot</span>
           </div>
 
           {/* Nav Links */}
@@ -151,7 +148,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Nexasure. All rights reserved.
+            &copy; {new Date().getFullYear()} Robilot. All rights reserved.
           </p>
         </div>
       </div>

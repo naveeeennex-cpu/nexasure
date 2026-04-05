@@ -5,49 +5,43 @@ const services = [
   {
     icon: Smartphone,
     name: 'Mobile App Development',
-    tech: 'Flutter / React Native',
+    tech: 'Flutter, React Native, Dart, Kotlin',
     timeline: '4-8 Weeks',
-    stack: 'FastAPI, Firebase, Supabase',
     color: '#7c3aed',
   },
   {
     icon: Globe,
     name: 'Website Development',
-    tech: 'React / Next.js',
+    tech: 'React, Next.js, Tailwind, Node.js, FastAPI',
     timeline: '2-4 Weeks',
-    stack: 'Tailwind, Vite, Vercel',
     color: '#3b82f6',
   },
   {
     icon: Bot,
     name: 'WhatsApp Bot',
-    tech: 'WhatsApp Business API',
+    tech: 'Python, WhatsApp Business API, Gemini AI',
     timeline: '1-2 Weeks',
-    stack: 'Python, Gemini AI, Automation',
     color: '#22c55e',
   },
   {
     icon: Phone,
     name: 'AI Voice Call Bot',
-    tech: 'Twilio / Pipecat AI',
+    tech: 'Twilio, Pipecat AI, Google STT/TTS, Gemini',
     timeline: '2-3 Weeks',
-    stack: 'Google STT/TTS, Gemini',
     color: '#22d3ee',
   },
   {
     icon: Search,
     name: 'SEO & Marketing',
-    tech: 'On-page & Off-page SEO',
+    tech: 'On-page SEO, Off-page SEO, Google Analytics',
     timeline: 'Ongoing',
-    stack: 'Analytics, Strategy, Content',
     color: '#f59e0b',
   },
   {
     icon: Palette,
     name: 'UI/UX Design',
-    tech: 'Figma / Adobe XD',
+    tech: 'Figma, Adobe XD, Prototyping, User Research',
     timeline: '1-3 Weeks',
-    stack: 'Prototyping, User Research',
     color: '#ec4899',
   },
 ]
@@ -79,11 +73,10 @@ export default function Services() {
         </motion.div>
 
         {/* Table Header */}
-        <div className="hidden md:grid grid-cols-5 gap-4 px-6 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider border-b border-gray-100">
+        <div className="hidden md:grid grid-cols-4 gap-4 px-6 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider border-b border-gray-100">
           <span>Service</span>
-          <span>Technology</span>
+          <span className="col-span-1">Technology</span>
           <span>Timeline</span>
-          <span>Stack</span>
           <span></span>
         </div>
 
@@ -96,7 +89,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="grid md:grid-cols-5 gap-4 items-center px-6 py-5 hover:bg-gray-50 rounded-xl transition-colors group"
+              className="grid md:grid-cols-4 gap-4 items-center px-6 py-5 hover:bg-gray-50 rounded-xl transition-colors group"
             >
               {/* Service Name */}
               <div className="flex items-center gap-3">
@@ -116,9 +109,6 @@ export default function Services() {
 
               {/* Timeline */}
               <div className="text-sm text-gray-600">{service.timeline}</div>
-
-              {/* Stack */}
-              <div className="text-sm text-gray-500">{service.stack}</div>
 
               {/* CTA */}
               <div className="flex justify-end">

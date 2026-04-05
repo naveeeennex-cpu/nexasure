@@ -30,12 +30,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-purple flex items-center justify-center">
-            <span className="text-white font-bold text-lg font-[var(--font-space)]">N</span>
-          </div>
-          <span className="text-xl font-bold text-white font-[var(--font-space)] tracking-tight">
-            Nexasure
+        <a href="#" className="flex items-center">
+          <span className="text-2xl font-bold text-white font-[var(--font-space)] tracking-tight">
+            Robilot
           </span>
         </a>
 
