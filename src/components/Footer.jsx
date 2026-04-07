@@ -16,13 +16,17 @@ const navLinks = [
 ]
 
 export default function Footer() {
-  const [form, setForm] = useState({ name: '', phone: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!form.name || !form.phone) {
-      toast.error('Please fill in name and phone number')
+    if (!form.name || !form.email || !form.phone) {
+      toast.error('Please fill in name, email and phone number')
+      return
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      toast.error('Please enter a valid email address')
       return
     }
     if (!/^[6-9]\d{9}$/.test(form.phone)) {
@@ -34,6 +38,7 @@ export default function Footer() {
     // Send email via EmailJS
     const templateParams = {
       from_name: form.name,
+      to_email: form.email,
       phone: form.phone,
       message: form.message || 'No message provided',
     }
@@ -52,7 +57,7 @@ export default function Footer() {
     window.open(url, '_blank')
 
     setLoading(false)
-    setForm({ name: '', phone: '', message: '' })
+    setForm({ name: '', email: '', phone: '', message: '' })
   }
 
   return (
@@ -111,6 +116,13 @@ export default function Footer() {
                   placeholder="Your Name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple transition-colors"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple transition-colors"
                 />
                 <input
