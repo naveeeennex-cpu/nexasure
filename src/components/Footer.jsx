@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
 
 const EMAILJS_SERVICE_ID = 'lazyrabbit2026'
 const EMAILJS_TEMPLATE_ID = 'template_o9v1unn'
-const EMAILJS_PUBLIC_KEY = 'RbUuAuwEti6MDep5A9gY1'
+const EMAILJS_PUBLIC_KEY = 'vlbqPcSGwMmokbZVb'
 
 const navLinks = [
   { name: 'Services', href: '#services' },
