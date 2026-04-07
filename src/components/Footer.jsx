@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import toast from 'react-hot-toast'
+import emailjs from '@emailjs/browser'
 import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
+
+const EMAILJS_SERVICE_ID = 'lazyrabbit2026'
+const EMAILJS_TEMPLATE_ID = 'template_o9v1unn'
+const EMAILJS_PUBLIC_KEY = 'RbUuAuwEti6MDep5A9gY1'
 
 const navLinks = [
   { name: 'Services', href: '#services' },
@@ -14,7 +19,7 @@ export default function Footer() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' })
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.phone) {
       toast.error('Please fill in name and phone number')
@@ -26,11 +31,26 @@ export default function Footer() {
     }
     setLoading(true)
 
+    // Send email via EmailJS
+    const templateParams = {
+      from_name: form.name,
+      phone: form.phone,
+      message: form.message || 'No message provided',
+    }
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      toast.success('Message sent successfully! We\'ll get back to you soon.')
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      toast.error('Failed to send message. Please try again.')
+    }
+
+    // Also redirect to WhatsApp
     const text = `Hi, I'm ${form.name}.\nPhone: ${form.phone}\n${form.message ? `Message: ${form.message}` : ''}`
     const url = `https://wa.me/919176186062?text=${encodeURIComponent(text)}`
     window.open(url, '_blank')
 
-    toast.success('Redirecting to WhatsApp!')
     setLoading(false)
     setForm({ name: '', phone: '', message: '' })
   }
