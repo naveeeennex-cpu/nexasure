@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import toast from 'react-hot-toast'
-import { Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
 
 const navLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Portfolio', href: '#portfolio' },
-  { name: 'How It Works', href: '#how-it-works' },
+  { name: 'How we Works', href: '#how-it-works' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -130,7 +130,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-xl font-bold text-white font-[var(--font-space)]">Robilot</span>
+            <Rabbit size={24} className="text-purple-glow" />
+            <span className="text-xl font-bold text-white font-[var(--font-space)] ml-2">LazyRabbit</span>
           </div>
 
           {/* Nav Links */}
@@ -148,7 +149,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Robilot. All rights reserved.
+            &copy; {new Date().getFullYear()} LazyRabbit. All rights reserved.
           </p>
         </div>
       </div>
