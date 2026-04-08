@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
 
 const EMAILJS_SERVICE_ID = 'lazyrabbit2026'
-const EMAILJS_TEMPLATE_ID = 'template_bavoucz'
+const EMAILJS_TEMPLATE_ID = 'template_o9v1unn'
 const EMAILJS_PUBLIC_KEY = 'vlbqPcSGwMmokbZVb'
 
 const navLinks = [
@@ -38,7 +38,7 @@ export default function Footer() {
     // Send email via EmailJS
     const templateParams = {
       from_name: form.name,
-      to_email: form.email,
+      from_email: form.email,
       phone: form.phone,
       message: form.message || 'No message provided',
     }
