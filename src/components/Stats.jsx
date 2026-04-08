@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '15+', label: 'Happy Clients' },
+  { value: '25+', label: 'Projects Delivered' },
+  { value: '23+', label: 'Happy Clients' },
   { value: '4+', label: 'Years Experience' },
-  { value: '98%', label: 'Client Satisfaction' },
+  { value: '97%', label: 'Client Satisfaction' },
 ]
 
 export default function Stats() {
