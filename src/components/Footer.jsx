@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
 
 const EMAILJS_SERVICE_ID = 'lazyrabbit2026'
-const EMAILJS_TEMPLATE_ID = 'template_o9v1unn'
+const EMAILJS_TEMPLATE_ID = 'template_bavoucz'
 const EMAILJS_PUBLIC_KEY = 'vlbqPcSGwMmokbZVb'
 
 const navLinks = [
