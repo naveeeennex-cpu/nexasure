@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 
 const clients = [
   { name: 'Stranger Meet', logo: '/logos/stranger meet.png' },
+  { name: 'MatchInMinutes', logo: '/logos/MIM_logo.png' },
   { name: 'Aptirix', logo: '/logos/aptirix_logo.jpg' },
   { name: 'MLV Enterprises', logo: '/logos/mlv_logo.png' },
   { name: 'Pick Your Slot', logo: '/logos/pys_logo.png' },
