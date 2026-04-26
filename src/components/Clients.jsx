@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const clients = [
   { name: 'Stranger Meet', logo: '/logos/stranger meet.png' },
-  { name: 'MatchInMinutes', logo: '/logos/MIM_logo.png' },
+  { name: 'MatchInMinutes', logo: 'https://matchinminutes.com/assets/icon.png' },
   { name: 'Aptirix', logo: '/logos/aptirix_logo.jpg' },
   { name: 'MLV Enterprises', logo: '/logos/mlv_logo.png' },
   { name: 'Pick Your Slot', logo: '/logos/pys_logo.png' },
@@ -10,7 +10,6 @@ const clients = [
   { name: 'Adory Creatives', logo: '/logos/adory_creatives.png' },
   { name: 'Green Access Tax', logo: '/logos/greenacesss.png' },
 ]
-
 export default function Clients() {
   // Duplicate the list for seamless loop
   const marqueeItems = [...clients, ...clients, ...clients, ...clients]
