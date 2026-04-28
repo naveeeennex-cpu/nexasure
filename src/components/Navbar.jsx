@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <Rabbit size={28} className="text-purple-glow" />
+          <img src="/rabbit_icon.png" alt="LazyRabbit logo" className="w-7 h-7 object-contain" />
           <span className="text-2xl font-bold text-white font-[var(--font-space)] tracking-tight ml-2">
             LazyRabbit
           </span>
