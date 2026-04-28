@@ -1,11 +1,23 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Smartphone,
+  Heart,
+  Briefcase,
+  Lock,
+  PhoneCall,
+  CalendarDays,
+  Sofa,
+  Calculator,
+} from 'lucide-react'
 import ProjectDetail from './ProjectDetail'
 
 const projects = [
   {
     title: 'Stranger Meet',
+    logo: '/logos/stranger%20meet.png',
+    icon: Smartphone,
     category: 'Mobile App',
     description: 'A full-featured social networking app with real-time chat, video calls, events, stories, and reels.',
     fullDescription: 'Stranger Meet is a cross-platform social networking application built with Flutter and FastAPI. It enables users to connect through real-time messaging, video calls powered by WebRTC, event discovery, stories, reels, and community groups — all in one seamless experience.',
@@ -36,6 +48,7 @@ const projects = [
   },
   {
     title: 'MatchInMinutes',
+    icon: Heart,
     category: 'Matrimony Platform',
     description: 'A modern matrimony platform with smart discovery, secure messaging, gift sending, and subscription packages.',
     fullDescription: 'MatchInMinutes is a feature-rich matrimony web platform designed to help users find their life partner quickly and safely. It offers intelligent partner discovery, secure in-app messaging, profile credits, gift sending, and tiered subscription packages — built with a clean, trust-focused UI.',
@@ -65,6 +78,8 @@ const projects = [
   },
   {
     title: 'Aptirix',
+    logo: '/logos/aptirix_logo.jpg',
+    icon: Briefcase,
     category: 'Web Platform',
     description: 'AI-powered recruitment platform with automated video interviews, resume builder, ATS scoring, and proctoring.',
     fullDescription: 'Aptirix is a comprehensive AI-driven recruitment and training platform. It streamlines hiring with automated video interviews powered by Gemini AI, real-time proctoring using MediaPipe, ATS-compatible resume building, and skill-based course recommendations — all in one unified platform.',
@@ -94,6 +109,8 @@ const projects = [
   },
   {
     title: 'MLV Enterprises',
+    logo: '/logos/mlv_logo.png',
+    icon: Lock,
     category: 'E-Commerce Website',
     description: 'Smart lock products showcase with online booking, WhatsApp integration, and installation scheduling.',
     fullDescription: 'MLV Enterprises is a modern e-commerce website for a smart lock company based in Chennai. It features a product catalog, online installation booking with form validation, WhatsApp direct chat integration, and email notifications — all built with a responsive, animated UI.',
@@ -116,6 +133,7 @@ const projects = [
   },
   {
     title: 'AI Sales Call Bot',
+    icon: PhoneCall,
     category: 'Voice AI',
     description: 'Twilio-powered AI voice bot that acts as a sales executive, handles calls in Tanglish, and records analytics.',
     tech: ['Twilio', 'Pipecat AI', 'Gemini', 'Google STT/TTS'],
@@ -131,6 +149,8 @@ const projects = [
   },
   {
     title: 'Pick Your Slot',
+    logo: '/logos/pys_logo.png',
+    icon: CalendarDays,
     category: 'Mobile App',
     description: 'A multi-service slot booking app for venues, salons, car wash, courses, and games with customer and vendor apps.',
     fullDescription: 'Pick Your Slot is a comprehensive slot booking platform with separate Customer and Vendor apps. Customers can book venue slots, salon appointments, car wash services, sports coaching courses, and host/join games. The platform supports bulk bookings, group passes, promo codes, and integrated payments.',
@@ -230,6 +250,8 @@ const projects = [
   },
   {
     title: 'Shivay Interior Decor',
+    logo: '/logos/Shiveyinteriordecor_logo.png',
+    icon: Sofa,
     category: 'Website',
     description: 'Professional website for an interior decoration company showcasing their design portfolio and services.',
     fullDescription: 'Shivay Interior Decor is a professional website built for an interior decoration company. It showcases their design portfolio, services, and past projects with a clean, modern layout optimized for lead generation and SEO.',
@@ -251,6 +273,8 @@ const projects = [
   },
   {
     title: 'Green Access Tax',
+    logo: '/logos/greenacesss.png',
+    icon: Calculator,
     category: 'Website',
     description: 'Professional website for a tax consulting firm offering GST, income tax, and business registration services.',
     fullDescription: 'Green Access Tax is a clean, professional website built for a tax consulting company. It showcases their services including GST filing, income tax returns, business registration, and financial advisory — designed to generate leads and build client trust.',
@@ -304,6 +328,29 @@ export default function Portfolio() {
                 onClick={() => setSelectedProject(project)}
                 className="rounded-xl border border-white/[0.08] bg-white/[0.02] hover:border-white/[0.15] hover:bg-white/[0.04] transition-all duration-300 p-6 flex flex-col group cursor-pointer"
               >
+                <div className="flex items-center justify-between mb-4">
+                  <div
+                    className={`w-12 h-12 rounded-xl border flex items-center justify-center overflow-hidden transition-colors ${
+                      project.logo
+                        ? 'bg-white border-white/20 p-1'
+                        : 'bg-purple/15 border-purple/20 group-hover:bg-purple/25'
+                    }`}
+                  >
+                    {project.logo ? (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : project.icon ? (
+                      <project.icon size={20} className="text-purple-glow" />
+                    ) : null}
+                  </div>
+                  <span className="text-[11px] uppercase tracking-wider text-muted font-medium">
+                    {project.category}
+                  </span>
+                </div>
+
                 <h3 className="text-xl font-bold text-white font-[var(--font-space)] mb-3">
                   {project.title}
                 </h3>
