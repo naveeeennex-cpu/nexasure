@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import toast from 'react-hot-toast'
 import emailjs from '@emailjs/browser'
-import { Mail, Phone, MapPin, Send, ArrowRight, Rabbit } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react'
 
 const EMAILJS_SERVICE_ID = 'lazyrabbit2026'
 const EMAILJS_TEMPLATE_ID = 'template_bavoucz'
@@ -162,7 +162,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center">
-            <Rabbit size={24} className="text-purple-glow" />
+            <img src="/rabbit_icon.png" alt="LazyRabbit logo" className="w-7 h-7 object-contain" />
             <span className="text-xl font-bold text-white font-[var(--font-space)] ml-2">LazyRabbit</span>
           </div>
 
