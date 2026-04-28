@@ -23,11 +23,11 @@ function Starfield() {
     const w = () => canvas.offsetWidth
     const h = () => canvas.offsetHeight
 
-    const stars = Array.from({ length: 200 }, () => ({
+    const stars = Array.from({ length: 450 }, () => ({
       x: Math.random() * w(),
       y: Math.random() * h(),
-      r: Math.random() * 1.2 + 0.3,
-      opacity: Math.random() * 0.6 + 0.2,
+      r: Math.random() * 1.4 + 0.3,
+      opacity: Math.random() * 0.7 + 0.25,
       speed: Math.random() * 0.0008 + 0.0002,
       phase: Math.random() * Math.PI * 2,
     }))
@@ -63,7 +63,7 @@ function Starfield() {
       })
 
       // Spawn meteors randomly
-      if (Math.random() < 0.012) spawnMeteor()
+      if (Math.random() < 0.045) spawnMeteor()
 
       // Draw meteors
       for (let i = meteors.length - 1; i >= 0; i--) {
@@ -244,7 +244,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-5 text-muted text-base md:text-lg max-w-md mx-auto leading-relaxed"
         >
-          From mobile apps to AI-powered bots, we craft digital experiences that drive real business results.
+          From idea to actual product — we turn your vision into shipped, real-world digital experiences.
         </motion.p>
 
         <motion.div
