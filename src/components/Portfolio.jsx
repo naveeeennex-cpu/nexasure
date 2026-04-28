@@ -48,7 +48,7 @@ const projects = [
   },
   {
     title: 'MatchInMinutes',
-    icon: Heart,
+    logo: "https://matchinminutes.com/assets/icon.png",
     category: 'Matrimony Platform',
     description: 'A modern matrimony platform with smart discovery, secure messaging, gift sending, and subscription packages.',
     fullDescription: 'MatchInMinutes is a feature-rich matrimony web platform designed to help users find their life partner quickly and safely. It offers intelligent partner discovery, secure in-app messaging, profile credits, gift sending, and tiered subscription packages — built with a clean, trust-focused UI.',
