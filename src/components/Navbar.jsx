@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Rabbit } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'How We Works', href: '#how-it-works' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Products', href: '/#products' },
+  { name: 'How We Work', href: '/#how-it-works' },
+  { name: 'Contact', href: '/#contact' },
 ]
 
 export default function Navbar() {
@@ -30,12 +31,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src="/rabbit_icon.png" alt="LazyRabbit logo" className="w-7 h-7 object-contain" />
           <span className="text-2xl font-bold text-white font-[var(--font-space)] tracking-tight ml-2">
             LazyRabbit
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -53,7 +54,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="px-5 py-2.5 bg-purple hover:bg-purple-light text-white text-sm font-medium rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-purple/30"
           >
             Book a Call
@@ -90,7 +91,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="px-5 py-2.5 bg-purple text-white text-sm font-medium rounded-full text-center mt-2"
               >
