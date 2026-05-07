@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Sparkles, Search, Lightbulb, Rocket, RefreshCw, ArrowRight } from 'lucide-react'
+import { ArrowUpRight, Sparkles, Search, Lightbulb, Rocket, RefreshCw, ArrowRight, X } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
+import Starfield from '../components/Starfield'
 import { products } from '../data/products'
 
 const buildSteps = [
@@ -40,35 +41,41 @@ export default function ProductsHub() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 overflow-hidden">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[160px] opacity-30 pointer-events-none bg-purple" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(124,58,237,0.1)_0%,transparent_60%)] pointer-events-none" />
+      <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-[#060614] pt-32 md:pt-40 pb-24">
+        <Starfield />
 
-        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+        {/* Radial gradient overlays — match main hero */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.08)_0%,transparent_60%)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[400px] bg-[radial-gradient(ellipse_at_bottom,rgba(13,27,42,0.8)_0%,transparent_70%)]" />
+
+        {/* Centered content */}
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple/30 bg-purple/[0.08] mb-6"
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple/30 bg-purple/[0.08] mb-6 backdrop-blur-sm"
           >
             <Sparkles size={13} className="text-purple-glow" />
             <span className="text-xs text-purple-glow font-medium tracking-[0.18em] uppercase">Our Products</span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-[var(--font-space)] tracking-tight leading-[1.05] mb-6"
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] text-white font-[var(--font-space)] tracking-tight"
           >
-            We build our<br /> own products.
+            We Build Our
+            <br />
+            <span className="text-white">Own Products</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-light max-w-2xl mx-auto leading-relaxed mb-10"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-5 text-muted text-base md:text-lg max-w-md mx-auto leading-relaxed"
           >
             LazyRabbit is a product-first company. We identify real problems,
             validate them with real users, and ship platforms we operate ourselves.
@@ -77,23 +84,92 @@ export default function ProductsHub() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-8 flex flex-wrap justify-center gap-3"
           >
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4">
-              <div className="text-2xl md:text-3xl font-bold text-white font-[var(--font-space)]">{products.length}</div>
-              <div className="text-xs text-muted uppercase tracking-wider mt-1">Live Products</div>
-            </div>
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4">
-              <div className="text-2xl md:text-3xl font-bold text-white font-[var(--font-space)]">10K+</div>
-              <div className="text-xs text-muted uppercase tracking-wider mt-1">Combined Users</div>
-            </div>
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4">
-              <div className="text-2xl md:text-3xl font-bold text-white font-[var(--font-space)]">Web · App · AI</div>
-              <div className="text-xs text-muted uppercase tracking-wider mt-1">Surfaces</div>
-            </div>
+            <a
+              href="#lineup"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#060614] font-semibold rounded-full hover:bg-white/90 transition-all duration-300 hover:shadow-xl hover:shadow-white/10 text-sm"
+            >
+              Explore products
+              <ArrowRight size={16} />
+            </a>
+            <a
+              href="/#contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/15 hover:border-white/30 hover:bg-white/[0.04] text-white font-medium rounded-full transition-colors text-sm backdrop-blur-sm"
+            >
+              Talk to us
+            </a>
           </motion.div>
         </div>
+
+        {/* Floating glass stat cards — match main hero */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="absolute left-[5%] md:left-[10%] top-[25%] hidden sm:block z-10"
+        >
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            className="glass-strong rounded-xl px-4 py-3 flex items-center gap-3"
+          >
+            <div>
+              <div className="text-[10px] text-muted uppercase tracking-wider">Live Products</div>
+              <div className="text-white font-bold text-2xl mt-0.5">{products.length}</div>
+            </div>
+            <div className="w-7 h-7 rounded-full bg-purple/20 flex items-center justify-center">
+              <X size={12} className="text-purple-glow rotate-45" />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="absolute right-[5%] md:right-[10%] top-[35%] hidden sm:block z-10"
+        >
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            className="glass-strong rounded-xl px-4 py-3 flex items-center gap-3"
+          >
+            <div>
+              <div className="text-[10px] text-muted uppercase tracking-wider">Surfaces</div>
+              <div className="text-white font-semibold text-sm mt-0.5">Web · App</div>
+              <div className="text-white font-semibold text-sm">AI · Voice</div>
+            </div>
+            <div className="w-7 h-7 rounded-full bg-cyan-accent/20 flex items-center justify-center">
+              <X size={12} className="text-cyan-accent rotate-45" />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="absolute left-[15%] md:left-[20%] bottom-[18%] hidden md:block z-10"
+        >
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+            className="glass-strong rounded-xl px-4 py-3 flex items-center gap-3"
+          >
+            <div>
+              <div className="text-[10px] text-muted uppercase tracking-wider">Combined Users</div>
+              <div className="text-white font-bold text-2xl mt-0.5">10K+</div>
+            </div>
+            <div className="w-7 h-7 rounded-full bg-emerald-400/20 flex items-center justify-center">
+              <X size={12} className="text-emerald-300 rotate-45" />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Bottom gradient fade into next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-dark to-transparent z-20" />
       </section>
 
       {/* How we build products */}
@@ -141,7 +217,7 @@ export default function ProductsHub() {
       </section>
 
       {/* Products grid */}
-      <section className="py-24 border-t border-white/[0.06] relative overflow-hidden">
+      <section id="lineup" className="py-24 border-t border-white/[0.06] relative overflow-hidden scroll-mt-20">
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-purple/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
