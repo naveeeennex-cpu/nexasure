@@ -37,11 +37,11 @@ export default function ProductPage() {
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <Link
-            to="/#products"
+            to="/products"
             className="inline-flex items-center gap-2 text-muted-light hover:text-white transition-colors mb-10 group text-sm"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-            Back to products
+            Back to all products
           </Link>
 
           <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-start">
@@ -351,7 +351,7 @@ export default function ProductPage() {
               Start a project
             </a>
             <Link
-              to="/#products"
+              to="/products"
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/15 hover:border-white/30 hover:bg-white/[0.04] text-white font-medium rounded-full transition-colors text-sm"
             >
               See other products

@@ -9,9 +9,8 @@ const EMAILJS_TEMPLATE_ID = 'template_bavoucz'
 const EMAILJS_PUBLIC_KEY = 'vlbqPcSGwMmokbZVb'
 
 const navLinks = [
-  { name: 'Services', href: '/#services' },
-  { name: 'Products', href: '/#products' },
-  { name: 'Work', href: '/#work' },
+  { name: 'Products', href: '/products' },
+  { name: 'Services', href: '/services' },
   { name: 'How we Work', href: '/#how-it-works' },
   { name: 'Contact', href: '/#contact' },
 ]

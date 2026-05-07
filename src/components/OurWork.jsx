@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Briefcase, Smartphone, Globe, Phone } from 'lucide-react'
+import { ArrowUpRight, Briefcase, Smartphone, Globe, Phone, ArrowRight } from 'lucide-react'
 import { clientWork } from '../data/clientWork'
 
 const categoryIcon = {
@@ -12,7 +12,7 @@ const categoryIcon = {
 
 export default function OurWork() {
   return (
-    <section id="work" className="py-24 bg-dark-2 relative overflow-hidden">
+    <section id="services" className="py-24 bg-dark-2 relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-purple/[0.05] rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
@@ -26,14 +26,14 @@ export default function OurWork() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-accent/30 bg-cyan-accent/[0.06] mb-5">
             <Briefcase size={13} className="text-cyan-accent" />
-            <span className="text-xs text-cyan-accent font-medium tracking-[0.18em] uppercase">Client Work</span>
+            <span className="text-xs text-cyan-accent font-medium tracking-[0.18em] uppercase">Our Services</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-[var(--font-space)] mb-4">
-            Work we've delivered for clients
+            Services we've delivered
           </h2>
           <p className="text-muted max-w-2xl mx-auto leading-relaxed">
-            We're also a service company. These are projects we designed, built,
-            and shipped for partners across web, mobile, and AI.
+            We're also a service company. We design, build, and ship custom
+            projects for clients across web, mobile, and AI.
           </p>
         </motion.div>
 
@@ -49,7 +49,7 @@ export default function OurWork() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
                 <Link
-                  to={`/work/${work.slug}`}
+                  to={`/services/${work.slug}`}
                   className="block h-full rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-white/[0.18] hover:bg-white/[0.04] transition-all duration-300 p-6 group relative overflow-hidden"
                 >
                   <div
@@ -110,6 +110,22 @@ export default function OurWork() {
             )
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mt-14"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 hover:border-white/30 hover:bg-white/[0.04] text-white text-sm font-medium transition-colors"
+          >
+            View all services
+            <ArrowRight size={15} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

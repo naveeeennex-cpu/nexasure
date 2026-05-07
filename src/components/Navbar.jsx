@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { name: 'Services', href: '/#services' },
-  { name: 'Products', href: '/#products' },
-  { name: 'Work', href: '/#work' },
+  { name: 'Products', href: '/products' },
+  { name: 'Services', href: '/services' },
   { name: 'How We Work', href: '/#how-it-works' },
   { name: 'Contact', href: '/#contact' },
 ]

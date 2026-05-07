@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Sparkles, ArrowRight } from 'lucide-react'
 import { products } from '../data/products'
 
 export default function OurProducts() {
@@ -93,6 +93,22 @@ export default function OurProducts() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mt-14"
+        >
+          <Link
+            to="/products"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 hover:border-white/30 hover:bg-white/[0.04] text-white text-sm font-medium transition-colors"
+          >
+            View all products
+            <ArrowRight size={15} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )
