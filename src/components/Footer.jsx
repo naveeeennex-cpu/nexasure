@@ -11,6 +11,7 @@ const EMAILJS_PUBLIC_KEY = 'vlbqPcSGwMmokbZVb'
 const navLinks = [
   { name: 'Products', href: '/products' },
   { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
   { name: 'How we Work', href: '/#how-it-works' },
   { name: 'Contact', href: '/#contact' },
 ]

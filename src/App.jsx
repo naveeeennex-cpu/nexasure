@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import Home from './pages/Home'
+import About from './pages/About'
 import ProductsHub from './pages/ProductsHub'
 import ProductPage from './pages/ProductPage'
 import ServicesHub from './pages/ServicesHub'
@@ -13,6 +14,7 @@ export default function App() {
         <Toaster position="top-right" />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/products" element={<ProductsHub />} />
           <Route path="/products/:slug" element={<ProductPage />} />
           <Route path="/services" element={<ServicesHub />} />
