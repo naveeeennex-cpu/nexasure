@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Stats from '../components/Stats'
 import Services from '../components/Services'
 import OurProducts from '../components/OurProducts'
+import OurWork from '../components/OurWork'
 import HowItWorks from '../components/HowItWorks'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
@@ -30,6 +31,7 @@ export default function Home() {
       <Stats />
       <Services />
       <OurProducts />
+      <OurWork />
       <HowItWorks />
       <Footer />
       <WhatsAppButton />
