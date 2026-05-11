@@ -220,19 +220,19 @@ export const clientWork = [
     client: 'Confidential',
     tagline: 'A Tanglish AI sales agent that handles calls 24/7.',
     summary:
-      'A Twilio-powered AI voice bot that acts as a sales executive — handles inbound and outbound calls in Tanglish (Tamil + English), runs sentiment analysis, and records analytics for follow-up.',
+      'An AI voice agent that acts as a sales executive — handles inbound and outbound calls in Tanglish (Tamil + English), runs sentiment analysis, and records analytics for follow-up.',
     longDescription:
-      'We built an AI voice agent that picks up the phone, holds an actual sales conversation in Tanglish, and hands off to a human only when needed. Twilio handles telephony, Pipecat orchestrates the agent, Gemini drives the language reasoning, and Google STT/TTS handles voice. Every call is recorded, transcribed, and scored for sentiment so the sales team can prioritize the right follow-ups.',
+      'We built an AI voice agent that picks up the phone, holds an actual sales conversation in Tanglish, and hands off to a human only when needed. The agent is built on a custom voice and language stack — handling speech recognition, language reasoning, and voice output end to end. Every call is recorded, transcribed, and scored for sentiment so the sales team can prioritize the right follow-ups.',
     accent: '#a855f7',
     category: 'Voice AI',
     status: 'Delivered',
     deliverables: ['Voice agent design', 'Telephony integration', 'Sentiment pipeline', 'CRM hand-off'],
     stats: [
       { label: 'Language', value: 'Tanglish' },
-      { label: 'Telephony', value: 'Twilio' },
-      { label: 'Engine', value: 'Gemini' },
+      { label: 'Telephony', value: 'Cloud Voice' },
+      { label: 'Engine', value: 'Custom AI' },
     ],
-    tech: ['Twilio', 'Pipecat AI', 'Gemini', 'Google STT/TTS'],
+    tech: ['Cloud Voice Platform', 'Agent Orchestration', 'Custom AI Engine', 'Speech AI'],
     highlights: ['Tanglish Agent', 'Call Analytics', 'Auto Follow-up', 'CRM Sync'],
     features: [
       { title: 'Inbound + Outbound Calls', desc: 'Handles both sides of the sales call funnel.' },
