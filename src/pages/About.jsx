@@ -44,25 +44,23 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2024', title: 'LazyRabbit founded', desc: 'Started with a small team and a clear bet — build products we\'d use ourselves.' },
-  { year: '2024', title: 'First product live', desc: 'Launched our first own platform and onboarded early users.' },
-  { year: '2025', title: 'Three products operating', desc: 'Aptirix, MatchInMinutes, and Stranger Meet running live with real users.' },
+  { year: '2025', title: 'LazyRabbit founded', desc: 'Started with a small team and a clear bet — build products we\'d use ourselves.' },
+  { year: '2025', title: 'First product live', desc: 'Launched our first own platform and onboarded early users.' },
+  { year: '2026', title: 'Three products operating', desc: 'Aptirix, MatchInMinutes, and Stranger Meet running live with real users.' },
   { year: '2025', title: 'Service practice scaled', desc: 'Started shipping client work — websites, apps, AI systems — to the same bar.' },
 ]
 
 const team = [
-  { name: 'X', role: 'Founder & CEO', bio: 'Sets product strategy and runs the team.', accent: '#7c3aed' },
-  { name: 'X', role: 'Co-Founder & CTO', bio: 'Engineering, infrastructure, and the bar for code quality.', accent: '#22d3ee' },
-  { name: 'X', role: 'Head of Design', bio: 'Owns product UX, brand, and the visual language across surfaces.', accent: '#ec4899' },
-  { name: 'X', role: 'Lead Engineer', bio: 'Full-stack engineering across our platforms and client work.', accent: '#10b981' },
-  { name: 'X', role: 'AI Engineer', bio: 'Voice AI, agentic workflows, and ML pipelines.', accent: '#a855f7' },
-  { name: 'X', role: 'Product Manager', bio: 'Connects user research, product decisions, and shipping.', accent: '#f59e0b' },
+  { name: 'Naveen Dhanasekaran', initials: 'ND', role: 'Managing Director', bio: 'Leading the company\'s vision, innovation, strategic growth, and development of AI-powered digital solutions and technology products.', accent: '#7c3aed' },
+  { name: 'Rahul Velan', initials: 'RV', role: 'Product Head', bio: 'Overseeing product strategy, development planning, feature execution, and delivering user-focused digital experiences.', accent: '#22d3ee' },
+  { name: 'Manimaran Ram', initials: 'MR', role: 'Marketing Team', bio: 'Managing brand growth, digital marketing campaigns, customer engagement, and market outreach initiatives.', accent: '#ec4899' },
+  { name: 'Ajay Kumar', initials: 'AK', role: 'Tech Operations Team', bio: 'Handling technical operations, infrastructure management, deployment processes, and ensuring smooth system performance and reliability.', accent: '#10b981' },
 ]
 
 const stats = [
-  { label: 'Founded', value: '2024' },
+  { label: 'Founded', value: '2025' },
   { label: 'Products live', value: '3' },
-  { label: 'Client projects', value: '5+' },
+  { label: 'Client projects', value: '10+' },
   { label: 'Team', value: `${team.length}+` },
 ]
 
@@ -309,13 +307,13 @@ export default function About() {
 
                 <div className="relative">
                   <div
-                    className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-5 text-3xl font-bold text-white font-[var(--font-space)]"
+                    className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-5 text-2xl font-bold text-white font-[var(--font-space)]"
                     style={{
                       backgroundColor: member.accent + '20',
                       borderColor: member.accent + '40',
                     }}
                   >
-                    {member.name}
+                    {member.initials}
                   </div>
 
                   <h3 className="text-xl font-semibold text-white font-[var(--font-space)]">
