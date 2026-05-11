@@ -290,7 +290,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex gap-5 overflow-x-auto pb-4 -mx-6 px-6 scrollbar-hide snap-x snap-mandatory">
             {team.map((member, i) => (
               <motion.div
                 key={i}
@@ -298,7 +298,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:border-white/[0.15] hover:bg-white/[0.04] transition-all duration-300 group relative overflow-hidden"
+                className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:border-white/[0.15] hover:bg-white/[0.04] transition-all duration-300 group relative overflow-hidden flex-shrink-0 w-[280px] snap-start"
               >
                 <div
                   className="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl"
@@ -306,16 +306,6 @@ export default function About() {
                 />
 
                 <div className="relative">
-                  <div
-                    className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-5 text-2xl font-bold text-white font-[var(--font-space)]"
-                    style={{
-                      backgroundColor: member.accent + '20',
-                      borderColor: member.accent + '40',
-                    }}
-                  >
-                    {member.initials}
-                  </div>
-
                   <h3 className="text-xl font-semibold text-white font-[var(--font-space)]">
                     {member.name}
                   </h3>
@@ -323,23 +313,6 @@ export default function About() {
                     {member.role}
                   </p>
                   <p className="text-sm text-muted leading-relaxed mt-3">{member.bio}</p>
-
-                  <div className="flex items-center gap-2 mt-5">
-                    <button
-                      type="button"
-                      aria-label="LinkedIn"
-                      className="w-8 h-8 rounded-lg border border-white/[0.08] bg-white/[0.02] flex items-center justify-center hover:border-white/[0.18] hover:bg-white/[0.05] transition-colors"
-                    >
-                      <Linkedin size={14} className="text-muted-light" />
-                    </button>
-                    <button
-                      type="button"
-                      aria-label="Email"
-                      className="w-8 h-8 rounded-lg border border-white/[0.08] bg-white/[0.02] flex items-center justify-center hover:border-white/[0.18] hover:bg-white/[0.05] transition-colors"
-                    >
-                      <Mail size={14} className="text-muted-light" />
-                    </button>
-                  </div>
                 </div>
               </motion.div>
             ))}
