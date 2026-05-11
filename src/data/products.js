@@ -17,7 +17,7 @@ export const products = [
       { label: 'AI Interviews', value: 'Live' },
       { label: 'Proctoring', value: 'Real-time' },
     ],
-    tech: ['React', 'FastAPI', 'Gemini AI', 'MediaPipe', 'Google Cloud', 'Razorpay', 'PostgreSQL'],
+    tech: ['React', 'FastAPI', 'Custom AI Engine', 'Vision AI', 'Cloud Infrastructure', 'Payment Gateway', 'PostgreSQL'],
     highlights: [
       'AI Interviews',
       'Live Proctoring',
@@ -61,7 +61,7 @@ export const products = [
       { label: 'Messaging', value: 'Encrypted' },
       { label: 'Payments', value: 'Secure' },
     ],
-    tech: ['React', 'Node.js', 'MongoDB', 'Razorpay', 'Tailwind CSS'],
+    tech: ['React', 'Node.js', 'MongoDB', 'Payment Gateway', 'Tailwind CSS'],
     highlights: ['Smart Discovery', 'Secure Messaging', 'Gifts & Credits', 'Subscription Packs'],
     features: [
       { title: 'Smart Partner Discovery', desc: 'Users set detailed preferences — age, location, education, lifestyle — and the platform shows matches that genuinely align with them. No endless swiping through irrelevant profiles.' },
@@ -100,7 +100,7 @@ export const products = [
       { label: 'Calls', value: 'Live' },
       { label: 'Platforms', value: 'iOS + Android' },
     ],
-    tech: ['Flutter', 'FastAPI', 'WebRTC', 'PostgreSQL', 'Firebase', 'Razorpay'],
+    tech: ['Flutter', 'FastAPI', 'Real-time Calls', 'PostgreSQL', 'Push Notifications', 'Payment Gateway'],
     highlights: ['Real-time Chat', 'Video Calls', 'Stories & Reels', 'Events'],
     features: [
       { title: 'Real-time Chat', desc: 'Send messages to anyone individually or in a group. Photos, videos, and files are supported. Messages are encrypted and delivered instantly, with read receipts and typing indicators.' },
