@@ -1,58 +1,27 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import FloatingButtons from './components/FloatingButtons';
-import Home from './pages/Home';
-import ProductCatalog from './pages/ProductCatalog';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsConditions from './pages/TermsConditions';
-import DataDeletion from './pages/DataDeletion';
-import RefundPolicy from './pages/RefundPolicy';
-import ContactUs from './pages/ContactUs';
-import ProductDetail from './pages/ProductDetail';
-
-const LEGAL_PATHS = ['/privacy-policy', '/terms-conditions', '/data-deletion', '/refund-policy', '/contact'];
-
-function AppInner() {
-  const location = useLocation();
-  const isLegalPage = LEGAL_PATHS.includes(location.pathname);
-
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductCatalog />} />
-        <Route path="/products/:productId" element={<ProductDetail />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-conditions" element={<TermsConditions />} />
-        <Route path="/data-deletion" element={<DataDeletion />} />
-        <Route path="/refund-policy" element={<RefundPolicy />} />
-        <Route path="/contact" element={<ContactUs />} />
-      </Routes>
-      {!isLegalPage && <Footer />}
-      <FloatingButtons />
-    </>
-  );
-}
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
+import Home from './pages/Home'
+import About from './pages/About'
+import ProductsHub from './pages/ProductsHub'
+import ProductPage from './pages/ProductPage'
+import ServicesHub from './pages/ServicesHub'
+import ServicePage from './pages/ServicePage'
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: '#111111',
-            color: '#f5f5f5',
-            border: '1px solid #2a2a2a',
-            fontSize: '14px',
-          },
-        }}
-      />
-      <AppInner />
+      <div className="min-h-screen bg-dark">
+        <Toaster position="top-right" />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<ProductsHub />} />
+          <Route path="/products/:slug" element={<ProductPage />} />
+          <Route path="/services" element={<ServicesHub />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </div>
     </BrowserRouter>
-  );
+  )
 }
