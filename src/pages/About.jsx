@@ -47,7 +47,7 @@ const milestones = [
   { year: '2025', title: 'LazyRabbit founded', desc: 'Started with a small team and a clear bet — build products we\'d use ourselves.' },
   { year: '2025', title: 'First product live', desc: 'Launched our first own platform and onboarded early users.' },
   { year: '2026', title: 'Three products operating', desc: 'Aptirix, MatchInMinutes, and Stranger Meet running live with real users.' },
-  { year: '2025', title: 'Service practice scaled', desc: 'Started shipping client work — websites, apps, AI systems — to the same bar.' },
+  { year: '2026', title: 'Service practice scaled', desc: 'Started shipping client work — websites, apps, AI systems — to the same bar.' },
 ]
 
 const team = [
